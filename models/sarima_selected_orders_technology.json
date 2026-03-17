@@ -1,0 +1,82 @@
+{
+  "closing_hc": {
+    "column": "Closing HC",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      0,
+      12
+    ],
+    "aic": 80.07,
+    "n_obs": 36
+  },
+  "attrition_pct": {
+    "column": "Attrition % Annualized",
+    "order": [
+      0,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "aic": -78.56,
+    "n_obs": 36
+  },
+  "avg_salary": {
+    "column": "Avg Salary Per FTE Annual (INR)",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      0,
+      12
+    ],
+    "aic": 465.79,
+    "n_obs": 36
+  },
+  "engagement": {
+    "column": "Employee Engagement Cost (INR)",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      0,
+      12
+    ],
+    "aic": 510.65,
+    "n_obs": 36
+  },
+  "other_indirect": {
+    "column": "Other Indirect Cost (INR)",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      0,
+      12
+    ],
+    "aic": 466.99,
+    "n_obs": 36
+  }
+}

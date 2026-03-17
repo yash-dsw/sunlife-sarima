@@ -1,0 +1,998 @@
+{
+  "Technology": {
+    "round_1": {
+      "closing_hc": {
+        "mape": 0.9647686339225451,
+        "mae": 1.6553022571730291,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 19.595959595959588,
+        "mae": 0.03004616664052448,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.4394591143383638,
+        "mae": 10001.072701428551,
+        "dir_acc": 100.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 19.69916853834402,
+        "mae": 45701.94289006834,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 10.247583404293515,
+        "mae": 9320.83078613801,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    },
+    "round_2": {
+      "closing_hc": {
+        "mape": 0.9255752659871781,
+        "mae": 1.6312748521668539,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 15.552325581395351,
+        "mae": 0.042172967424903514,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.3250185052608939,
+        "mae": 7514.3670534106595,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 11.539565947039836,
+        "mae": 28358.30099305602,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 8.411457930326666,
+        "mae": 6917.167748512249,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    }
+  },
+  "Operations": {
+    "round_1": {
+      "closing_hc": {
+        "mape": 2.8609174880551054,
+        "mae": 3.3253813413913114,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 54.05405405405407,
+        "mae": 0.11375479705788238,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 1.1255863924613947,
+        "mae": 17007.131433505954,
+        "dir_acc": 100.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 19.342244966760468,
+        "mae": 27845.47915024942,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 21.989933754922298,
+        "mae": 14385.640575002808,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    },
+    "round_2": {
+      "closing_hc": {
+        "mape": 3.4958392444594,
+        "mae": 4.205292087950194,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 35.919540229885044,
+        "mae": 0.03795551159665711,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 1.0313262524544775,
+        "mae": 15759.450393396042,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 11.82732427152171,
+        "mae": 15221.342094731686,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 8.776541106615559,
+        "mae": 5341.466225366438,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    }
+  },
+  "Finance": {
+    "round_1": {
+      "closing_hc": {
+        "mape": 3.0594259280931153,
+        "mae": 2.0046940027238,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          1,
+          0,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 32.82051282051282,
+        "mae": 0.11666144800473159,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.47339481780897624,
+        "mae": 8943.825218479149,
+        "dir_acc": 100.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 1.623882507191556,
+        "mae": 1181.0958775298157,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 22.537398179235137,
+        "mae": 8097.730127920972,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    },
+    "round_2": {
+      "closing_hc": {
+        "mape": 5.780727181061285,
+        "mae": 3.9626273359527224,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          1,
+          0,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 2.525252525252531,
+        "mae": 0.004472015114455098,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.40848801480595714,
+        "mae": 7898.656450709405,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 1.9728008291176755,
+        "mae": 1769.3731182259846,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 45.179155756326146,
+        "mae": 11367.779474009738,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    }
+  },
+  "HR": {
+    "round_1": {
+      "closing_hc": {
+        "mape": 2.0084837194036513,
+        "mae": 0.8193551729178689,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          1,
+          0,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 53.118086702900115,
+        "mae": 0.19194471504144192,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          1,
+          1,
+          0,
+          12
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.6765427311698553,
+        "mae": 9350.458199359166,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 14.687558631088796,
+        "mae": 6724.649413442305,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 363.1184392222307,
+        "mae": 16838.92403638468,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    },
+    "round_2": {
+      "closing_hc": {
+        "mape": 3.7656577764391375,
+        "mae": 1.6192328438688293,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          1,
+          0,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 390.73138294273133,
+        "mae": 1.2522698739663978,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          1,
+          1,
+          0,
+          12
+        ]
+      },
+      "avg_salary": {
+        "mape": 1.4606187388367908,
+        "mae": 20785.977239451528,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 13.729045072830539,
+        "mae": 7939.7858478709895,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 161.53081519318343,
+        "mae": 16030.055315745334,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    }
+  },
+  "Sales & Marketing": {
+    "round_1": {
+      "closing_hc": {
+        "mape": 2.4873092487601403,
+        "mae": 2.052127609778424,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 44.31372549019607,
+        "mae": 0.09810770032373807,
+        "dir_acc": 0.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.5307677108774083,
+        "mae": 8605.734138735957,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 21.10907151739773,
+        "mae": 21469.55506862172,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 17.36763471920795,
+        "mae": 8534.424179186672,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    },
+    "round_2": {
+      "closing_hc": {
+        "mape": 1.987522475960669,
+        "mae": 1.703579287639106,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 35.77235772357725,
+        "mae": 0.05566714490674322,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.28844962857201056,
+        "mae": 4825.6783157122945,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 14.765863462725799,
+        "mae": 13570.741158589759,
+        "dir_acc": 50.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 20.72672769577619,
+        "mae": 7754.823090898809,
+        "dir_acc": 100.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    }
+  },
+  "Risk & Compliance": {
+    "round_1": {
+      "closing_hc": {
+        "mape": 3.6476949834844583,
+        "mae": 2.131116385216662,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          1,
+          0,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 90.4296614064768,
+        "mae": 0.18879021229058165,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          1,
+          1,
+          0,
+          12
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.759450436880598,
+        "mae": 15395.063689903123,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 4.997544464847327,
+        "mae": 3279.441209594656,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 52.593623968863,
+        "mae": 11356.050679734823,
+        "dir_acc": 100.0,
+        "selected_order": [
+          0,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    },
+    "round_2": {
+      "closing_hc": {
+        "mape": 2.964083525848556,
+        "mae": 1.762586629636078,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          1,
+          0,
+          0,
+          12
+        ]
+      },
+      "attrition_pct": {
+        "mape": 0.5649717514124268,
+        "mae": 0.0011689070718877796,
+        "dir_acc": 50.0,
+        "selected_order": [
+          0,
+          1,
+          0
+        ],
+        "selected_seasonal_order": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "avg_salary": {
+        "mape": 0.48282823292110705,
+        "mae": 9959.125933784604,
+        "dir_acc": 100.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "engagement": {
+        "mape": 19.111248703188448,
+        "mae": 14163.017721324877,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      },
+      "other_indirect": {
+        "mape": 42.2722643854752,
+        "mae": 9242.080472459294,
+        "dir_acc": 0.0,
+        "selected_order": [
+          1,
+          1,
+          1
+        ],
+        "selected_seasonal_order": [
+          0,
+          1,
+          0,
+          12
+        ]
+      }
+    }
+  }
+}

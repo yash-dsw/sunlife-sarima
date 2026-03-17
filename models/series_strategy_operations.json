@@ -1,0 +1,47 @@
+{
+  "closing_hc": {
+    "strategy": "sarima",
+    "sarima_wmape": 5.63,
+    "naive_wmape": 7.93,
+    "lift_wmape_pts": 2.3,
+    "lift_threshold": 1.0,
+    "holdout_months": 6,
+    "n_obs": 36
+  },
+  "attrition_pct": {
+    "strategy": "naive",
+    "sarima_wmape": 70.92,
+    "naive_wmape": 45.24,
+    "lift_wmape_pts": -25.68,
+    "lift_threshold": 1.0,
+    "holdout_months": 6,
+    "n_obs": 36
+  },
+  "avg_salary": {
+    "strategy": "sarima",
+    "sarima_wmape": 0.94,
+    "naive_wmape": 7.54,
+    "lift_wmape_pts": 6.6,
+    "lift_threshold": 1.0,
+    "holdout_months": 6,
+    "n_obs": 36
+  },
+  "engagement": {
+    "strategy": "sarima",
+    "sarima_wmape": 12.49,
+    "naive_wmape": 15.79,
+    "lift_wmape_pts": 3.3,
+    "lift_threshold": 1.0,
+    "holdout_months": 6,
+    "n_obs": 36
+  },
+  "other_indirect": {
+    "strategy": "sarima",
+    "sarima_wmape": 17.84,
+    "naive_wmape": 20.61,
+    "lift_wmape_pts": 2.77,
+    "lift_threshold": 1.0,
+    "holdout_months": 6,
+    "n_obs": 36
+  }
+}

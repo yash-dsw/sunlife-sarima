@@ -1,0 +1,29 @@
+{
+  "per_fte_it_license": 3200.0,
+  "per_fte_admin": 1500.0,
+  "per_fte_hr": 800.0,
+  "per_fte_learning": 600.0,
+  "per_wfo_rent": 8000.0,
+  "per_wfo_utilities": 1200.0,
+  "cost_per_hire": 37604.94351851852,
+  "cost_per_device": 45000.0,
+  "overtime_per_exit": 207290.2962962963,
+  "training_per_hire": 24059.859239511374,
+  "training_per_hc_base": 1990.5291365744934,
+  "wfh_pct": 0.6000346791091234,
+  "engagement_seasonal_per_fte": {
+    "1": 1080.0,
+    "2": 1269.0,
+    "3": 1060.0,
+    "4": 1100.0,
+    "5": 1100.0,
+    "6": 1417.5,
+    "7": 1000.0,
+    "8": 1000.0,
+    "9": 1150.0,
+    "10": 1351.248538011696,
+    "11": 1316.0,
+    "12": 1000.0
+  },
+  "rates_lookback_months": 18
+}
