@@ -168,6 +168,21 @@ def _attach_naive_comparison(metrics: dict, actual: np.ndarray, naive_pred: np.n
     metrics["WMAPE Lift vs Naive %pts"] = round(base_wmape - metrics["WMAPE %"], 2)
 
 
+def _build_exog(df: pd.DataFrame, key: str, idx: pd.Index) -> pd.DataFrame | None:
+    exog_cols_map = {
+        "monthly_budget": ["Closing HC"],
+        "attrition_pct": ["Closing HC"],
+        "engagement": ["Closing HC", "Original Budget (INR)"],
+        "other_indirect": ["Closing HC", "Original Budget (INR)"],
+    }
+    cols = [c for c in exog_cols_map.get(key, []) if c in df.columns]
+    if not cols:
+        return None
+    ex = df.loc[idx, cols].astype(float)
+    ex = ex.ffill().bfill()
+    return ex if not ex.empty else None
+
+
 # ── SARIMA series validation ───────────────────────────────────────────────
 
 def validate_sarima_series(
@@ -194,12 +209,8 @@ def validate_sarima_series(
             continue
         h = len(te)
 
-        exog_tr = exog_te = None
-        if key == "engagement":
-            hc_col = "Closing HC"
-            if hc_col in df.columns:
-                exog_tr = train.loc[tr.index, hc_col].ffill().astype(float)
-                exog_te = test.loc[te.index, hc_col].ffill().astype(float)
+        exog_tr = _build_exog(train, key, tr.index)
+        exog_te = _build_exog(test, key, te.index)
 
         try:
             fit, best_order, best_seasonal, best_aic = fit_best_sarima(tr, key, exog=exog_tr)
@@ -236,9 +247,7 @@ def _fit_models_for_window(train: pd.DataFrame) -> tuple[dict[str, Any], dict]:
         if len(tr) < 12:
             continue
 
-        exog_tr = None
-        if key == "engagement" and "Closing HC" in train.columns:
-            exog_tr = train.loc[tr.index, "Closing HC"].ffill().astype(float)
+        exog_tr = _build_exog(train, key, tr.index)
 
         try:
             fit, _, _, _ = fit_best_sarima(tr, key, exog=exog_tr)

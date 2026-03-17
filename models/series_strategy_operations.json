@@ -1,63 +1,63 @@
 {
   "closing_hc": {
     "strategy": "sarima",
-    "sarima_wmape": 1.36,
+    "sarima_wmape": 0.66,
     "naive_wmape": 11.93,
-    "lift_wmape_pts": 10.57,
+    "lift_wmape_pts": 11.27,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "attrition_pct": {
     "strategy": "naive",
-    "sarima_wmape": 49.65,
+    "sarima_wmape": 57.66,
     "naive_wmape": 41.87,
-    "lift_wmape_pts": -7.78,
+    "lift_wmape_pts": -15.79,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "avg_salary": {
     "strategy": "sarima",
-    "sarima_wmape": 0.07,
+    "sarima_wmape": 0.04,
     "naive_wmape": 6.84,
-    "lift_wmape_pts": 6.77,
+    "lift_wmape_pts": 6.81,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "engagement": {
     "strategy": "naive",
-    "sarima_wmape": 766.37,
+    "sarima_wmape": 1519.02,
     "naive_wmape": 617.84,
-    "lift_wmape_pts": -148.52,
+    "lift_wmape_pts": -901.18,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "other_indirect": {
     "strategy": "sarima",
-    "sarima_wmape": 81.71,
+    "sarima_wmape": 83.1,
     "naive_wmape": 92.5,
-    "lift_wmape_pts": 10.79,
+    "lift_wmape_pts": 9.4,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "monthly_budget": {
     "strategy": "sarima",
-    "sarima_wmape": 2.93,
+    "sarima_wmape": 5.37,
     "naive_wmape": 18.42,
-    "lift_wmape_pts": 15.49,
+    "lift_wmape_pts": 13.04,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "band_hc_1": {
     "strategy": "sarima",
-    "sarima_wmape": 0.63,
+    "sarima_wmape": 1.35,
     "naive_wmape": 12.45,
-    "lift_wmape_pts": 11.82,
+    "lift_wmape_pts": 11.1,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
@@ -73,18 +73,18 @@
   },
   "band_hc_3": {
     "strategy": "sarima",
-    "sarima_wmape": 1.47,
+    "sarima_wmape": 1.83,
     "naive_wmape": 11.76,
-    "lift_wmape_pts": 10.29,
+    "lift_wmape_pts": 9.94,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "band_hc_4": {
     "strategy": "sarima",
-    "sarima_wmape": 1.04,
+    "sarima_wmape": 4.13,
     "naive_wmape": 9.52,
-    "lift_wmape_pts": 8.49,
+    "lift_wmape_pts": 5.4,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
@@ -100,9 +100,9 @@
   },
   "band_hc_6": {
     "strategy": "sarima",
-    "sarima_wmape": 31.36,
+    "sarima_wmape": 23.62,
     "naive_wmape": 33.33,
-    "lift_wmape_pts": 1.97,
+    "lift_wmape_pts": 9.71,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60

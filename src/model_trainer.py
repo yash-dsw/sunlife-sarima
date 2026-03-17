@@ -67,6 +67,14 @@ BAND_HC_CANDIDATE_COLS: dict[str, list[str]] = {
     "band_hc_6": ["Band 6 Count", "Band F Count"],
 }
 
+# Exogenous dependencies used by SARIMAX to capture inter-series effects.
+EXOG_SERIES_COLS: dict[str, list[str]] = {
+    "monthly_budget": ["Closing HC"],
+    "attrition_pct": ["Closing HC"],
+    "engagement": ["Closing HC", "Original Budget (INR)"],
+    "other_indirect": ["Closing HC", "Original Budget (INR)"],
+}
+
 MODELS_DIR = Path(__file__).parent.parent / "models"
 
 # Lightweight candidate catalogue around current defaults.
@@ -157,6 +165,19 @@ CANDIDATE_ORDERS: dict[str, list[tuple[tuple[int, int, int], tuple[int, int, int
     ],
 }
 
+# Broader seasonal candidates to improve month-pattern learning without heuristics.
+_EXTRA_SEASONAL_CANDIDATES = [
+    ((1, 0, 1), (1, 1, 1, 12)),
+    ((2, 1, 1), (1, 0, 1, 12)),
+    ((1, 0, 0), (1, 1, 0, 12)),
+    ((0, 1, 1), (1, 1, 1, 12)),
+]
+for _k in list(CANDIDATE_ORDERS.keys()):
+    existing = set(CANDIDATE_ORDERS[_k])
+    for cand in _EXTRA_SEASONAL_CANDIDATES:
+        if cand not in existing:
+            CANDIDATE_ORDERS[_k].append(cand)
+
 
 def _resolve_series_map(df: pd.DataFrame) -> dict[str, str]:
     """
@@ -169,6 +190,34 @@ def _resolve_series_map(df: pd.DataFrame) -> dict[str, str]:
         if chosen:
             active[key] = chosen
     return active
+
+
+def _build_exog(df: pd.DataFrame, key: str, idx: pd.Index) -> pd.DataFrame | None:
+    """Build exogenous feature matrix for keys with configured dependencies."""
+    cols = EXOG_SERIES_COLS.get(key, [])
+    if not cols:
+        return None
+    present = [c for c in cols if c in df.columns]
+    if not present:
+        return None
+    ex = df.loc[idx, present].astype(float)
+    ex = ex.ffill().bfill()
+    return ex if not ex.empty else None
+
+
+def _is_stable_forecast(pred: np.ndarray, ref_series: pd.Series) -> bool:
+    """Reject numerically unstable candidates that explode far beyond observed scale."""
+    if pred is None or len(pred) == 0:
+        return False
+    if not np.isfinite(pred).all():
+        return False
+    ref = np.asarray(ref_series.astype(float).values, dtype=float)
+    ref = ref[np.isfinite(ref)]
+    if len(ref) == 0:
+        return True
+    ref_max = max(1.0, float(np.max(np.abs(ref))))
+    pred_max = float(np.max(np.abs(pred)))
+    return pred_max <= (10.0 * ref_max)
 
 
 def _fit_sarima(
@@ -261,12 +310,38 @@ def fit_best_sarima(
     best_order = SARIMA_ORDERS[key][0]
     best_seasonal = SARIMA_ORDERS[key][1]
     best_aic = np.inf
+    best_holdout_wmape = np.inf
+
+    # Time-aware candidate ranking: prefer lowest holdout WMAPE when enough history.
+    # Falls back to AIC selection if holdout is not feasible.
+    use_holdout = len(series) >= 30
+    holdout_h = min(12, max(6, len(series) // 4)) if use_holdout else 0
+    tr = series.iloc[:-holdout_h] if use_holdout else series
+    te = series.iloc[-holdout_h:] if use_holdout else pd.Series(dtype=float)
+    exog_tr = exog.loc[tr.index] if (use_holdout and exog is not None) else exog
+    exog_te = exog.loc[te.index] if (use_holdout and exog is not None) else None
 
     for order, seasonal in candidates:
+        if use_holdout:
+            fit_tr = _try_fit_candidate(tr, order, seasonal, exog=exog_tr)
+            if fit_tr is not None:
+                try:
+                    pred = fit_tr.forecast(steps=len(te), exog=exog_te if exog_te is not None else None).values[:len(te)]
+                    score = _wmape(te.values, pred)
+                    if np.isfinite(score) and _is_stable_forecast(pred, tr) and score < best_holdout_wmape:
+                        full_fit = _try_fit_candidate(series, order, seasonal, exog=exog)
+                        if full_fit is not None:
+                            best_holdout_wmape = float(score)
+                            best_fit = full_fit
+                            best_order = order
+                            best_seasonal = seasonal
+                            best_aic = float(getattr(full_fit, "aic", np.nan))
+                            continue
+                except Exception:
+                    pass
+
         fit = _try_fit_candidate(series, order, seasonal, exog=exog)
-        if fit is None:
-            continue
-        if fit.aic < best_aic:
+        if fit is not None and fit.aic < best_aic and not np.isfinite(best_holdout_wmape):
             best_aic = fit.aic
             best_fit = fit
             best_order = order
@@ -319,11 +394,8 @@ def learn_series_strategy(
             }
             continue
 
-        exog_tr = exog_te = None
-        if key == "engagement" and "Closing HC" in df.columns:
-            hc = df["Closing HC"].astype(float)
-            exog_tr = hc.loc[tr.index].ffill()
-            exog_te = hc.loc[te.index].ffill()
+        exog_tr = _build_exog(df, key, tr.index)
+        exog_te = _build_exog(df, key, te.index)
 
         try:
             fit, _, _, _ = fit_best_sarima(tr, key, exog=exog_tr)
@@ -378,9 +450,7 @@ def train_department(df: pd.DataFrame, dept: str, models_dir: Path = MODELS_DIR)
             continue
 
         series = df[col].dropna().astype(float)
-        exog = None
-        if key == "engagement" and "Closing HC" in df.columns:
-            exog = df.loc[series.index, "Closing HC"].ffill().astype(float)
+        exog = _build_exog(df, key, series.index)
 
         logger.info(f"  Fitting {key} for {dept} (order search) …")
         result, order, seasonal, best_aic = fit_best_sarima(series, key, exog=exog)
@@ -472,10 +542,8 @@ def walk_forward_validate(df: pd.DataFrame, dept: str) -> dict:
             if len(tr) < 12 or len(te) == 0:
                 continue
 
-            exog_tr = exog_te = None
-            if key == "engagement" and "Closing HC" in df.columns:
-                exog_tr = train.loc[tr.index, "Closing HC"].ffill().astype(float)
-                exog_te = test.loc[te.index, "Closing HC"].ffill().astype(float)
+            exog_tr = _build_exog(train, key, tr.index)
+            exog_te = _build_exog(test, key, te.index)
 
             try:
                 fit, best_order, best_seasonal, _ = fit_best_sarima(tr, key, exog=exog_tr)

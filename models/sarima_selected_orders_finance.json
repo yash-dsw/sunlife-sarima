@@ -4,15 +4,15 @@
     "order": [
       0,
       1,
-      0
+      1
     ],
     "seasonal_order": [
       1,
-      0,
-      0,
+      1,
+      1,
       12
     ],
-    "aic": 82.23,
+    "aic": 991.9,
     "n_obs": 60
   },
   "attrition_pct": {
@@ -28,30 +28,46 @@
       0,
       12
     ],
-    "aic": -89.75,
+    "aic": -87.91,
     "n_obs": 60
   },
   "avg_salary": {
     "column": "Avg Salary Per FTE Annual (INR)",
     "order": [
-      0,
       1,
-      1
+      0,
+      0
     ],
     "seasonal_order": [
-      0,
+      1,
       1,
       0,
       12
     ],
-    "aic": 921.59,
+    "aic": 719.87,
     "n_obs": 60
   },
   "engagement": {
     "column": "Employee Engagement Cost (INR)",
     "order": [
       1,
+      0,
+      1
+    ],
+    "seasonal_order": [
       1,
+      1,
+      1,
+      12
+    ],
+    "aic": 983.07,
+    "n_obs": 60
+  },
+  "other_indirect": {
+    "column": "Other Indirect Cost (INR)",
+    "order": [
+      1,
+      0,
       0
     ],
     "seasonal_order": [
@@ -60,23 +76,7 @@
       0,
       12
     ],
-    "aic": 1347.47,
-    "n_obs": 60
-  },
-  "other_indirect": {
-    "column": "Other Indirect Cost (INR)",
-    "order": [
-      0,
-      1,
-      1
-    ],
-    "seasonal_order": [
-      0,
-      1,
-      0,
-      12
-    ],
-    "aic": 1274.66,
+    "aic": 1317.46,
     "n_obs": 60
   },
   "monthly_budget": {
@@ -87,12 +87,12 @@
       1
     ],
     "seasonal_order": [
-      0,
       1,
+      0,
       0,
       12
     ],
-    "aic": 1359.0,
+    "aic": 1436.95,
     "n_obs": 60
   },
   "band_hc_1": {
@@ -103,12 +103,12 @@
       0
     ],
     "seasonal_order": [
+      1,
       0,
       0,
-      0,
-      0
+      12
     ],
-    "aic": 24.44,
+    "aic": 32.07,
     "n_obs": 60
   },
   "band_hc_2": {
@@ -116,15 +116,15 @@
     "order": [
       0,
       1,
-      1
+      0
     ],
     "seasonal_order": [
-      1,
       0,
       0,
-      12
+      0,
+      0
     ],
-    "aic": 50.8,
+    "aic": 58.53,
     "n_obs": 60
   },
   "band_hc_3": {
@@ -146,7 +146,7 @@
   "band_hc_4": {
     "column": "Band D Count",
     "order": [
-      0,
+      1,
       1,
       0
     ],
@@ -156,39 +156,39 @@
       0,
       12
     ],
-    "aic": -1205.29,
+    "aic": -957.02,
     "n_obs": 60
   },
   "band_hc_5": {
     "column": "Band E Count",
     "order": [
-      0,
+      1,
       1,
       0
     ],
     "seasonal_order": [
+      1,
       0,
       0,
-      0,
-      0
+      12
     ],
-    "aic": -1493.7,
+    "aic": -1180.24,
     "n_obs": 60
   },
   "band_hc_6": {
     "column": "Band F Count",
     "order": [
-      0,
+      1,
       1,
       0
     ],
     "seasonal_order": [
+      1,
       0,
       0,
-      0,
-      0
+      12
     ],
-    "aic": -1493.7,
+    "aic": -1180.24,
     "n_obs": 60
   }
 }

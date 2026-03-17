@@ -1,54 +1,54 @@
 {
   "closing_hc": {
-    "strategy": "sarima",
-    "sarima_wmape": 1.49,
+    "strategy": "naive",
+    "sarima_wmape": 4.2,
     "naive_wmape": 4.48,
-    "lift_wmape_pts": 2.99,
+    "lift_wmape_pts": 0.28,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "attrition_pct": {
     "strategy": "naive",
-    "sarima_wmape": 115.5,
+    "sarima_wmape": 98.79,
     "naive_wmape": 9.52,
-    "lift_wmape_pts": -105.98,
+    "lift_wmape_pts": -89.26,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "avg_salary": {
     "strategy": "sarima",
-    "sarima_wmape": 0.01,
+    "sarima_wmape": 0.23,
     "naive_wmape": 6.0,
-    "lift_wmape_pts": 5.99,
+    "lift_wmape_pts": 5.77,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "engagement": {
     "strategy": "naive",
-    "sarima_wmape": 50.33,
+    "sarima_wmape": 68.48,
     "naive_wmape": 49.63,
-    "lift_wmape_pts": -0.7,
+    "lift_wmape_pts": -18.84,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "other_indirect": {
-    "strategy": "naive",
-    "sarima_wmape": 50.09,
+    "strategy": "sarima",
+    "sarima_wmape": 38.49,
     "naive_wmape": 41.95,
-    "lift_wmape_pts": -8.14,
+    "lift_wmape_pts": 3.46,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "monthly_budget": {
-    "strategy": "naive",
-    "sarima_wmape": 20.34,
+    "strategy": "sarima",
+    "sarima_wmape": 16.57,
     "naive_wmape": 20.69,
-    "lift_wmape_pts": 0.35,
+    "lift_wmape_pts": 4.12,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
@@ -84,7 +84,7 @@
     "strategy": "naive",
     "sarima_wmape": 0.0,
     "naive_wmape": 0.0,
-    "lift_wmape_pts": -0.0,
+    "lift_wmape_pts": 0.0,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
@@ -93,16 +93,16 @@
     "strategy": "naive",
     "sarima_wmape": 14.29,
     "naive_wmape": 14.29,
-    "lift_wmape_pts": 0.0,
+    "lift_wmape_pts": -0.0,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60
   },
   "band_hc_6": {
-    "strategy": "sarima",
-    "sarima_wmape": 20.0,
+    "strategy": "naive",
+    "sarima_wmape": 56.46,
     "naive_wmape": 40.0,
-    "lift_wmape_pts": 20.0,
+    "lift_wmape_pts": -16.46,
     "lift_threshold": 1.0,
     "holdout_months": 6,
     "n_obs": 60

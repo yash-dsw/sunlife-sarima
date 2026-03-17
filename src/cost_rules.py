@@ -55,6 +55,14 @@ def learn_rates(df: pd.DataFrame, lookback_months: int = 18) -> dict:
     rates["travel_per_wfo"] = _safe_mean_ratio("Travel Allowance (INR)", "WFO Count")
 
     # ── headcount-driven ────────────────────────────────────────────────
+    # Calibrate direct-salary baseline because Avg Salary may exclude some paid components
+    # that are present in the dataset's Direct Salary Cost.
+    salary_base = (df["Closing HC"] * df["Avg Salary Per FTE Annual (INR)"] / 12.0).replace([np.inf, -np.inf], np.nan)
+    salary_mask = salary_base > 0
+    salary_ratio = (df.loc[salary_mask, "Direct Salary Cost (INR)"] / salary_base.loc[salary_mask]).replace([np.inf, -np.inf], np.nan)
+    salary_uplift = float(salary_ratio.dropna().mean()) if not salary_ratio.dropna().empty else 1.0
+    rates["salary_uplift"] = float(np.clip(salary_uplift, 0.7, 1.6))
+
     rates["per_fte_it_license"]   = _safe_mean_ratio("IT License Cost (INR)", "Closing HC")
     rates["per_fte_admin"]        = _safe_mean_ratio("Admin Overhead (INR)", "Closing HC")
     rates["per_fte_hr"]           = _safe_mean_ratio("HR Payroll Admin (INR)", "Closing HC")
@@ -68,35 +76,6 @@ def learn_rates(df: pd.DataFrame, lookback_months: int = 18) -> dict:
     rates["cost_per_hire"]        = _safe_mean_ratio("Recruitment Cost (INR)", "Hires")
     rates["cost_per_device"]      = _safe_mean_ratio("IT Equipment Cost (INR)", "Hires")
     rates["overtime_per_exit"]    = _safe_mean_ratio("Overtime Cost (INR)", "Exits")
-
-    # Month-wise seasonality for spike-prone components
-    # Variable pay: use monthly ratio to direct salary to preserve bonus-cycle spikes.
-    if "Variable Pay Bonus (INR)" in df.columns and "Direct Salary Cost (INR)" in df.columns:
-        tmp = df[["Variable Pay Bonus (INR)", "Direct Salary Cost (INR)"]].copy()
-        tmp = tmp[tmp["Direct Salary Cost (INR)"] > 0]
-        if not tmp.empty:
-            tmp["vp_rate"] = tmp["Variable Pay Bonus (INR)"] / tmp["Direct Salary Cost (INR)"]
-            vp_month = tmp.groupby(tmp.index.month)["vp_rate"].mean()
-            vp_default = float(vp_month.mean()) if len(vp_month) else rates["variable_pay_rate"]
-            rates["variable_pay_rate_by_month"] = {str(m): float(vp_month.get(m, vp_default)) for m in range(1, 13)}
-        else:
-            rates["variable_pay_rate_by_month"] = {str(m): float(rates["variable_pay_rate"]) for m in range(1, 13)}
-    else:
-        rates["variable_pay_rate_by_month"] = {str(m): float(rates["variable_pay_rate"]) for m in range(1, 13)}
-
-    # Overtime: use monthly per-exit pattern to preserve attrition-wave spikes.
-    if "Overtime Cost (INR)" in df.columns and "Exits" in df.columns:
-        tmp = df[["Overtime Cost (INR)", "Exits"]].copy()
-        tmp = tmp[tmp["Exits"] > 0]
-        if not tmp.empty:
-            tmp["ot_rate"] = tmp["Overtime Cost (INR)"] / tmp["Exits"]
-            ot_month = tmp.groupby(tmp.index.month)["ot_rate"].mean()
-            ot_default = float(ot_month.mean()) if len(ot_month) else rates["overtime_per_exit"]
-            rates["overtime_per_exit_by_month"] = {str(m): float(ot_month.get(m, ot_default)) for m in range(1, 13)}
-        else:
-            rates["overtime_per_exit_by_month"] = {str(m): float(rates["overtime_per_exit"]) for m in range(1, 13)}
-    else:
-        rates["overtime_per_exit_by_month"] = {str(m): float(rates["overtime_per_exit"]) for m in range(1, 13)}
 
     # Training: split into onboarding part (per hire) + base (per HC)
     # Training = hires × onboard_rate + closing_hc × base_rate
@@ -170,12 +149,12 @@ def compute_costs(
     hires = max(0.0, closing_hc - opening_hc + exits)
 
     # ── direct salary base ────────────────────────────────────────────
-    monthly_salary_base = closing_hc * avg_salary_annual / 12
+    salary_uplift = float(rates.get("salary_uplift", 1.0))
+    monthly_salary_base = closing_hc * avg_salary_annual / 12 * salary_uplift
 
     direct_salary     = monthly_salary_base
     benefits_rate     = rates.get("benefits_rate", STATUTORY_BENEFITS_RATE)
-    variable_rate_by_month = rates.get("variable_pay_rate_by_month", {})
-    variable_rate     = float(variable_rate_by_month.get(str(month), rates.get("variable_pay_rate", VARIABLE_PAY_RATE)))
+    variable_rate     = rates.get("variable_pay_rate", VARIABLE_PAY_RATE)
     payroll_rate      = rates.get("payroll_tax_rate", PAYROLL_TAX_RATE)
     meal_per_hc       = rates.get("meal_per_hc", MEAL_PER_HC)
     travel_per_wfo    = rates.get("travel_per_wfo", TRAVEL_PER_WFO)
@@ -185,8 +164,7 @@ def compute_costs(
     payroll_tax       = direct_salary * payroll_rate
     travel_allowance  = wfo_count * travel_per_wfo
     meal_allowance    = closing_hc * meal_per_hc
-    overtime_by_month = rates.get("overtime_per_exit_by_month", {})
-    overtime_rate     = float(overtime_by_month.get(str(month), rates.get("overtime_per_exit", 30_000.0)))
+    overtime_rate     = rates.get("overtime_per_exit", 30_000.0)
     overtime          = exits * overtime_rate
 
     total_direct = (
