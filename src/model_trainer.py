@@ -1,12 +1,16 @@
 """
 model_trainer.py
 ================
-Trains 5 SARIMA models per department:
-  1. Closing HC
-  2. Attrition % Annualised
-  3. Avg Salary Per FTE Annual (INR)
-  4. Employee Engagement Cost (INR)    ← SARIMAX with closing_hc as exog
-  5. Other Indirect Cost (INR)
+Trains SARIMA/SARIMAX models per department for core drivers + band-wise HC:
+  - Core drivers:
+      1. Closing HC
+      2. Attrition % Annualised
+      3. Avg Salary Per FTE Annual (INR)
+      4. Employee Engagement Cost (INR)   (SARIMAX with closing_hc as exog)
+      5. Other Indirect Cost (INR)
+      6. Original Budget (INR)            (monthly budget forecast)
+  - Band-wise headcount:
+      * Band 1..6 Count (new schema) OR Band A..F Count (legacy schema)
 
 Walk-forward validation (2 rounds) is also run to measure accuracy.
 """
@@ -34,6 +38,14 @@ SARIMA_ORDERS: dict[str, tuple] = {
     "avg_salary":       ((0, 1, 1), (0, 1, 0, 12)),
     "engagement":       ((1, 1, 0), (1, 0, 0, 12)),   # uses HC as exog
     "other_indirect":   ((1, 1, 0), (0, 1, 0, 12)),
+    "monthly_budget":   ((0, 1, 1), (0, 1, 0, 12)),
+    # band-wise HC keys (shared order template)
+    "band_hc_1":        ((1, 1, 0), (1, 0, 0, 12)),
+    "band_hc_2":        ((1, 1, 0), (1, 0, 0, 12)),
+    "band_hc_3":        ((1, 1, 0), (1, 0, 0, 12)),
+    "band_hc_4":        ((1, 1, 0), (1, 0, 0, 12)),
+    "band_hc_5":        ((1, 1, 0), (1, 0, 0, 12)),
+    "band_hc_6":        ((1, 1, 0), (1, 0, 0, 12)),
 }
 
 SERIES_MAP: dict[str, str] = {
@@ -42,6 +54,17 @@ SERIES_MAP: dict[str, str] = {
     "avg_salary":     "Avg Salary Per FTE Annual (INR)",
     "engagement":     "Employee Engagement Cost (INR)",
     "other_indirect": "Other Indirect Cost (INR)",
+    "monthly_budget": "Original Budget (INR)",
+}
+
+# Prefer new-schema names first; fall back to legacy workbook headers.
+BAND_HC_CANDIDATE_COLS: dict[str, list[str]] = {
+    "band_hc_1": ["Band 1 Count", "Band A Count"],
+    "band_hc_2": ["Band 2 Count", "Band B Count"],
+    "band_hc_3": ["Band 3 Count", "Band C Count"],
+    "band_hc_4": ["Band 4 Count", "Band D Count"],
+    "band_hc_5": ["Band 5 Count", "Band E Count"],
+    "band_hc_6": ["Band 6 Count", "Band F Count"],
 }
 
 MODELS_DIR = Path(__file__).parent.parent / "models"
@@ -83,7 +106,69 @@ CANDIDATE_ORDERS: dict[str, list[tuple[tuple[int, int, int], tuple[int, int, int
         ((1, 0, 0), (1, 0, 0, 12)),
         ((0, 1, 0), (0, 0, 0, 0)),
     ],
+    "monthly_budget": [
+        ((0, 1, 1), (0, 1, 0, 12)),
+        ((1, 1, 0), (0, 1, 0, 12)),
+        ((1, 1, 1), (0, 1, 0, 12)),
+        ((0, 1, 1), (1, 0, 0, 12)),
+        ((0, 1, 0), (0, 0, 0, 0)),
+    ],
+    "band_hc_1": [
+        ((1, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 1), (1, 0, 0, 12)),
+        ((1, 1, 1), (0, 1, 0, 12)),
+        ((0, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 0), (0, 0, 0, 0)),
+    ],
+    "band_hc_2": [
+        ((1, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 1), (1, 0, 0, 12)),
+        ((1, 1, 1), (0, 1, 0, 12)),
+        ((0, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 0), (0, 0, 0, 0)),
+    ],
+    "band_hc_3": [
+        ((1, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 1), (1, 0, 0, 12)),
+        ((1, 1, 1), (0, 1, 0, 12)),
+        ((0, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 0), (0, 0, 0, 0)),
+    ],
+    "band_hc_4": [
+        ((1, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 1), (1, 0, 0, 12)),
+        ((1, 1, 1), (0, 1, 0, 12)),
+        ((0, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 0), (0, 0, 0, 0)),
+    ],
+    "band_hc_5": [
+        ((1, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 1), (1, 0, 0, 12)),
+        ((1, 1, 1), (0, 1, 0, 12)),
+        ((0, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 0), (0, 0, 0, 0)),
+    ],
+    "band_hc_6": [
+        ((1, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 1), (1, 0, 0, 12)),
+        ((1, 1, 1), (0, 1, 0, 12)),
+        ((0, 1, 0), (1, 0, 0, 12)),
+        ((0, 1, 0), (0, 0, 0, 0)),
+    ],
 }
+
+
+def _resolve_series_map(df: pd.DataFrame) -> dict[str, str]:
+    """
+    Return the active series map for a dataframe, including whichever
+    band-wise headcount columns are available in this schema.
+    """
+    active = dict(SERIES_MAP)
+    for key, candidates in BAND_HC_CANDIDATE_COLS.items():
+        chosen = next((c for c in candidates if c in df.columns), None)
+        if chosen:
+            active[key] = chosen
+    return active
 
 
 def _fit_sarima(
@@ -208,7 +293,8 @@ def learn_series_strategy(
     SARIMA vs seasonal-naive on a train-only holdout window.
     """
     strategies: dict = {}
-    for key, col in SERIES_MAP.items():
+    active_map = _resolve_series_map(df)
+    for key, col in active_map.items():
         if col not in df.columns:
             continue
 
@@ -276,7 +362,7 @@ def save_series_strategy(strategy: dict, path: str | Path) -> None:
 
 def train_department(df: pd.DataFrame, dept: str, models_dir: Path = MODELS_DIR) -> dict:
     """
-    Train 5 SARIMA models for a department.
+    Train SARIMA/SARIMAX models for all active driver series for a department.
     Saves each as  models/sarima_{series}_{dept_slug}.pkl
     Returns a dict of fitted results for immediate use.
     """
@@ -285,7 +371,8 @@ def train_department(df: pd.DataFrame, dept: str, models_dir: Path = MODELS_DIR)
     fitted: dict = {}
     selected_orders: dict[str, dict] = {}
 
-    for key, col in SERIES_MAP.items():
+    active_map = _resolve_series_map(df)
+    for key, col in active_map.items():
         if col not in df.columns:
             logger.warning(f"Column '{col}' not found for {dept}, skipping.")
             continue
@@ -319,7 +406,7 @@ def train_department(df: pd.DataFrame, dept: str, models_dir: Path = MODELS_DIR)
 
 
 def load_department_models(dept: str, models_dir: Path = MODELS_DIR) -> dict:
-    """Load all 5 pickled SARIMA models for a department."""
+    """Load all configured pickled SARIMA models for a department."""
     slug = dept.lower().replace(" ", "_").replace("&", "and")
     loaded = {}
     for key in SARIMA_ORDERS:
@@ -327,8 +414,6 @@ def load_department_models(dept: str, models_dir: Path = MODELS_DIR) -> dict:
         if path.exists():
             with open(path, "rb") as f:
                 loaded[key] = pickle.load(f)
-        else:
-            logger.warning(f"Model file not found: {path}")
     return loaded
 
 
@@ -355,18 +440,17 @@ def _direction_acc(actual: np.ndarray, predicted: np.ndarray) -> float:
 
 def walk_forward_validate(df: pd.DataFrame, dept: str) -> dict:
     """
-    2-round walk-forward:
-      Round 1: train Apr-22→Sep-24, test Oct-24→Dec-24  (3 months)
-      Round 2: train Apr-22→Dec-24, test Jan-25→Mar-25  (3 months)
+    2-round year-based walk-forward (Jan-Dec fiscal):
+      Round 1: train Jan-2022→Dec-2024, test Jan-2025→Dec-2025
+      Round 2: train Jan-2022→Dec-2025, test Jan-2026→Dec-2026
 
     Returns metrics per series per round.
     """
     results: dict = {}
-    slug = dept.lower().replace(" ", "_").replace("&", "and")
 
     splits = [
-        ("2022-04", "2024-09", "2024-10", "2024-12"),
-        ("2022-04", "2024-12", "2025-01", "2025-03"),
+        ("2022-01", "2024-12", "2025-01", "2025-12"),
+        ("2022-01", "2025-12", "2026-01", "2026-12"),
     ]
 
     for rnd, (train_start, train_end, test_start, test_end) in enumerate(splits, 1):
@@ -379,7 +463,8 @@ def walk_forward_validate(df: pd.DataFrame, dept: str) -> dict:
             continue
         h = len(test)
 
-        for key, col in SERIES_MAP.items():
+        active_map = _resolve_series_map(df)
+        for key, col in active_map.items():
             if col not in df.columns:
                 continue
             tr = train[col].dropna().astype(float)

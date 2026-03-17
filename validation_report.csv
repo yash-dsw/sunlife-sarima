@@ -1,253 +1,43 @@
 Dept,Round,Cost Line,Evaluation Type,MAPE %,WMAPE %,MAE,RMSE,DirAcc %,MaxErr,Naive MAPE %,Naive WMAPE %,MAPE Lift vs Naive %pts,WMAPE Lift vs Naive %pts,actual_mean,predicted_mean
-Technology,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Rules-only (actual drivers),23.52,25.93,11635143.0,14442123.0,80.0,25840340.0,29.07,31.1,5.55,5.17,44874524.0,33239380.0
-Technology,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Rules-only (actual drivers),23.52,25.93,2094326.0,2599582.0,80.0,4651261.0,29.07,31.1,5.55,5.17,8077414.0,5983088.0
-Technology,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Rules-only (actual drivers),23.52,25.93,930811.0,1155370.0,80.0,2067227.0,29.07,31.1,5.55,5.17,3589962.0,2659150.0
-Technology,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Rules-only (actual drivers),23.52,25.93,1570744.0,1949687.0,80.0,3488446.0,29.07,31.1,5.55,5.17,6058061.0,4487316.0
-Technology,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Rules-only (actual drivers),4.5,4.57,4960.0,6030.0,60.0,11176.0,11.72,11.73,7.22,7.16,108410.0,104575.0
-Technology,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Rules-only (actual drivers),7.37,7.53,17018.0,19560.0,60.0,30780.0,12.25,12.27,4.88,4.74,226018.0,209000.0
-Technology,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Rules-only (actual drivers),15.81,17.18,113961.0,181509.0,20.0,401154.0,26.39,28.37,10.58,11.19,663270.0,617672.0
-Technology,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Rules-only (actual drivers),8.91,10.84,20572.0,29197.0,60.0,59441.0,48.66,47.21,39.75,36.37,189784.0,178337.0
-Technology,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Rules-only (actual drivers),6.5,6.51,29748.0,35015.0,80.0,64570.0,12.25,12.28,5.75,5.77,456792.0,470076.0
-Technology,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,12.25,12.25,12.25,12.25,557333.0,557333.0
-Technology,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,40.04,37.93,40.04,37.93,217500.0,217500.0
-Technology,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Rules-only (actual drivers),4.31,4.31,23069.0,23353.0,60.0,27607.0,11.72,11.72,7.41,7.41,534667.0,557736.0
-Technology,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Rules-only (actual drivers),4.31,4.31,3460.0,3503.0,60.0,4141.0,11.72,11.72,7.41,7.41,80200.0,83660.0
-Technology,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,12.25,12.25,12.25,12.25,261250.0,261250.0
-Technology,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,12.25,12.25,12.25,12.25,139333.0,139333.0
-Technology,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,12.25,12.25,12.25,12.25,104500.0,104500.0
-Technology,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,20.62,22.43,20.62,22.43,210970.0,210970.0
-Technology,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,9.42,9.73,9.42,9.73,89128.0,89128.0
-Technology,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Rules-only (actual drivers),23.23,25.63,16297476.0,20291672.0,80.0,36490384.0,28.93,30.95,5.7,5.32,63597658.0,47300183.0
-Technology,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Rules-only (actual drivers),1.81,1.84,52177.0,59594.0,80.0,103513.0,12.04,12.47,10.23,10.63,2841457.0,2869825.0
-Technology,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Rules-only (actual drivers),22.22,24.49,16269108.0,20292624.0,80.0,36561811.0,28.12,30.06,5.9,5.57,66439116.0,50170008.0
-Technology,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Full pipeline (forecast drivers),24.09,26.53,11907136.0,14749997.0,60.0,26331746.0,29.07,31.1,4.98,4.57,44874524.0,32967387.0
-Technology,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Full pipeline (forecast drivers),24.09,26.53,2143285.0,2654999.0,60.0,4739714.0,29.07,31.1,4.98,4.57,8077414.0,5934130.0
-Technology,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Full pipeline (forecast drivers),24.09,26.53,952571.0,1180000.0,60.0,2106540.0,29.07,31.1,4.98,4.57,3589962.0,2637391.0
-Technology,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Full pipeline (forecast drivers),24.09,26.53,1607463.0,1991250.0,60.0,3554786.0,29.07,31.1,4.98,4.57,6058061.0,4450597.0
-Technology,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Full pipeline (forecast drivers),5.33,5.43,5881.0,7082.0,40.0,12624.0,11.72,11.73,6.39,6.3,108410.0,103591.0
-Technology,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Full pipeline (forecast drivers),8.23,8.4,18985.0,21802.0,40.0,33674.0,12.25,12.27,4.02,3.87,226018.0,207033.0
-Technology,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Full pipeline (forecast drivers),39.84,41.63,276147.0,313229.0,0.0,455318.0,26.39,28.37,-13.45,-13.26,663270.0,520145.0
-Technology,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Full pipeline (forecast drivers),53.68,50.03,94954.0,108629.0,60.0,148419.0,48.66,47.21,-5.02,-2.82,189784.0,164253.0
-Technology,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Full pipeline (forecast drivers),10.59,10.95,50010.0,61958.0,60.0,103113.0,12.25,12.28,1.66,1.33,456792.0,456748.0
-Technology,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Full pipeline (forecast drivers),1.08,1.08,6002.0,6850.0,80.0,10507.0,12.25,12.25,11.17,11.17,557333.0,552088.0
-Technology,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Full pipeline (forecast drivers),46.98,43.1,93743.0,115526.0,20.0,180216.0,40.04,37.93,-6.94,-5.17,217500.0,200323.0
-Technology,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Full pipeline (forecast drivers),3.33,3.33,17820.0,18698.0,40.0,29879.0,11.72,11.72,8.39,8.39,534667.0,552487.0
-Technology,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Full pipeline (forecast drivers),3.33,3.33,2673.0,2805.0,40.0,4482.0,11.72,11.72,8.39,8.39,80200.0,82873.0
-Technology,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Full pipeline (forecast drivers),1.08,1.08,2814.0,3211.0,80.0,4925.0,12.25,12.25,11.17,11.17,261250.0,258791.0
-Technology,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Full pipeline (forecast drivers),1.08,1.08,1501.0,1712.0,80.0,2627.0,12.25,12.25,11.17,11.17,139333.0,138022.0
-Technology,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Full pipeline (forecast drivers),1.08,1.08,1125.0,1284.0,80.0,1970.0,12.25,12.25,11.17,11.17,104500.0,103517.0
-Technology,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Full pipeline (forecast drivers),16.69,18.48,38980.0,50390.0,80.0,81832.0,20.62,22.43,3.93,3.95,210970.0,187523.0
-Technology,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Full pipeline (forecast drivers),13.6,13.14,11713.0,13367.0,100.0,20474.0,9.42,9.73,-4.18,-3.41,89128.0,100337.0
-Technology,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Full pipeline (forecast drivers),23.94,26.38,16777384.0,20835683.0,60.0,37180238.0,28.93,30.95,4.99,4.57,63597658.0,46820274.0
-Technology,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Full pipeline (forecast drivers),9.89,9.97,283407.0,320101.0,20.0,467862.0,12.04,12.47,2.15,2.5,2841457.0,2796962.0
-Technology,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Full pipeline (forecast drivers),22.98,25.32,16821879.0,20994238.0,40.0,37624689.0,28.12,30.06,5.14,4.74,66439116.0,49617237.0
-Operations,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Rules-only (actual drivers),12.58,14.81,2593212.0,4189108.0,60.0,9948804.0,22.73,24.48,10.15,9.67,17512538.0,14919326.0
-Operations,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Rules-only (actual drivers),12.58,14.81,466778.0,754039.0,60.0,1790785.0,22.73,24.48,10.15,9.67,3152257.0,2685479.0
-Operations,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Rules-only (actual drivers),12.58,14.81,207457.0,335129.0,60.0,795904.0,22.73,24.48,10.15,9.67,1401003.0,1193546.0
-Operations,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Rules-only (actual drivers),12.58,14.81,350084.0,565530.0,60.0,1343089.0,22.73,24.48,10.15,9.67,2364193.0,2014109.0
-Operations,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Rules-only (actual drivers),6.36,6.47,9100.0,10459.0,40.0,18415.0,8.21,8.25,1.85,1.78,140572.0,132334.0
-Operations,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Rules-only (actual drivers),7.37,7.51,11464.0,13147.0,40.0,20520.0,7.87,7.87,0.5,0.36,152664.0,141200.0
-Operations,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Rules-only (actual drivers),14.62,15.56,40426.0,65388.0,20.0,126061.0,20.86,22.04,6.24,6.48,259861.0,219861.0
-Operations,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Rules-only (actual drivers),11.76,12.7,15595.0,19585.0,20.0,36457.0,37.21,38.08,25.45,25.38,122811.0,126253.0
-Operations,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Rules-only (actual drivers),9.62,9.7,29920.0,31258.0,60.0,45023.0,7.87,7.73,-1.75,-1.97,308417.0,323329.0
-Operations,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,7.87,7.93,7.87,7.93,376533.0,376533.0
-Operations,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,41.67,40.0,41.67,40.0,150000.0,150000.0
-Operations,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Rules-only (actual drivers),1.8,1.8,12447.0,13508.0,40.0,19779.0,8.21,8.27,6.41,6.47,693333.0,705780.0
-Operations,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Rules-only (actual drivers),1.8,1.8,1867.0,2026.0,40.0,2967.0,8.21,8.27,6.41,6.47,104000.0,105867.0
-Operations,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,7.87,7.93,7.87,7.93,176500.0,176500.0
-Operations,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,7.87,7.93,7.87,7.93,94133.0,94133.0
-Operations,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,7.87,7.93,7.87,7.93,70600.0,70600.0
-Operations,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,15.12,15.79,15.12,15.79,134799.0,134799.0
-Operations,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,19.62,20.61,19.62,20.61,60714.0,60714.0
-Operations,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Rules-only (actual drivers),12.55,14.72,3677233.0,5904548.0,60.0,14005771.0,22.53,24.24,9.98,9.52,24983087.0,21305854.0
-Operations,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Rules-only (actual drivers),1.67,1.66,37968.0,40805.0,80.0,54623.0,12.04,12.06,10.37,10.4,2291840.0,2324508.0
-Operations,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Rules-only (actual drivers),11.47,13.36,3644565.0,5888150.0,60.0,13984004.0,21.54,23.06,10.07,9.7,27274928.0,23630362.0
-Operations,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Full pipeline (forecast drivers),18.06,20.08,3516301.0,4717532.0,40.0,10498655.0,22.73,24.48,4.67,4.4,17512538.0,13996237.0
-Operations,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Full pipeline (forecast drivers),18.06,20.08,632934.0,849156.0,40.0,1889758.0,22.73,24.48,4.67,4.4,3152257.0,2519323.0
-Operations,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Full pipeline (forecast drivers),18.06,20.08,281304.0,377403.0,40.0,839892.0,22.73,24.48,4.67,4.4,1401003.0,1119699.0
-Operations,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Full pipeline (forecast drivers),18.06,20.08,474701.0,636867.0,40.0,1417318.0,22.73,24.48,4.67,4.4,2364193.0,1889492.0
-Operations,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Full pipeline (forecast drivers),11.01,11.16,15689.0,16760.0,40.0,20830.0,8.21,8.25,-2.8,-2.91,140572.0,124883.0
-Operations,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Full pipeline (forecast drivers),12.59,12.72,19413.0,20311.0,40.0,23906.0,7.87,7.87,-4.72,-4.85,152664.0,133251.0
-Operations,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Full pipeline (forecast drivers),18.26,17.46,45361.0,68360.0,20.0,121203.0,20.86,22.04,2.6,4.58,259861.0,299811.0
-Operations,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Full pipeline (forecast drivers),40.33,39.56,48585.0,52810.0,40.0,77402.0,37.21,38.08,-3.12,-1.48,122811.0,74226.0
-Operations,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Full pipeline (forecast drivers),9.14,9.57,29503.0,35821.0,20.0,71672.0,7.87,7.73,-1.27,-1.84,308417.0,286313.0
-Operations,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Full pipeline (forecast drivers),5.57,5.63,21199.0,24412.0,20.0,39174.0,7.87,7.93,2.3,2.3,376533.0,355335.0
-Operations,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Full pipeline (forecast drivers),42.82,41.21,61813.0,65756.0,20.0,95104.0,41.67,40.0,-1.15,-1.21,150000.0,88187.0
-Operations,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Full pipeline (forecast drivers),3.88,3.94,27288.0,35150.0,0.0,59654.0,8.21,8.27,4.33,4.33,693333.0,666045.0
-Operations,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Full pipeline (forecast drivers),3.88,3.94,4093.0,5272.0,0.0,8948.0,8.21,8.27,4.33,4.33,104000.0,99907.0
-Operations,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Full pipeline (forecast drivers),5.57,5.63,9937.0,11443.0,20.0,18363.0,7.87,7.93,2.3,2.3,176500.0,166563.0
-Operations,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Full pipeline (forecast drivers),5.57,5.63,5300.0,6103.0,20.0,9793.0,7.87,7.93,2.3,2.3,94133.0,88834.0
-Operations,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Full pipeline (forecast drivers),5.57,5.63,3975.0,4577.0,20.0,7345.0,7.87,7.93,2.3,2.3,70600.0,66625.0
-Operations,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Full pipeline (forecast drivers),15.12,15.79,21280.0,26523.0,20.0,52192.0,15.12,15.79,0.0,0.0,134799.0,123568.0
-Operations,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Full pipeline (forecast drivers),19.62,20.61,12512.0,17110.0,40.0,36092.0,19.62,20.61,0.0,0.0,60714.0,48955.0
-Operations,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Full pipeline (forecast drivers),17.65,19.61,4900392.0,6582148.0,60.0,14660186.0,22.53,24.24,4.88,4.63,24983087.0,20082696.0
-Operations,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Full pipeline (forecast drivers),9.92,9.92,227282.0,238831.0,40.0,356574.0,12.04,12.06,2.12,2.14,2291840.0,2064558.0
-Operations,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Full pipeline (forecast drivers),17.11,18.8,5127674.0,6743813.0,80.0,14841076.0,21.54,23.06,4.43,4.26,27274928.0,22147254.0
-Finance,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Rules-only (actual drivers),15.85,18.24,2390893.0,3454512.0,100.0,7958454.0,23.59,23.44,7.74,5.2,13108798.0,10717905.0
-Finance,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Rules-only (actual drivers),15.85,18.24,430361.0,621812.0,100.0,1432522.0,23.59,23.44,7.74,5.2,2359584.0,1929223.0
-Finance,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Rules-only (actual drivers),15.85,18.24,191271.0,276361.0,100.0,636676.0,23.59,23.44,7.74,5.2,1048704.0,857432.0
-Finance,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Rules-only (actual drivers),15.85,18.24,322771.0,466359.0,100.0,1074391.0,23.59,23.44,7.74,5.2,1769688.0,1446917.0
-Finance,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Rules-only (actual drivers),5.77,5.9,3749.0,4358.0,80.0,7176.0,17.01,17.13,11.24,11.23,63562.0,60249.0
-Finance,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Rules-only (actual drivers),7.37,7.57,6598.0,7591.0,80.0,12060.0,17.84,17.93,10.47,10.36,87198.0,80600.0
-Finance,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Rules-only (actual drivers),36.38,36.57,68647.0,79498.0,20.0,123127.0,20.28,20.35,-16.1,-16.22,187692.0,195459.0
-Finance,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Rules-only (actual drivers),25.15,11.39,7030.0,8066.0,80.0,14497.0,327.1,103.74,301.95,92.35,59358.0,63980.0
-Finance,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Rules-only (actual drivers),7.83,8.33,14682.0,18909.0,80.0,38282.0,17.84,17.94,10.01,9.61,176292.0,178213.0
-Finance,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.84,17.87,17.84,17.87,214933.0,214933.0
-Finance,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,63.33,100.0,63.33,100.0,75000.0,75000.0
-Finance,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Rules-only (actual drivers),2.55,2.55,7994.0,8286.0,80.0,10098.0,17.01,17.02,14.46,14.47,313333.0,321328.0
-Finance,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Rules-only (actual drivers),2.55,2.55,1199.0,1243.0,80.0,1515.0,17.01,17.02,14.46,14.47,47000.0,48199.0
-Finance,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.84,17.87,17.84,17.87,100750.0,100750.0
-Finance,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.84,17.87,17.84,17.87,53733.0,53733.0
-Finance,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.84,17.87,17.84,17.87,40300.0,40300.0
-Finance,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.84,17.9,17.84,17.9,76932.0,76932.0
-Finance,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,31.95,31.75,31.95,31.75,28559.0,28559.0
-Finance,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Rules-only (actual drivers),15.55,17.92,3337441.0,4853010.0,100.0,11201777.0,23.5,23.36,7.95,5.44,18625225.0,15287785.0
-Finance,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Rules-only (actual drivers),1.87,1.91,22618.0,25126.0,100.0,43163.0,19.64,20.22,17.77,18.31,1186190.0,1201927.0
-Finance,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Rules-only (actual drivers),14.61,16.77,3321704.0,4843223.0,80.0,11190393.0,23.1,22.98,8.49,6.21,19811415.0,16489711.0
-Finance,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Full pipeline (forecast drivers),14.41,17.03,2232821.0,3454592.0,40.0,8080989.0,23.59,23.44,9.18,6.41,13108798.0,10875977.0
-Finance,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Full pipeline (forecast drivers),14.41,17.03,401908.0,621827.0,40.0,1454578.0,23.59,23.44,9.18,6.41,2359584.0,1957676.0
-Finance,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Full pipeline (forecast drivers),14.41,17.03,178626.0,276367.0,40.0,646479.0,23.59,23.44,9.18,6.41,1048704.0,870078.0
-Finance,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Full pipeline (forecast drivers),14.41,17.03,301431.0,466370.0,40.0,1090933.0,23.59,23.44,9.18,6.41,1769688.0,1468257.0
-Finance,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Full pipeline (forecast drivers),6.05,6.06,3851.0,4178.0,20.0,6583.0,17.01,17.13,10.96,11.07,63562.0,61185.0
-Finance,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Full pipeline (forecast drivers),7.63,7.72,6735.0,7136.0,20.0,11267.0,17.84,17.93,10.21,10.21,87198.0,81853.0
-Finance,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Full pipeline (forecast drivers),30.96,34.91,65530.0,102032.0,0.0,239653.0,20.28,20.35,-10.68,-14.56,187692.0,122162.0
-Finance,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Full pipeline (forecast drivers),196.88,68.7,42421.0,51900.0,40.0,82781.0,327.1,103.74,130.22,35.04,59358.0,43312.0
-Finance,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Full pipeline (forecast drivers),7.9,8.3,14626.0,18709.0,40.0,38317.0,17.84,17.94,9.94,9.64,176292.0,178145.0
-Finance,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Full pipeline (forecast drivers),2.08,2.04,4393.0,5572.0,20.0,11117.0,17.84,17.87,15.76,15.83,214933.0,218274.0
-Finance,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Full pipeline (forecast drivers),45.45,68.57,51424.0,63389.0,40.0,100684.0,63.33,100.0,17.88,31.43,75000.0,50771.0
-Finance,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Full pipeline (forecast drivers),4.18,4.15,12989.0,14063.0,20.0,23582.0,17.01,17.02,12.83,12.87,313333.0,326323.0
-Finance,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Full pipeline (forecast drivers),4.18,4.15,1948.0,2109.0,20.0,3537.0,17.01,17.02,12.83,12.87,47000.0,48948.0
-Finance,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Full pipeline (forecast drivers),2.08,2.04,2059.0,2612.0,20.0,5211.0,17.84,17.87,15.76,15.83,100750.0,102316.0
-Finance,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Full pipeline (forecast drivers),2.08,2.04,1098.0,1393.0,20.0,2779.0,17.84,17.87,15.76,15.83,53733.0,54569.0
-Finance,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Full pipeline (forecast drivers),2.08,2.04,824.0,1045.0,20.0,2084.0,17.84,17.87,15.76,15.83,40300.0,40926.0
-Finance,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Full pipeline (forecast drivers),5.33,5.12,3940.0,4196.0,100.0,6418.0,17.84,17.9,12.51,12.78,76932.0,79791.0
-Finance,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Full pipeline (forecast drivers),31.95,31.75,9066.0,10636.0,20.0,15109.0,31.95,31.75,0.0,0.0,28559.0,26098.0
-Finance,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Full pipeline (forecast drivers),14.5,17.12,3188038.0,4926134.0,40.0,11519790.0,23.5,23.36,9.0,6.24,18625225.0,15437188.0
-Finance,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Full pipeline (forecast drivers),9.41,9.14,108403.0,122457.0,60.0,208243.0,19.64,20.22,10.23,11.08,1186190.0,1169474.0
-Finance,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Full pipeline (forecast drivers),13.77,16.18,3204753.0,4960629.0,40.0,11572000.0,23.1,22.98,9.33,6.8,19811415.0,16606662.0
-HR,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Rules-only (actual drivers),13.24,16.15,946465.0,1553157.0,100.0,3687464.0,22.32,24.58,9.08,8.43,5861493.0,4915028.0
-HR,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Rules-only (actual drivers),13.24,16.15,170364.0,279568.0,100.0,663744.0,22.32,24.58,9.08,8.43,1055069.0,884705.0
-HR,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Rules-only (actual drivers),13.24,16.15,75717.0,124253.0,100.0,294997.0,22.32,24.58,9.08,8.43,468919.0,393202.0
-HR,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Rules-only (actual drivers),13.24,16.15,127773.0,209676.0,100.0,497808.0,22.32,24.58,9.08,8.43,791302.0,663529.0
-HR,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Rules-only (actual drivers),5.75,5.8,2508.0,2681.0,60.0,3978.0,4.95,5.06,-0.8,-0.74,43238.0,41105.0
-HR,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Rules-only (actual drivers),7.37,7.52,4100.0,4692.0,80.0,7200.0,5.11,5.17,-2.26,-2.35,54500.0,50400.0
-HR,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Rules-only (actual drivers),55.65,59.77,55161.0,75667.0,40.0,148842.0,24.12,27.28,-31.53,-32.49,92289.0,39600.0
-HR,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Rules-only (actual drivers),53.64,14.03,5142.0,7470.0,100.0,16676.0,629.42,89.3,,75.27,36643.0,31502.0
-HR,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Rules-only (actual drivers),10.58,11.01,12110.0,15187.0,40.0,28171.0,5.11,5.04,-5.47,-5.97,110000.0,112719.0
-HR,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,5.11,5.16,5.11,5.16,134400.0,134400.0
-HR,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,50.0,100.0,50.0,100.0,37500.0,37500.0
-HR,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Rules-only (actual drivers),2.83,2.76,5891.0,7199.0,40.0,11224.0,4.95,5.0,2.12,2.24,213333.0,219224.0
-HR,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Rules-only (actual drivers),2.83,2.76,884.0,1080.0,40.0,1684.0,4.95,5.0,2.12,2.24,32000.0,32884.0
-HR,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,5.11,5.16,5.11,5.16,63000.0,63000.0
-HR,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,5.11,5.16,5.11,5.16,33600.0,33600.0
-HR,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,5.11,5.16,5.11,5.16,25200.0,25200.0
-HR,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,12.27,13.48,12.27,13.48,48126.0,48126.0
-HR,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,196.48,75.39,196.48,75.39,15520.0,15520.0
-HR,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Rules-only (actual drivers),13.59,16.48,1379240.0,2236600.0,100.0,5300259.0,22.04,24.28,8.45,7.8,8366809.0,6987569.0
-HR,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Rules-only (actual drivers),1.56,1.56,11679.0,15832.0,100.0,27374.0,11.23,11.04,9.67,9.48,749323.0,753675.0
-HR,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Rules-only (actual drivers),12.51,15.08,1374887.0,2236261.0,80.0,5300541.0,20.02,22.18,7.51,7.1,9116132.0,7741245.0
-HR,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Full pipeline (forecast drivers),14.43,17.59,1030794.0,1672464.0,40.0,3950952.0,22.32,24.58,7.89,6.99,5861493.0,4830699.0
-HR,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Full pipeline (forecast drivers),14.43,17.59,185543.0,301044.0,40.0,711171.0,22.32,24.58,7.89,6.99,1055069.0,869526.0
-HR,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Full pipeline (forecast drivers),14.43,17.59,82464.0,133797.0,40.0,316076.0,22.32,24.58,7.89,6.99,468919.0,386456.0
-HR,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Full pipeline (forecast drivers),14.43,17.59,139157.0,225783.0,40.0,533379.0,22.32,24.58,7.89,6.99,791302.0,652144.0
-HR,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Full pipeline (forecast drivers),7.38,7.46,3225.0,3358.0,40.0,4562.0,4.95,5.06,-2.43,-2.4,43238.0,40537.0
-HR,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Full pipeline (forecast drivers),8.97,9.14,4979.0,5392.0,40.0,6973.0,5.11,5.17,-3.86,-3.97,54500.0,49704.0
-HR,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Full pipeline (forecast drivers),45.79,45.47,41961.0,54728.0,40.0,90817.0,24.12,27.28,-21.67,-18.19,92289.0,52801.0
-HR,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Full pipeline (forecast drivers),329.34,65.76,24095.0,30738.0,80.0,45820.0,629.42,89.3,,23.54,36643.0,28087.0
-HR,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Full pipeline (forecast drivers),5.91,6.15,6764.0,8248.0,60.0,16490.0,5.11,5.04,-0.8,-1.11,110000.0,110614.0
-HR,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Full pipeline (forecast drivers),2.71,2.72,3656.0,3874.0,20.0,4934.0,5.11,5.16,2.4,2.44,134400.0,132544.0
-HR,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Full pipeline (forecast drivers),37.15,69.16,25935.0,32914.0,80.0,55306.0,50.0,100.0,12.85,30.84,37500.0,33435.0
-HR,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Full pipeline (forecast drivers),3.59,3.53,7534.0,8684.0,40.0,15200.0,4.95,5.0,1.36,1.47,213333.0,216197.0
-HR,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Full pipeline (forecast drivers),3.59,3.53,1130.0,1303.0,40.0,2280.0,4.95,5.0,1.36,1.47,32000.0,32429.0
-HR,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Full pipeline (forecast drivers),2.71,2.72,1714.0,1816.0,20.0,2313.0,5.11,5.16,2.4,2.44,63000.0,62130.0
-HR,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Full pipeline (forecast drivers),2.71,2.72,914.0,968.0,20.0,1234.0,5.11,5.16,2.4,2.44,33600.0,33136.0
-HR,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Full pipeline (forecast drivers),2.71,2.72,685.0,726.0,20.0,925.0,5.11,5.16,2.4,2.44,25200.0,24852.0
-HR,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Full pipeline (forecast drivers),12.27,13.48,6485.0,9168.0,100.0,18414.0,12.27,13.48,0.0,0.0,48126.0,45616.0
-HR,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Full pipeline (forecast drivers),196.48,75.39,11700.0,14807.0,0.0,24338.0,196.48,75.39,0.0,0.0,15520.0,24251.0
-HR,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Full pipeline (forecast drivers),14.67,17.75,1484943.0,2374005.0,40.0,5591484.0,22.04,24.28,7.37,6.53,8366809.0,6881866.0
-HR,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Full pipeline (forecast drivers),6.44,6.5,48682.0,58870.0,100.0,97811.0,11.23,11.04,4.79,4.54,749323.0,743292.0
-HR,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Full pipeline (forecast drivers),13.54,16.36,1490974.0,2408966.0,80.0,5681057.0,20.02,22.18,6.48,5.82,9116132.0,7625158.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Rules-only (actual drivers),18.89,20.92,3058981.0,4075566.0,80.0,9058803.0,23.97,25.66,5.08,4.74,14625079.0,11566098.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Rules-only (actual drivers),18.89,20.92,550617.0,733602.0,80.0,1630585.0,23.97,25.66,5.08,4.74,2632514.0,2081898.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Rules-only (actual drivers),18.89,20.92,244718.0,326045.0,80.0,724704.0,23.97,25.66,5.08,4.74,1170006.0,925288.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Rules-only (actual drivers),18.89,20.92,412962.0,550201.0,80.0,1222938.0,23.97,25.66,5.08,4.74,1974386.0,1561423.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Rules-only (actual drivers),6.12,6.24,5835.0,6625.0,80.0,11754.0,7.5,7.5,1.38,1.26,93575.0,88471.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Rules-only (actual drivers),7.37,7.55,8252.0,9491.0,80.0,15120.0,7.72,7.7,0.35,0.15,109252.0,101000.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Rules-only (actual drivers),43.02,40.09,84629.0,107534.0,20.0,223425.0,19.19,20.33,-23.83,-19.76,211089.0,251318.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Rules-only (actual drivers),6.06,5.4,4995.0,7100.0,100.0,16051.0,58.14,51.39,52.08,45.99,92593.0,90112.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Rules-only (actual drivers),9.96,10.33,22831.0,25600.0,60.0,47150.0,7.72,7.7,-2.24,-2.63,220917.0,228031.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,7.72,7.72,7.72,7.72,269333.0,269333.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,54.17,46.67,54.17,46.67,112500.0,112500.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Rules-only (actual drivers),2.29,2.28,10512.0,10759.0,100.0,12517.0,7.5,7.51,5.21,5.23,461333.0,471845.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Rules-only (actual drivers),2.29,2.28,1577.0,1614.0,100.0,1878.0,7.5,7.51,5.21,5.23,69200.0,70777.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,7.72,7.72,7.72,7.72,126250.0,126250.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,7.72,7.72,7.72,7.72,67333.0,67333.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,7.72,7.72,7.72,7.72,50500.0,50500.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,14.71,15.37,14.71,15.37,95827.0,95827.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,15.26,16.22,15.26,16.22,44760.0,44760.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Rules-only (actual drivers),18.38,20.37,4240405.0,5672787.0,80.0,12627776.0,23.75,25.41,5.37,5.04,20815901.0,16575496.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Rules-only (actual drivers),1.89,1.9,30582.0,32057.0,100.0,41581.0,10.1,10.15,8.21,8.25,1610546.0,1627268.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Rules-only (actual drivers),17.07,18.83,4223683.0,5661473.0,80.0,12614736.0,22.69,24.19,5.62,5.36,22426448.0,18202764.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Full pipeline (forecast drivers),16.91,19.03,2783411.0,3899489.0,60.0,8854683.0,23.97,25.66,7.06,6.63,14625079.0,11841668.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Full pipeline (forecast drivers),16.91,19.03,501014.0,701908.0,60.0,1593843.0,23.97,25.66,7.06,6.63,2632514.0,2131500.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Full pipeline (forecast drivers),16.91,19.03,222673.0,311959.0,60.0,708375.0,23.97,25.66,7.06,6.63,1170006.0,947333.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Full pipeline (forecast drivers),16.91,19.03,375761.0,526431.0,60.0,1195382.0,23.97,25.66,7.06,6.63,1974386.0,1598625.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Full pipeline (forecast drivers),4.7,4.76,4453.0,5293.0,80.0,10094.0,7.5,7.5,2.8,2.74,93575.0,90344.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Full pipeline (forecast drivers),5.99,6.11,6674.0,7698.0,80.0,13225.0,7.72,7.7,1.73,1.59,109252.0,103138.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Full pipeline (forecast drivers),35.08,36.17,76360.0,82507.0,40.0,144143.0,19.19,20.33,-15.89,-15.84,211089.0,182777.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Full pipeline (forecast drivers),53.48,50.29,46566.0,50696.0,60.0,69250.0,58.14,51.39,4.66,1.1,92593.0,87292.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Full pipeline (forecast drivers),10.69,10.86,23990.0,25282.0,60.0,37518.0,7.72,7.7,-2.97,-3.16,220917.0,232400.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Full pipeline (forecast drivers),2.32,2.32,6250.0,6858.0,60.0,10163.0,7.72,7.72,5.4,5.4,269333.0,275036.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Full pipeline (forecast drivers),55.37,51.28,57692.0,63717.0,60.0,91447.0,54.17,46.67,-1.2,-4.61,112500.0,108980.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Full pipeline (forecast drivers),4.46,4.44,20502.0,21541.0,60.0,29503.0,7.5,7.51,3.04,3.07,461333.0,481835.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Full pipeline (forecast drivers),4.46,4.44,3075.0,3231.0,60.0,4425.0,7.5,7.51,3.04,3.07,69200.0,72275.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Full pipeline (forecast drivers),2.32,2.32,2930.0,3215.0,60.0,4764.0,7.72,7.72,5.4,5.4,126250.0,128923.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Full pipeline (forecast drivers),2.32,2.32,1563.0,1714.0,60.0,2541.0,7.72,7.72,5.4,5.4,67333.0,68759.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Full pipeline (forecast drivers),2.32,2.32,1172.0,1286.0,60.0,1906.0,7.72,7.72,5.4,5.4,50500.0,51569.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Full pipeline (forecast drivers),14.71,15.37,14726.0,18631.0,40.0,35700.0,14.71,15.37,0.0,0.0,95827.0,89266.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Full pipeline (forecast drivers),15.26,16.22,7260.0,10975.0,60.0,23384.0,15.26,16.22,0.0,0.0,44760.0,38985.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Full pipeline (forecast drivers),16.83,18.83,3920515.0,5409533.0,80.0,12202792.0,23.75,25.41,6.92,6.58,20815901.0,16895386.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Full pipeline (forecast drivers),6.56,6.55,105458.0,125655.0,40.0,217543.0,10.1,10.15,3.54,3.6,1610546.0,1635321.0
-Sales & Marketing,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Full pipeline (forecast drivers),15.57,17.37,3895741.0,5427072.0,80.0,12293090.0,22.69,24.19,7.12,6.82,22426448.0,18530707.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Rules-only (actual drivers),18.88,21.77,2782449.0,3952429.0,60.0,9040687.0,28.22,30.63,9.34,8.86,12782684.0,10000235.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Rules-only (actual drivers),18.88,21.77,500841.0,711437.0,60.0,1627324.0,28.22,30.63,9.34,8.86,2300883.0,1800042.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Rules-only (actual drivers),18.88,21.77,222596.0,316194.0,60.0,723255.0,28.22,30.63,9.34,8.86,1022615.0,800019.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Rules-only (actual drivers),18.88,21.77,375631.0,533578.0,60.0,1220493.0,28.22,30.63,9.34,8.86,1725662.0,1350032.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Rules-only (actual drivers),4.71,4.8,2425.0,2886.0,80.0,5551.0,15.51,15.53,10.8,10.73,50562.0,48612.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Rules-only (actual drivers),7.37,7.55,5764.0,6633.0,60.0,10440.0,17.0,17.06,9.63,9.51,76364.0,70600.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Rules-only (actual drivers),26.97,28.16,52167.0,57456.0,0.0,96546.0,27.11,28.43,0.14,0.27,185276.0,133109.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Rules-only (actual drivers),23.21,6.28,3714.0,4960.0,100.0,9376.0,23133.96,46.88,,40.6,59155.0,59695.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Rules-only (actual drivers),9.7,10.01,15453.0,17030.0,80.0,31455.0,17.0,17.09,7.3,7.08,154333.0,159302.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.0,17.0,17.0,17.0,188267.0,188267.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,26.67,50.0,26.67,50.0,75000.0,75000.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Rules-only (actual drivers),3.99,3.98,9932.0,10148.0,40.0,11999.0,15.51,15.51,11.52,11.53,249333.0,259265.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Rules-only (actual drivers),3.99,3.98,1490.0,1522.0,40.0,1800.0,15.51,15.51,11.52,11.53,37400.0,38890.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.0,17.0,17.0,17.0,88250.0,88250.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.0,17.0,17.0,17.0,47067.0,47067.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,17.0,17.0,17.0,17.0,35300.0,35300.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,20.46,21.49,20.46,21.49,67347.0,67347.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,33.14,31.93,33.14,31.93,24816.0,24816.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Rules-only (actual drivers),18.89,21.72,3941397.0,5569312.0,60.0,12713928.0,28.11,30.48,9.22,8.76,18144047.0,14202650.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Rules-only (actual drivers),2.42,2.39,24553.0,25422.0,100.0,31532.0,15.53,16.11,13.11,13.72,1026268.0,1043197.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Rules-only (actual drivers),17.85,20.47,3924468.0,5559208.0,60.0,12701176.0,27.12,29.35,9.27,8.88,19170315.0,15245847.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Direct Salary Cost (INR),Full pipeline (forecast drivers),22.91,25.74,3290765.0,4374439.0,60.0,9725096.0,28.22,30.63,5.31,4.89,12782684.0,9491919.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Benefits Cost (INR),Full pipeline (forecast drivers),22.91,25.74,592338.0,787399.0,60.0,1750517.0,28.22,30.63,5.31,4.89,2300883.0,1708545.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Variable Pay Bonus (INR),Full pipeline (forecast drivers),22.91,25.74,263261.0,349955.0,60.0,778008.0,28.22,30.63,5.31,4.89,1022615.0,759354.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Payroll Tax (INR),Full pipeline (forecast drivers),22.91,25.74,444253.0,590549.0,60.0,1312888.0,28.22,30.63,5.31,4.89,1725662.0,1281409.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Travel Allowance (INR),Full pipeline (forecast drivers),8.08,8.25,4171.0,4682.0,40.0,7045.0,15.51,15.53,7.43,7.28,50562.0,46391.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Meal Allowance (INR),Full pipeline (forecast drivers),11.59,11.77,8989.0,9588.0,20.0,12609.0,17.0,17.06,5.41,5.29,76364.0,67375.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Overtime Cost (INR),Full pipeline (forecast drivers),47.24,46.71,86540.0,110124.0,40.0,193008.0,27.11,28.43,-20.13,-18.28,185276.0,110925.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Recruitment Cost (INR),Full pipeline (forecast drivers),54.99,49.68,29395.0,40622.0,60.0,69336.0,23133.96,46.88,,-2.8,59155.0,31440.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Training & Dev Cost (INR),Full pipeline (forecast drivers),5.77,6.35,9807.0,15470.0,40.0,36349.0,17.0,17.09,11.23,10.74,154333.0,152024.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),IT License Cost (INR),Full pipeline (forecast drivers),4.56,4.57,8601.0,8901.0,60.0,12513.0,17.0,17.0,12.44,12.43,188267.0,179666.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),IT Equipment Cost (INR),Full pipeline (forecast drivers),41.36,47.37,35529.0,52376.0,60.0,90000.0,26.67,50.0,-14.69,2.63,75000.0,39501.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Rent & Facilities Cost (INR),Full pipeline (forecast drivers),0.75,0.77,1913.0,3646.0,20.0,8826.0,15.51,15.51,14.76,14.74,249333.0,247420.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Utilities Cost (INR),Full pipeline (forecast drivers),0.75,0.77,287.0,547.0,20.0,1324.0,15.51,15.51,14.76,14.74,37400.0,37113.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Admin Overhead (INR),Full pipeline (forecast drivers),4.56,4.57,4032.0,4172.0,60.0,5866.0,17.0,17.0,12.44,12.43,88250.0,84218.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),HR Payroll Admin (INR),Full pipeline (forecast drivers),4.56,4.57,2150.0,2225.0,60.0,3128.0,17.0,17.0,12.44,12.43,47067.0,44916.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Learning Platform Cost (INR),Full pipeline (forecast drivers),4.56,4.57,1613.0,1669.0,60.0,2346.0,17.0,17.0,12.44,12.43,35300.0,33687.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Employee Engagement Cost (INR),Full pipeline (forecast drivers),20.46,21.49,14475.0,16734.0,60.0,32860.0,20.46,21.49,0.0,0.0,67347.0,55932.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Other Indirect Cost (INR),Full pipeline (forecast drivers),58.23,47.37,11754.0,14016.0,60.0,24749.0,33.14,31.93,-25.09,-15.44,24816.0,35755.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Total Direct Cost (INR),Full pipeline (forecast drivers),23.08,25.78,4678129.0,6136522.0,60.0,13543492.0,28.11,30.48,5.03,4.7,18144047.0,13465918.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Total Indirect Cost (INR),Full pipeline (forecast drivers),7.91,8.43,86514.0,114726.0,60.0,202188.0,15.53,16.11,7.62,7.68,1026268.0,941672.0
-Risk & Compliance,Full Hold-out (Oct-24→Mar-25),Total Actual Cost (INR),Full pipeline (forecast drivers),22.36,24.84,4762725.0,6195128.0,60.0,13608562.0,27.12,29.35,4.76,4.51,19170315.0,14407590.0
+Technology,Validation 2026 (Train 2022-2025),Direct Salary Cost (INR),Rules-only (actual drivers),0.87,0.92,143823.0,498218.0,81.8,1725879.0,15.9,16.12,15.03,15.2,15684591.0,15540768.0
+Technology,Validation 2026 (Train 2022-2025),Benefits Cost (INR),Rules-only (actual drivers),0.82,0.82,12689.0,12697.0,100.0,13266.0,16.24,16.36,15.42,15.54,1554077.0,1541388.0
+Technology,Validation 2026 (Train 2022-2025),Variable Pay Bonus (INR),Rules-only (actual drivers),61.89,111.86,976239.0,1495597.0,18.2,4669276.0,33.04,29.63,-28.85,-82.23,872742.0,564030.0
+Technology,Validation 2026 (Train 2022-2025),Payroll Tax (INR),Rules-only (actual drivers),0.82,0.82,6344.0,6348.0,100.0,6633.0,16.24,16.36,15.42,15.54,777038.0,770694.0
+Technology,Validation 2026 (Train 2022-2025),Travel Allowance (INR),Rules-only (actual drivers),12.95,13.29,10476.0,11086.0,90.9,16421.0,11.83,11.96,-1.12,-1.33,78800.0,78897.0
+Technology,Validation 2026 (Train 2022-2025),Meal Allowance (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,11.83,11.93,11.83,11.93,47350.0,47350.0
+Technology,Validation 2026 (Train 2022-2025),Overtime Cost (INR),Rules-only (actual drivers),100.0,100.0,350018.0,729310.0,36.4,2335487.0,17.38,13.06,-82.62,-86.94,350018.0,0.0
+Technology,Validation 2026 (Train 2022-2025),Recruitment Cost (INR),Rules-only (actual drivers),511.3,511.3,39153.0,97804.0,100.0,281900.0,2130.5,3845.3,,3334.0,7657.0,46810.0
+Technology,Validation 2026 (Train 2022-2025),Training & Dev Cost (INR),Rules-only (actual drivers),56.21,42.47,25874.0,28541.0,45.5,44115.0,11.83,11.24,-44.38,-31.23,60917.0,68134.0
+Technology,Validation 2026 (Train 2022-2025),IT License Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,11.83,11.93,11.83,11.93,176773.0,176773.0
+Technology,Validation 2026 (Train 2022-2025),IT Equipment Cost (INR),Rules-only (actual drivers),108.39,108.39,15807.0,39487.0,100.0,113813.0,557.41,1160.09,,1051.7,14583.0,30391.0
+Technology,Validation 2026 (Train 2022-2025),Rent & Facilities Cost (INR),Rules-only (actual drivers),11.23,42.56,265637.0,870788.0,81.8,3016001.0,18.32,47.73,7.09,5.17,624146.0,360236.0
+Technology,Validation 2026 (Train 2022-2025),Utilities Cost (INR),Rules-only (actual drivers),12.05,88.23,104495.0,360056.0,81.8,1247269.0,18.97,89.29,6.92,1.06,118437.0,14009.0
+Technology,Validation 2026 (Train 2022-2025),Admin Overhead (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,11.83,11.93,11.83,11.93,31567.0,31567.0
+Technology,Validation 2026 (Train 2022-2025),HR Payroll Admin (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,11.83,11.93,11.83,11.93,43404.0,43404.0
+Technology,Validation 2026 (Train 2022-2025),Learning Platform Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,11.83,11.93,11.83,11.93,27621.0,27621.0
+Technology,Validation 2026 (Train 2022-2025),Employee Engagement Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,339.74,391.12,339.74,391.12,75143.0,75143.0
+Technology,Validation 2026 (Train 2022-2025),Other Indirect Cost (INR),Rules-only (actual drivers),0.0,0.0,0.0,0.0,100.0,0.0,20.58,32.85,20.58,32.85,1057218.0,1057218.0
+Technology,Validation 2026 (Train 2022-2025),Total Direct Cost (INR),Rules-only (actual drivers),6.52,7.29,1413899.0,2371700.0,27.3,7137969.0,15.02,14.98,8.5,7.69,19402637.0,18543126.0
+Technology,Validation 2026 (Train 2022-2025),Total Indirect Cost (INR),Rules-only (actual drivers),11.22,19.7,439312.0,1231899.0,100.0,4229625.0,43.03,50.1,31.81,30.4,2229809.0,1931305.0
+Technology,Validation 2026 (Train 2022-2025),Total Actual Cost (INR),Rules-only (actual drivers),6.97,7.77,1680516.0,2601390.0,63.6,7158746.0,16.81,17.29,9.84,9.52,21632446.0,20474431.0
+Technology,Validation 2026 (Train 2022-2025),Direct Salary Cost (INR),Full pipeline (forecast drivers),6.48,6.38,1000674.0,1390463.0,18.2,2586790.0,15.9,16.12,9.42,9.74,15684591.0,16439348.0
+Technology,Validation 2026 (Train 2022-2025),Benefits Cost (INR),Full pipeline (forecast drivers),5.3,5.22,81061.0,124269.0,18.2,244281.0,16.24,16.36,10.94,11.14,1554077.0,1630512.0
+Technology,Validation 2026 (Train 2022-2025),Variable Pay Bonus (INR),Full pipeline (forecast drivers),59.88,111.61,974048.0,1472459.0,36.4,4579508.0,33.04,29.63,-26.84,-81.98,872742.0,596643.0
+Technology,Validation 2026 (Train 2022-2025),Payroll Tax (INR),Full pipeline (forecast drivers),5.3,5.22,40530.0,62134.0,18.2,122140.0,16.24,16.36,10.94,11.14,777038.0,815256.0
+Technology,Validation 2026 (Train 2022-2025),Travel Allowance (INR),Full pipeline (forecast drivers),14.25,13.76,10840.0,12062.0,9.1,20636.0,11.83,11.96,-2.42,-1.8,78800.0,84036.0
+Technology,Validation 2026 (Train 2022-2025),Meal Allowance (INR),Full pipeline (forecast drivers),6.75,6.51,3084.0,4319.0,9.1,8226.0,11.83,11.93,5.08,5.42,47350.0,50434.0
+Technology,Validation 2026 (Train 2022-2025),Overtime Cost (INR),Full pipeline (forecast drivers),100.0,100.0,350018.0,729310.0,36.4,2335487.0,17.38,13.06,-82.62,-86.94,350018.0,0.0
+Technology,Validation 2026 (Train 2022-2025),Recruitment Cost (INR),Full pipeline (forecast drivers),1123.95,1807.94,138443.0,240749.0,27.3,687574.0,2130.5,3845.3,,2037.36,7657.0,146100.0
+Technology,Validation 2026 (Train 2022-2025),Training & Dev Cost (INR),Full pipeline (forecast drivers),59.02,42.58,25940.0,29645.0,45.5,42956.0,11.83,11.24,-47.19,-31.34,60917.0,72572.0
+Technology,Validation 2026 (Train 2022-2025),IT License Cost (INR),Full pipeline (forecast drivers),6.75,6.51,11515.0,16123.0,9.1,30712.0,11.83,11.93,5.08,5.42,176773.0,188288.0
+Technology,Validation 2026 (Train 2022-2025),IT Equipment Cost (INR),Full pipeline (forecast drivers),317.25,550.42,80270.0,141480.0,27.3,400258.0,557.41,1160.09,,609.67,14583.0,94853.0
+Technology,Validation 2026 (Train 2022-2025),Rent & Facilities Cost (INR),Full pipeline (forecast drivers),13.29,43.68,272655.0,870439.0,18.2,3013958.0,18.32,47.73,5.03,4.05,624146.0,383701.0
+Technology,Validation 2026 (Train 2022-2025),Utilities Cost (INR),Full pipeline (forecast drivers),14.11,88.46,104768.0,360034.0,18.2,1247190.0,18.97,89.29,4.86,0.83,118437.0,14922.0
+Technology,Validation 2026 (Train 2022-2025),Admin Overhead (INR),Full pipeline (forecast drivers),6.75,6.51,2056.0,2879.0,9.1,5484.0,11.83,11.93,5.08,5.42,31567.0,33623.0
+Technology,Validation 2026 (Train 2022-2025),HR Payroll Admin (INR),Full pipeline (forecast drivers),6.75,6.51,2827.0,3959.0,9.1,7541.0,11.83,11.93,5.08,5.42,43404.0,46231.0
+Technology,Validation 2026 (Train 2022-2025),Learning Platform Cost (INR),Full pipeline (forecast drivers),6.75,6.51,1799.0,2519.0,9.1,4799.0,11.83,11.93,5.08,5.42,27621.0,29420.0
+Technology,Validation 2026 (Train 2022-2025),Employee Engagement Cost (INR),Full pipeline (forecast drivers),339.74,391.12,293899.0,988406.0,81.8,3423608.0,339.74,391.12,0.0,0.0,75143.0,361905.0
+Technology,Validation 2026 (Train 2022-2025),Other Indirect Cost (INR),Full pipeline (forecast drivers),20.58,32.85,347347.0,780691.0,27.3,2639375.0,20.58,32.85,0.0,0.0,1057218.0,709870.0
+Technology,Validation 2026 (Train 2022-2025),Total Direct Cost (INR),Full pipeline (forecast drivers),7.88,8.14,1579611.0,1989068.0,36.4,4185781.0,15.02,14.98,7.14,6.84,19402637.0,19616230.0
+Technology,Validation 2026 (Train 2022-2025),Total Indirect Cost (INR),Full pipeline (forecast drivers),45.44,50.94,1135778.0,1833365.0,54.5,4404267.0,43.03,50.1,-2.41,-0.84,2229809.0,2081485.0
+Technology,Validation 2026 (Train 2022-2025),Total Actual Cost (INR),Full pipeline (forecast drivers),11.16,11.38,2462589.0,3139833.0,27.3,6861517.0,16.81,17.29,5.65,5.91,21632446.0,21697715.0

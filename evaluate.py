@@ -10,9 +10,8 @@ Tests two things:
 
 Walk-forward rounds
 -------------------
-  Round 1: Train Apr-22 → Sep-24  |  Test Oct-24 → Dec-24  (3 months)
-  Round 2: Train Apr-22 → Dec-24  |  Test Jan-25 → Mar-25  (3 months)
-  Full:    Train Apr-22 → Sep-24  |  Test Oct-24 → Mar-25  (6 months)
+  test25: Train Jan-22 → Dec-24  |  Test Jan-25 → Dec-25
+  val26:  Train Jan-22 → Dec-25  |  Validate Jan-26 → Dec-26
 
 Metrics reported per series per dept
 -------------------------------------
@@ -26,7 +25,7 @@ Usage
 -----
     python evaluate.py
     python evaluate.py --dept Technology
-    python evaluate.py --dept Technology --rounds 1 2 full --output report.csv
+    python evaluate.py --dept Technology --rounds test25 val26 --output report.csv
 """
 
 from __future__ import annotations
@@ -46,12 +45,18 @@ import pandas as pd
 warnings.filterwarnings("ignore")
 
 BASE_DIR   = Path(__file__).parent
-DATA_PATH  = BASE_DIR / "data" / "raw" / "workforce_cost_model_v4.xlsx"
 MODELS_DIR = BASE_DIR / "models"
+
+
+def _default_data_path(base_dir: Path) -> Path:
+    samples = sorted(base_dir.glob("cost_forecast_sample_data*.xlsx"))
+    if samples:
+        return samples[0]
+    return base_dir / "data" / "raw" / "workforce_cost_model_v4.xlsx"
 
 sys.path.insert(0, str(BASE_DIR))
 from src.data_loader    import load_all, DEPARTMENTS
-from src.model_trainer  import SERIES_MAP, fit_best_sarima, learn_series_strategy
+from src.model_trainer  import fit_best_sarima, learn_series_strategy, _resolve_series_map
 from src.cost_rules     import learn_rates, compute_costs
 from src.forecaster     import forecast_dept
 
@@ -179,7 +184,8 @@ def validate_sarima_series(
     test  = df.loc[test_start:test_end]
     results = {}
 
-    for key, col in SERIES_MAP.items():
+    active_map = _resolve_series_map(df)
+    for key, col in active_map.items():
         if col not in df.columns:
             continue
         tr = train[col].dropna().astype(float)
@@ -222,7 +228,8 @@ def _fit_models_for_window(train: pd.DataFrame) -> tuple[dict[str, Any], dict]:
     Used by full-pipeline backtest to avoid leakage from future months.
     """
     models: dict[str, Any] = {}
-    for key, col in SERIES_MAP.items():
+    active_map = _resolve_series_map(train)
+    for key, col in active_map.items():
         if col not in train.columns:
             continue
         tr = train[col].dropna().astype(float)
@@ -284,6 +291,9 @@ def validate_end_to_end(
         )
         cost["period"] = period
         rules_rows.append(cost)
+
+    if not rules_rows:
+        return results
 
     rules_df = pd.DataFrame(rules_rows).set_index("period")
 
@@ -410,6 +420,20 @@ def month_comparison_table(
             "Pred Indirect":      round(cost["total_indirect_cost"], 0),
         })
 
+    if not rows:
+        return pd.DataFrame(
+            columns=[
+                "Actual HC",
+                "Actual Total (INR)",
+                "Pred Total (INR)",
+                "Diff (INR)",
+                "Diff %",
+                "Actual Direct",
+                "Pred Direct",
+                "Actual Indirect",
+                "Pred Indirect",
+            ]
+        )
     return pd.DataFrame(rows).set_index("Period")
 
 
@@ -447,23 +471,23 @@ def run_evaluation(
     depts_filter: list[str] | None = None,
     rounds: list[str] | None = None,
     output_csv: str | None = None,
+    data_path: Path | None = None,
 ):
     depts_filter = depts_filter or DEPARTMENTS
-    rounds       = rounds or ["1", "2", "full"]
+    rounds       = rounds or ["test25", "val26"]
 
     SPLITS = {
-        "1":    ("2024-09", "2024-10", "2024-12"),
-        "2":    ("2024-12", "2025-01", "2025-03"),
-        "full": ("2024-09", "2024-10", "2025-03"),
+        "test25": ("2024-12", "2025-01", "2025-12"),
+        "val26":  ("2025-12", "2026-01", "2026-12"),
     }
 
     print("\n" + "█"*110)
     print("  WORKFORCE COST FORECASTING — VALIDATION REPORT")
-    print("  Data: Apr-2022 → Mar-2025  |  Holdout windows: Oct-24→Dec-24, Jan-25→Mar-25")
+    print("  Data: Jan-2022 onward  |  Holdout windows: Test-2025, Validation-2026")
     print("█"*110)
 
     all_rows = []
-    data = load_all(DATA_PATH)
+    data = load_all(data_path or _default_data_path(BASE_DIR))
 
     for dept in depts_filter:
         if dept not in data:
@@ -475,12 +499,19 @@ def run_evaluation(
 
         for rnd_key in rounds:
             if rnd_key not in SPLITS:
-                print(f"  [WARN] Unknown round '{rnd_key}'. Valid: 1, 2, full")
+                print(f"  [WARN] Unknown round '{rnd_key}'. Valid: test25, val26")
                 continue
             train_end, test_start, test_end = SPLITS[rnd_key]
-            label = {"1": "Round 1 (Oct-24→Dec-24)",
-                     "2": "Round 2 (Jan-25→Mar-25)",
-                     "full": "Full Hold-out (Oct-24→Mar-25)"}[rnd_key]
+            label = {
+                "test25": "Test 2025 (Train 2022-2024)",
+                "val26": "Validation 2026 (Train 2022-2025)",
+            }[rnd_key]
+            test_window = df.loc[test_start:test_end]
+            if test_window.empty:
+                print(f"\n  ┌── {label} ──────────────────────────────────────────────────────────────────┐")
+                print(f"  [WARN] No rows available in {test_start}→{test_end} for {dept}; skipping this round.")
+                print(f"  └{'─'*108}┘")
+                continue
 
             print(f"\n  ┌── {label} ──────────────────────────────────────────────────────────────────┐")
 
@@ -568,30 +599,31 @@ def run_evaluation(
                     **m
                 })
 
-        # ── Overall summary for this dept (best round = full holdout) ──────
-        if "full" in rounds:
-            train_end, test_start, test_end = SPLITS["full"]
-            e_metrics = validate_end_to_end(df, train_end, test_start, test_end)
-            total_metrics = e_metrics.get("Total Actual Cost (INR)", {})
-            if total_metrics and "error" not in total_metrics:
-                print(f"\n  ★ OVERALL (Full 6-month holdout) — Total Cost:")
-                print(f"    MAPE={total_metrics['MAPE %']:.1f}%   "
-                      f"WMAPE={total_metrics['WMAPE %']:.1f}%   "
-                      f"MAE={_inr(total_metrics['MAE'])}   "
-                      f"RMSE={_inr(total_metrics['RMSE'])}   "
-                      f"DirAcc={total_metrics['DirAcc %']:.0f}%   "
-                      f"MaxErr={_inr(total_metrics['MaxErr'])}")
-            fp_metrics = validate_full_pipeline(df, train_end, test_start, test_end)
-            fp_total = fp_metrics.get("Total Actual Cost (INR)", {})
-            if fp_total and "error" not in fp_total:
-                print(f"    Full pipeline (forecast drivers) → "
-                      f"MAPE={fp_total['MAPE %']:.1f}%   "
-                      f"WMAPE={fp_total['WMAPE %']:.1f}%   "
-                      f"LiftVsNaive={fp_total.get('MAPE Lift vs Naive %pts', np.nan):.1f} pts   "
-                      f"MAE={_inr(fp_total['MAE'])}   "
-                      f"RMSE={_inr(fp_total['RMSE'])}   "
-                      f"DirAcc={fp_total['DirAcc %']:.0f}%   "
-                      f"MaxErr={_inr(fp_total['MaxErr'])}")
+        # ── Overall summary for this dept (validation year) ─────────────────
+        if "val26" in rounds:
+            train_end, test_start, test_end = SPLITS["val26"]
+            if not df.loc[test_start:test_end].empty:
+                e_metrics = validate_end_to_end(df, train_end, test_start, test_end)
+                total_metrics = e_metrics.get("Total Actual Cost (INR)", {})
+                if total_metrics and "error" not in total_metrics:
+                    print(f"\n  ★ OVERALL (Validation 2026) — Total Cost:")
+                    print(f"    MAPE={total_metrics['MAPE %']:.1f}%   "
+                          f"WMAPE={total_metrics['WMAPE %']:.1f}%   "
+                          f"MAE={_inr(total_metrics['MAE'])}   "
+                          f"RMSE={_inr(total_metrics['RMSE'])}   "
+                          f"DirAcc={total_metrics['DirAcc %']:.0f}%   "
+                          f"MaxErr={_inr(total_metrics['MaxErr'])}")
+                fp_metrics = validate_full_pipeline(df, train_end, test_start, test_end)
+                fp_total = fp_metrics.get("Total Actual Cost (INR)", {})
+                if fp_total and "error" not in fp_total:
+                    print(f"    Full pipeline (forecast drivers) → "
+                          f"MAPE={fp_total['MAPE %']:.1f}%   "
+                          f"WMAPE={fp_total['WMAPE %']:.1f}%   "
+                          f"LiftVsNaive={fp_total.get('MAPE Lift vs Naive %pts', np.nan):.1f} pts   "
+                          f"MAE={_inr(fp_total['MAE'])}   "
+                          f"RMSE={_inr(fp_total['RMSE'])}   "
+                          f"DirAcc={fp_total['DirAcc %']:.0f}%   "
+                          f"MaxErr={_inr(fp_total['MaxErr'])}")
 
     # ── Save CSV ───────────────────────────────────────────────────────────
     if output_csv and all_rows:
@@ -613,16 +645,22 @@ if __name__ == "__main__":
         help="One or more department names (default: all 6)",
     )
     parser.add_argument(
-        "--rounds", nargs="+", default=["1", "2", "full"],
-        help="Validation rounds to run: 1  2  full  (default: all)",
+        "--rounds", nargs="+", default=["test25", "val26"],
+        help="Validation rounds to run: test25  val26  (default: both)",
     )
     parser.add_argument(
         "--output", default=None,
         help="Path to save CSV metrics report (optional)",
+    )
+    parser.add_argument(
+        "--data",
+        default=str(_default_data_path(BASE_DIR)),
+        help="Path to source Excel workbook.",
     )
     args = parser.parse_args()
     run_evaluation(
         depts_filter=args.dept,
         rounds=args.rounds,
         output_csv=args.output,
+        data_path=Path(args.data),
     )

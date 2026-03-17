@@ -3,14 +3,15 @@ train.py
 ========
 Run full training pipeline:
   1. Load data
-  2. Train 5 SARIMA models × 6 departments  (30 models)
+  2. Train SARIMA/SARIMAX driver models (core + band-wise HC where available)
   3. Learn per-rate constants from historical data (6 rate files)
-  4. Walk-forward validation (2 rounds × 6 depts)
+  4. Walk-forward validation (Test-2025 and Validation-2026, where available)
   5. Save metrics to models/training_metrics.json
 """
 
 import logging
 import json
+import argparse
 from pathlib import Path
 
 import pandas as pd
@@ -29,13 +30,19 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
 BASE_DIR   = Path(__file__).parent
-DATA_PATH  = BASE_DIR / "data" / "raw" / "workforce_cost_model_v4.xlsx"
 MODELS_DIR = BASE_DIR / "models"
 
 
-def main():
+def _default_data_path(base_dir: Path) -> Path:
+    samples = sorted(base_dir.glob("cost_forecast_sample_data*.xlsx"))
+    if samples:
+        return samples[0]
+    return base_dir / "data" / "raw" / "workforce_cost_model_v4.xlsx"
+
+
+def main(data_path: Path):
     logger.info("Loading data …")
-    depts = load_all(DATA_PATH)
+    depts = load_all(data_path)
 
     all_metrics: dict = {}
 
@@ -78,4 +85,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Train workforce cost forecasting models.")
+    parser.add_argument(
+        "--data",
+        default=str(_default_data_path(BASE_DIR)),
+        help="Path to source Excel workbook.",
+    )
+    args = parser.parse_args()
+    main(Path(args.data))
