@@ -1,0 +1,359 @@
+Sheet,Column,Kind,p,d,q,P,D,Q,m,AIC,Selection_MAPE,Test_MAE,Test_RMSE,Test_MAPE_%
+Technology,Admin Overhead (INR),actual,0,1,0,1,1,0,12,518.88,26.71,9919.7948,26063.4332,26.7065
+Technology,Attrition % (Ann.),driver,0,0,0,1,0,0,12,-122.4,32.17,0.0357,0.0742,
+Technology,Avg Appraisal Rate,driver,0,0,0,1,0,0,12,-420.47,8.52,0.0005,0.0013,
+Technology,Avg Salary (Wtd) (INR),driver,1,1,2,0,1,1,12,383.84,0.76,21101.6994,21401.2628,0.7604
+Technology,Band 1 Count,driver,0,1,0,1,0,0,12,-21.11,0.0,0.0,0.0,0.0
+Technology,Band 1 Sal/FTE (INR),driver,0,1,2,1,1,1,12,373.68,1.39,12004.3682,14122.1334,1.3854
+Technology,Band 2 Count,driver,2,0,0,0,1,1,12,41.07,1.42,0.2714,0.323,1.4195
+Technology,Band 2 Sal/FTE (INR),driver,0,1,2,0,1,1,12,334.83,0.11,1457.4518,1686.0273,0.1069
+Technology,Band 3 Count,driver,1,0,2,0,1,1,12,36.53,2.72,0.625,0.7036,2.7162
+Technology,Band 3 Sal/FTE (INR),driver,0,1,2,1,1,1,12,393.29,0.79,15998.103,17925.2,0.7911
+Technology,Band 4 Count,driver,0,1,1,0,1,1,12,24.75,1.34,0.1667,0.4082,1.3356
+Technology,Band 4 Sal/FTE (INR),driver,0,1,2,1,1,1,12,362.56,0.64,19824.5322,23298.4295,0.6436
+Technology,Band 5 Count,driver,2,1,2,1,0,0,12,-523.12,0.0,0.0,0.0,0.0
+Technology,Band 5 Sal/FTE (INR),driver,2,0,2,1,1,1,12,438.16,0.11,5052.9685,6100.2049,0.1064
+Technology,Band 6 Count,driver,0,0,2,0,1,1,12,69.5,58.66,0.9551,1.224,58.664
+Technology,Band 6 Sal/FTE (INR),driver,2,1,0,1,1,0,12,445.0,0.18,14703.8663,23492.7548,0.1795
+Technology,Billable HC,driver,1,0,0,0,1,1,12,54.09,2.68,1.7451,2.0774,2.6846
+Technology,Bonus/Var Pay (INR),actual,0,1,2,0,1,1,12,620.68,35.56,500136.4135,1443727.8545,
+Technology,Budget: Admin Overhead (INR),budget,0,1,2,0,1,1,12,339.73,4.39,1881.9071,2671.3769,4.391
+Technology,Budget: Bonus (INR),budget,0,1,2,1,1,1,12,567.69,8.66,152727.8106,397040.4766,8.6565
+Technology,Budget: Consultancy (INR),budget,0,1,2,0,1,1,12,535.19,9.1,82056.3497,181161.6659,9.1035
+Technology,Budget: DBTS Charges (INR),budget,0,1,2,0,1,1,12,363.19,4.19,3134.9805,4408.3631,4.1919
+Technology,Budget: Emp Engagement (INR),budget,0,1,2,0,1,1,12,488.2,66.0,25906.4111,36273.858,66.0022
+Technology,Budget: HR Cost (INR),budget,0,1,2,0,1,1,12,353.17,4.28,2518.6246,3553.2193,4.2806
+Technology,Budget: IT Equipment (INR),budget,0,1,2,1,1,1,12,520.05,112.67,81476.8733,153277.0256,112.6737
+Technology,Budget: IT License (INR),budget,2,1,2,0,1,1,12,411.22,4.19,10075.9226,14536.2006,4.1891
+Technology,Budget: Learning Platform (INR),budget,0,1,2,1,1,1,12,358.11,4.71,2008.204,3072.0983,4.7073
+Technology,Budget: Long Leave (INR),budget,0,1,2,0,1,1,12,513.94,61.03,33662.0035,77060.4701,61.032
+Technology,Budget: Mgmt Overhead (INR),budget,0,1,2,0,1,1,12,440.07,5.85,28224.5917,38920.8033,5.8535
+Technology,Budget: Office Rent (INR),budget,2,0,2,0,1,1,12,519.36,12.95,61531.876,68099.5182,12.9522
+Technology,Budget: Overtime (INR),budget,0,1,2,1,1,1,12,534.86,25.62,140009.4039,239721.7294,25.6218
+Technology,Budget: Salary (INR),budget,0,1,2,0,1,1,12,587.64,5.87,1132560.1651,1559273.2434,5.8749
+Technology,Budget: Training & Dev (INR),budget,0,1,2,0,1,1,12,410.57,6.88,7330.8607,10505.4719,6.8843
+Technology,Budget: Utilities (INR),budget,1,1,2,1,1,1,12,362.95,6.19,1088.0752,1200.7283,6.1908
+Technology,CAD/INR Forex Rate,driver,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814
+Technology,Closing HC,driver,1,0,2,1,1,0,12,61.88,2.04,1.387,1.8535,2.043
+Technology,Consultancy Charges (INR),actual,0,1,2,0,1,1,12,597.03,72.38,505108.2079,1193756.1015,72.3833
+Technology,DBTS Charges (INR),actual,0,1,2,0,1,1,12,360.39,4.22,2947.7304,4147.8066,4.2159
+Technology,Emp Engagement Cost (INR),actual,1,1,2,1,1,1,12,614.89,55118.29,52539381.8248,73767639.1285,55118.2876
+Technology,HR Cost (INR),actual,0,1,2,0,1,1,12,350.34,4.31,2368.6618,3345.8725,4.3059
+Technology,IT Equipment Cost (INR),actual,0,1,2,0,1,1,12,593.39,50.92,476831.1459,1086460.023,
+Technology,IT License Cost (INR),actual,2,1,2,0,1,1,12,408.77,4.06,9149.3702,13439.3991,4.0625
+Technology,Learning Platform Cost (INR),actual,0,1,2,0,1,1,12,331.08,4.44,1558.2551,2219.4117,4.4431
+Technology,Long Leave Cost (INR),driver,0,1,1,0,1,1,12,530.1,75.98,46927.2428,60020.9891,
+Technology,Long Leave Count,driver,0,0,1,0,1,1,12,35.34,75.0,0.3382,0.515,
+Technology,Mgmt Overhead (INR),actual,0,1,2,0,1,1,12,437.36,5.85,26366.2048,36366.2068,5.8504
+Technology,Office Rent & Facilities (INR),actual,1,1,2,0,1,1,12,614.86,725.7,2984389.0251,3949553.816,725.7035
+Technology,Opening HC,driver,2,0,1,0,1,1,12,56.81,1.46,0.9934,1.3961,1.4576
+Technology,Original Budget (INR),actual,0,1,2,0,1,1,12,613.71,5.73,1623336.9895,2429496.2868,5.7296
+Technology,Overtime Cost (INR),actual,2,1,2,0,1,1,12,592.8,38.65,275127.8477,675379.1939,
+Technology,Salary Cost (INR),actual,0,1,2,1,1,1,12,612.95,5.92,1058931.8521,1475715.6482,5.9168
+Technology,Talent Pool,driver,1,0,1,0,0,0,12,-7.29,5.81,0.1929,0.2849,5.8139
+Technology,Total Exits,driver,2,0,0,0,1,0,12,6.16,25.0,0.1667,0.4082,
+Technology,Total Hires,driver,0,1,2,0,1,1,12,37.11,22.98,0.3541,0.3934,
+Technology,Training & Dev Cost (INR),actual,0,1,2,1,1,1,12,381.63,8.41,6629.9143,8427.4499,8.4064
+Technology,Utilities Cost (INR),actual,0,1,2,0,1,1,12,565.21,2168.38,343152.9912,670521.5593,2168.3835
+Technology,WFH Count,driver,2,0,2,1,1,1,12,106.72,5.08,1.6774,2.4324,5.0811
+Technology,WFO Count,driver,0,1,2,0,1,1,12,102.94,5.61,1.9229,3.3451,5.6108
+Operations,Admin Overhead (INR),actual,0,1,2,1,1,1,12,354.39,3.31,1899.9444,2127.4346,3.307
+Operations,Attrition % (Ann.),driver,0,0,0,1,0,0,12,-372.59,2.56,0.0014,0.0023,
+Operations,Avg Appraisal Rate,driver,0,0,0,1,0,0,12,-441.71,3.97,0.0001,0.0004,
+Operations,Avg Salary (Wtd) (INR),driver,0,1,2,1,1,1,12,361.19,3.45,41849.0252,46914.829,3.4537
+Operations,Band 1 Count,driver,0,1,2,0,1,1,12,35.44,0.87,0.3132,0.4232,0.8692
+Operations,Band 1 Sal/FTE (INR),driver,1,1,2,1,1,1,12,350.55,1.02,4902.8442,6168.188,1.0206
+Operations,Band 2 Count,driver,0,1,1,0,1,1,12,26.28,1.78,0.7298,0.8416,1.7777
+Operations,Band 2 Sal/FTE (INR),driver,0,1,2,1,1,1,12,352.42,2.57,17723.9719,20535.9852,2.5691
+Operations,Band 3 Count,driver,0,1,0,1,1,0,12,11.1,0.32,0.0833,0.2887,0.3205
+Operations,Band 3 Sal/FTE (INR),driver,0,1,2,1,1,1,12,370.85,0.81,8624.707,10105.2168,0.8131
+Operations,Band 4 Count,driver,0,1,0,1,1,1,12,0.43,2.56,0.3333,0.5773,2.5641
+Operations,Band 4 Sal/FTE (INR),driver,0,1,1,1,1,1,12,386.61,2.95,48036.155,48078.6775,2.9459
+Operations,Band 5 Count,driver,1,0,0,0,0,0,12,-12.22,19.79,0.7911,0.8268,19.79
+Operations,Band 5 Sal/FTE (INR),driver,0,1,2,0,1,1,12,399.33,0.07,1846.1125,1950.9951,0.0689
+Operations,Band 6 Count,driver,1,0,0,0,1,1,12,52.25,27.91,0.46,0.543,27.906
+Operations,Band 6 Sal/FTE (INR),driver,2,1,2,0,1,1,12,397.05,0.06,2549.6779,3266.3422,0.0588
+Operations,Billable HC,driver,0,1,0,1,1,1,12,62.63,1.17,1.3797,1.5685,1.1747
+Operations,Bonus/Var Pay (INR),actual,0,1,2,1,1,1,12,618.77,1085.07,6891864.3879,8645954.246,
+Operations,Budget: Admin Overhead (INR),budget,0,1,2,1,1,1,12,357.11,3.31,2030.8243,2268.4121,3.3114
+Operations,Budget: Bonus (INR),budget,0,1,2,1,1,1,12,542.04,20.84,35686.0823,68626.7285,20.8431
+Operations,Budget: Consultancy (INR),budget,0,1,2,0,1,1,12,475.36,3.64,2606.3295,3087.3666,3.6384
+Operations,Budget: DBTS Charges (INR),budget,0,1,2,1,1,1,12,370.64,3.31,2840.9996,3182.0137,3.3126
+Operations,Budget: Emp Engagement (INR),budget,1,1,2,1,1,1,12,515.4,30.26,37192.8357,55356.6832,30.2637
+Operations,Budget: Finance Charges (INR),budget,0,1,2,0,1,1,12,313.09,3.64,846.288,950.0798,3.641
+Operations,Budget: HR Cost (INR),budget,0,1,2,1,1,1,12,369.91,3.3,2794.0033,3154.9204,3.2953
+Operations,Budget: IT Equipment (INR),budget,1,1,2,0,1,1,12,544.51,324.42,91845.4613,211227.9468,324.422
+Operations,Budget: IT License (INR),budget,1,1,2,1,1,1,12,394.7,3.63,5350.6376,6332.2036,3.6257
+Operations,Budget: Learning Platform (INR),budget,0,1,2,0,1,1,12,358.58,10.39,4272.8255,4843.5184,10.3919
+Operations,Budget: Long Leave (INR),budget,2,1,1,1,1,0,12,530.08,8349.65,32147.4547,57559.192,8349.6518
+Operations,Budget: Mgmt Overhead (INR),budget,1,1,2,1,1,1,12,418.98,3.58,10468.751,11688.4663,3.5848
+Operations,Budget: Office Rent (INR),budget,0,0,2,0,1,1,12,494.79,3.27,27596.8385,32619.9478,3.2737
+Operations,Budget: Overtime (INR),budget,0,1,2,1,1,1,12,520.96,75.0,83583.6149,122081.675,74.9954
+Operations,Budget: Salary (INR),budget,2,1,2,0,1,1,12,566.13,3.56,415486.6696,468955.8101,3.557
+Operations,Budget: Training & Dev (INR),budget,1,1,2,0,1,1,12,380.72,7.92,2858.9323,3329.8973,7.9204
+Operations,Budget: Utilities (INR),budget,2,1,2,1,1,1,12,357.21,4.02,1805.0887,2383.8078,4.0177
+Operations,CAD/INR Forex Rate,driver,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814
+Operations,Closing HC,driver,0,1,2,0,1,1,12,56.77,0.91,1.1272,1.5214,0.9056
+Operations,Consultancy Charges (INR),actual,0,1,2,0,1,1,12,604.78,40.73,433540.09,1012742.2598,40.729
+Operations,DBTS Charges (INR),actual,0,1,2,1,1,1,12,367.92,3.31,2655.3287,2971.5498,3.3114
+Operations,Emp Engagement Cost (INR),actual,0,1,2,1,1,1,12,606.86,26.47,465387.7726,1172833.3283,26.4671
+Operations,Finance Charges (INR),actual,0,1,2,0,1,1,12,310.25,3.64,790.8401,887.862,3.6405
+Operations,HR Cost (INR),actual,0,1,2,1,1,1,12,367.2,3.31,2608.0094,2918.0415,3.3112
+Operations,IT Equipment Cost (INR),actual,0,1,2,0,1,1,12,603.48,325.18,491545.2592,694167.0969,
+Operations,IT License Cost (INR),actual,0,1,0,1,1,0,12,607.67,47.59,67760.8545,212089.0702,47.5858
+Operations,Learning Platform Cost (INR),actual,1,1,2,1,1,1,12,350.59,3.36,1691.6217,1903.309,3.3588
+Operations,Long Leave Cost (INR),driver,1,1,2,0,1,1,12,498.02,79.21,37191.9718,44288.481,
+Operations,Long Leave Count,driver,0,0,2,1,1,1,12,41.27,115.36,0.4836,0.6823,
+Operations,Mgmt Overhead (INR),actual,1,1,2,1,1,1,12,416.27,3.59,9784.3836,10929.2119,3.5856
+Operations,Office Rent & Facilities (INR),actual,2,1,2,0,1,1,12,578.86,23.96,214725.6197,234124.8616,23.9559
+Operations,Opening HC,driver,2,1,2,1,1,1,12,62.84,1.28,1.5786,1.8252,1.282
+Operations,Original Budget (INR),actual,0,1,2,0,1,1,12,597.56,5.03,827199.9697,926329.9542,5.0286
+Operations,Overtime Cost (INR),actual,0,1,2,1,1,1,12,576.49,364.64,614284.5619,847759.7835,
+Operations,Salary Cost (INR),actual,1,1,2,0,1,1,12,603.68,5.95,727283.7499,1001762.0004,5.9521
+Operations,Talent Pool,driver,0,1,1,1,0,0,12,14.06,0.28,0.0168,0.0168,0.2793
+Operations,Total Exits,driver,2,0,0,0,1,0,12,-870.94,0.0,0.0,0.0,
+Operations,Total Hires,driver,0,0,2,0,1,1,12,51.35,19.87,0.4601,0.8568,
+Operations,Training & Dev Cost (INR),actual,1,1,2,1,1,1,12,354.81,4.64,1961.609,2356.4746,4.6425
+Operations,Utilities Cost (INR),actual,0,1,0,1,1,0,12,627.56,12.14,79767.2516,271583.3242,12.1355
+Operations,WFH Count,driver,0,1,2,0,1,1,12,78.89,5.31,0.9469,1.328,5.3069
+Operations,WFO Count,driver,2,1,1,1,1,0,12,84.42,5.1,5.2242,5.7521,5.0988
+Finance,Admin Overhead (INR),actual,0,1,2,1,1,1,12,325.51,66.13,6348.0561,6779.7419,66.1343
+Finance,Attrition % (Ann.),driver,0,0,2,0,1,0,12,-228.22,4.06,0.0051,0.0103,
+Finance,Avg Appraisal Rate,driver,0,0,0,1,0,0,12,-390.49,1.82,0.0001,0.0004,
+Finance,Avg Salary (Wtd) (INR),driver,0,1,2,1,1,1,12,403.55,3.36,124588.1099,125682.1062,3.3582
+Finance,Band 1 Count,driver,0,0,1,1,1,0,12,-1.72,5.56,0.1667,0.4082,5.5556
+Finance,Band 1 Sal/FTE (INR),driver,0,1,2,1,1,1,12,380.73,11.17,108144.9538,125949.4292,11.1747
+Finance,Band 2 Count,driver,0,0,0,1,1,1,12,30.74,6.17,0.3412,0.4942,6.1665
+Finance,Band 2 Sal/FTE (INR),driver,1,1,2,0,1,1,12,401.2,0.68,10026.4487,10366.7998,0.6783
+Finance,Band 3 Count,driver,2,0,2,0,1,1,12,38.94,6.0,0.461,0.5843,6.0028
+Finance,Band 3 Sal/FTE (INR),driver,1,1,2,1,1,1,12,369.67,0.55,12465.5996,14403.2663,0.5501
+Finance,Band 4 Count,driver,0,1,0,1,0,0,12,-895.32,0.0,0.0,0.0,0.0
+Finance,Band 4 Sal/FTE (INR),driver,2,0,1,1,1,1,12,478.81,0.38,13972.9237,18536.7279,0.3834
+Finance,Band 5 Count,driver,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0
+Finance,Band 5 Sal/FTE (INR),driver,0,1,2,1,1,1,12,445.33,1.18,69747.5172,80537.5772,1.1804
+Finance,Band 6 Count,driver,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0
+Finance,Band 6 Sal/FTE (INR),driver,0,1,2,1,1,1,12,426.55,0.1,10285.5904,13192.6441,0.0992
+Finance,Billable HC,driver,2,0,2,0,1,1,12,30.76,3.68,0.9527,1.2869,3.6796
+Finance,Bonus/Var Pay (INR),actual,0,1,2,0,1,1,12,570.49,20.28,79952.3416,150040.1606,
+Finance,Budget: Admin Overhead (INR),budget,1,1,2,0,1,1,12,321.75,5.78,611.8519,728.7065,5.7789
+Finance,Budget: Bonus (INR),budget,0,1,2,0,1,1,12,472.72,6.86,15898.4746,35880.3025,6.8646
+Finance,Budget: Consultancy (INR),budget,0,1,2,0,1,1,12,514.35,19.88,46069.7766,72627.372,19.877
+Finance,Budget: DBTS Charges (INR),budget,2,1,2,1,1,1,12,358.75,6.12,1581.1709,1880.9589,6.1167
+Finance,Budget: Emp Engagement (INR),budget,0,1,2,0,1,1,12,457.68,18.95,10541.8441,22067.2936,18.946
+Finance,Budget: Finance Charges (INR),budget,1,1,2,0,1,1,12,394.61,6.87,4188.4286,4461.0267,6.871
+Finance,Budget: HR Cost (INR),budget,1,1,2,0,1,1,12,333.45,5.62,814.8418,985.5356,5.6223
+Finance,Budget: IT Equipment (INR),budget,0,1,2,0,1,1,12,501.07,321.54,42129.2972,81136.55,321.5361
+Finance,Budget: IT License (INR),budget,0,1,2,1,1,1,12,368.95,6.95,2565.5887,2964.6946,6.9474
+Finance,Budget: Learning Platform (INR),budget,0,1,2,0,1,1,12,329.67,7.46,745.4539,1072.3278,7.4607
+Finance,Budget: Long Leave (INR),budget,0,1,2,0,1,1,12,525.12,84.37,36071.0262,97994.8061,84.3685
+Finance,Budget: Mgmt Overhead (INR),budget,0,0,2,1,1,1,12,453.58,5.5,8767.1183,12068.7126,5.5049
+Finance,Budget: Office Rent (INR),budget,2,1,1,1,1,0,12,473.27,8.09,14926.326,18752.5095,8.0923
+Finance,Budget: Overtime (INR),budget,1,1,2,1,1,1,12,345.64,5.95,1575.795,1690.6792,5.95
+Finance,Budget: Salary (INR),budget,0,0,2,1,1,1,12,608.51,5.51,350656.5545,482179.21,5.5053
+Finance,Budget: Training & Dev (INR),budget,0,1,2,0,1,1,12,365.6,17.98,1703.1506,2062.8593,17.9814
+Finance,Budget: Utilities (INR),budget,0,1,2,0,1,1,12,311.97,6.66,459.3933,556.8867,6.6623
+Finance,CAD/INR Forex Rate,driver,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814
+Finance,Closing HC,driver,2,0,2,0,1,1,12,30.76,3.68,0.9527,1.2869,3.6796
+Finance,Consultancy Charges (INR),actual,0,1,2,0,1,1,12,542.26,9.11,19579.754,25075.9777,9.1054
+Finance,DBTS Charges (INR),actual,1,1,2,0,1,1,12,354.11,6.3,1503.0449,1648.8175,6.305
+Finance,Emp Engagement Cost (INR),actual,0,1,0,1,1,0,12,632.97,29.19,88383.52,284594.7353,29.1904
+Finance,Finance Charges (INR),actual,2,0,2,1,1,1,12,407.43,6.7,3957.9651,5056.8853,6.6999
+Finance,HR Cost (INR),actual,1,1,2,0,1,1,12,330.84,5.57,755.9463,920.3509,5.5702
+Finance,IT Equipment Cost (INR),actual,0,1,2,0,1,1,12,539.14,114.54,170906.8278,180716.1563,
+Finance,IT License Cost (INR),actual,2,0,2,0,1,1,12,549.25,60.76,20472.233,21856.6376,60.7632
+Finance,Learning Platform Cost (INR),actual,0,1,2,0,1,1,12,314.77,5.85,502.1156,603.1326,5.8484
+Finance,Long Leave Cost (INR),driver,0,1,2,0,1,1,12,512.12,99.99,31364.5731,76775.0036,
+Finance,Long Leave Count,driver,0,1,2,1,1,1,12,26.99,5.33,0.4275,0.5303,
+Finance,Mgmt Overhead (INR),actual,0,0,2,1,1,1,12,450.74,5.5,8193.6535,11280.8366,5.5049
+Finance,Office Rent & Facilities (INR),actual,1,1,2,0,1,1,12,536.91,82.0,135349.1072,148215.4519,82.0019
+Finance,Opening HC,driver,0,1,0,0,1,1,12,33.09,2.84,0.7223,0.8873,2.8385
+Finance,Original Budget (INR),actual,0,1,2,0,1,1,12,595.17,8.83,735730.9826,768702.667,8.8291
+Finance,Overtime Cost (INR),actual,0,0,0,1,1,0,12,551.22,15.31,9313.1702,32261.7679,
+Finance,Salary Cost (INR),actual,0,0,2,0,1,1,12,608.59,6.02,347152.974,377987.7046,6.0216
+Finance,Talent Pool,driver,1,2,1,0,0,0,12,-972.23,inf,0.0,0.0,
+Finance,Total Exits,driver,1,0,0,1,0,0,12,-887.41,0.0,0.0,0.0,
+Finance,Total Hires,driver,2,0,0,0,1,0,12,-17.41,10.0,0.0833,0.2887,
+Finance,Training & Dev Cost (INR),actual,0,1,2,1,1,1,12,341.12,8.94,1126.9802,1516.9032,8.9371
+Finance,Utilities Cost (INR),actual,0,1,2,0,1,1,12,496.34,108.28,6593.2579,6630.4097,108.2763
+Finance,WFH Count,driver,0,1,0,0,1,1,12,61.59,9.16,0.6389,0.8221,9.1601
+Finance,WFO Count,driver,2,0,2,0,1,1,12,53.19,3.87,0.7178,0.9523,3.8658
+HR,Admin Overhead (INR),actual,2,1,1,1,1,0,12,336.45,2.99,310.4798,420.7235,2.9931
+HR,Attrition % (Ann.),driver,2,0,1,1,1,0,12,-48.74,34.19,0.0478,0.096,
+HR,Avg Appraisal Rate,driver,0,0,0,1,0,0,12,-460.9,1.59,0.0001,0.0004,
+HR,Avg Salary (Wtd) (INR),driver,1,1,2,0,1,1,12,389.99,1.02,20912.7556,21532.8237,1.0169
+HR,Band 1 Count,driver,0,1,0,1,1,1,12,15.68,58.33,1.0,1.0801,58.334
+HR,Band 1 Sal/FTE (INR),driver,0,1,2,0,1,1,12,362.73,0.78,5097.7886,5978.1924,0.7777
+HR,Band 2 Count,driver,0,1,0,1,1,0,12,20.42,18.06,1.0833,1.1547,18.0556
+HR,Band 2 Sal/FTE (INR),driver,0,1,2,1,1,1,12,359.57,1.45,14139.8853,16559.3881,1.4501
+HR,Band 3 Count,driver,1,0,0,1,0,0,12,42.01,20.6,1.4094,1.5155,20.5951
+HR,Band 3 Sal/FTE (INR),driver,0,1,2,0,1,1,12,387.31,0.7,10409.4059,12022.5592,0.7018
+HR,Band 4 Count,driver,0,1,1,1,1,1,12,10.28,12.17,0.4168,0.4565,12.1728
+HR,Band 4 Sal/FTE (INR),driver,2,1,2,1,1,0,12,426.1,0.32,7128.8297,8283.3904,0.3171
+HR,Band 5 Count,driver,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0
+HR,Band 5 Sal/FTE (INR),driver,2,1,1,1,1,0,12,414.19,0.21,7795.79,9126.5337,0.2148
+HR,Band 6 Count,driver,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0
+HR,Band 6 Sal/FTE (INR),driver,1,1,2,1,1,1,12,445.86,0.85,49523.0345,57314.4419,0.85
+HR,Billable HC,driver,2,0,0,1,1,1,12,48.77,3.43,0.6554,0.8307,3.4342
+HR,Bonus/Var Pay (INR),actual,1,1,2,0,1,1,12,572.14,150.62,309670.7706,314804.88,
+HR,Budget: Admin Overhead (INR),budget,2,1,1,1,1,0,12,339.61,2.99,331.9075,449.6033,2.9891
+HR,Budget: Bonus (INR),budget,0,1,2,0,1,1,12,493.1,11.46,23959.0727,56821.3313,11.4633
+HR,Budget: Consultancy (INR),budget,2,1,2,0,1,1,12,480.5,28.88,27406.6266,69688.6245,28.8824
+HR,Budget: DBTS Charges (INR),budget,1,1,2,1,1,1,12,308.05,5.89,444.5216,511.1028,5.8928
+HR,Budget: Emp Engagement (INR),budget,1,1,2,1,1,1,12,448.93,28.18,6574.5272,12710.6492,28.183
+HR,Budget: Finance Charges (INR),budget,2,1,2,1,1,0,12,292.16,3.11,132.8717,158.1431,3.1062
+HR,Budget: HR Cost (INR),budget,2,1,2,1,1,0,12,355.03,3.88,606.016,705.0236,3.8834
+HR,Budget: IT Equipment (INR),budget,1,1,2,0,1,1,12,532.41,935.96,81192.7534,139548.1379,935.9599
+HR,Budget: IT License (INR),budget,2,1,1,1,1,0,12,362.44,3.19,617.3175,808.3555,3.1864
+HR,Budget: Learning Platform (INR),budget,0,1,2,0,1,1,12,330.65,19.41,1931.8078,2723.5487,19.4089
+HR,Budget: Long Leave (INR),budget,0,1,2,0,1,1,12,469.44,2.62,836.2706,2866.6952,2.6217
+HR,Budget: Mgmt Overhead (INR),budget,2,1,0,1,1,0,12,418.93,3.85,3370.7256,3962.0752,3.854
+HR,Budget: Office Rent (INR),budget,2,1,2,1,1,0,12,459.9,4.66,6633.1852,8882.5582,4.6568
+HR,Budget: Overtime (INR),budget,0,1,2,0,1,1,12,370.53,17.02,3196.4529,3884.9625,17.0207
+HR,Budget: Salary (INR),budget,2,1,0,1,1,0,12,584.04,3.85,134829.0954,158483.257,3.854
+HR,Budget: Training & Dev (INR),budget,0,1,2,1,1,1,12,341.88,24.67,2376.9587,3897.9852,24.6727
+HR,Budget: Utilities (INR),budget,2,1,0,1,1,0,12,337.14,4.09,295.5592,424.7494,4.0908
+HR,CAD/INR Forex Rate,driver,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814
+HR,Closing HC,driver,2,0,0,1,1,1,12,48.77,3.43,0.6554,0.8307,3.4342
+HR,Consultancy Charges (INR),actual,0,1,2,0,1,1,12,517.94,32.78,15806.2898,20093.4277,32.7814
+HR,DBTS Charges (INR),actual,2,1,1,1,1,0,12,320.8,3.02,218.6616,297.0626,3.0192
+HR,Emp Engagement Cost (INR),actual,0,1,2,0,1,1,12,545.7,5005.81,761504.1211,794639.8221,5005.8103
+HR,Finance Charges (INR),actual,2,1,2,1,1,1,12,277.37,4.62,201.4889,240.9669,4.6229
+HR,HR Cost (INR),actual,2,1,2,1,1,0,12,352.18,3.94,578.2737,669.6766,3.9434
+HR,IT Equipment Cost (INR),actual,0,1,2,0,1,1,12,543.9,495.66,204080.4591,341422.0596,
+HR,IT License Cost (INR),actual,1,1,2,0,1,1,12,506.86,137.9,26561.3835,65188.0693,137.9007
+HR,Learning Platform Cost (INR),actual,2,1,1,1,1,0,12,330.55,3.0,272.1792,369.2235,3.0016
+HR,Long Leave Cost (INR),driver,0,1,2,1,1,1,12,458.95,7.11,1004.2677,2008.4439,
+HR,Long Leave Count,driver,0,1,0,1,1,0,12,46.18,0.0,0.8333,0.9789,
+HR,Mgmt Overhead (INR),actual,2,1,0,1,1,0,12,416.09,3.85,3150.215,3702.8819,3.854
+HR,Office Rent & Facilities (INR),actual,2,1,2,1,1,0,12,561.13,10.6,47021.5763,145356.7108,10.5978
+HR,Opening HC,driver,2,2,0,0,0,1,12,1157.52,4.56,0.8739,1.0388,4.5648
+HR,Original Budget (INR),actual,1,1,2,1,1,1,12,582.04,14.71,696010.31,760746.7906,14.7107
+HR,Overtime Cost (INR),actual,1,0,1,0,0,0,12,1165.69,inf,0.0,0.0,
+HR,Salary Cost (INR),actual,0,1,2,0,1,1,12,570.35,22.46,733773.2138,822771.7354,22.4596
+HR,Talent Pool,driver,1,2,1,0,0,0,12,-972.23,inf,0.0,0.0,
+HR,Total Exits,driver,0,0,2,1,1,0,12,-557.0,0.0,0.0,0.0,
+HR,Total Hires,driver,0,1,2,1,1,1,12,16.6,37.45,0.2615,0.3365,
+HR,Training & Dev Cost (INR),actual,1,0,2,0,1,1,12,337.17,5.2,311.8775,405.9454,5.1966
+HR,Utilities Cost (INR),actual,2,1,2,1,1,1,12,499.17,12.67,17845.9954,60744.2113,12.6719
+HR,WFH Count,driver,0,1,0,0,0,1,12,1711.9,12.2,0.6072,0.6965,12.196
+HR,WFO Count,driver,2,0,2,1,1,1,12,47.84,4.35,0.6152,0.6865,4.3477
+Sales & Marketing,Admin Overhead (INR),actual,0,1,2,0,1,1,12,330.65,16.11,3499.3701,3754.0629,16.1112
+Sales & Marketing,Attrition % (Ann.),driver,0,0,0,1,0,1,12,1208.85,42.53,0.0577,0.1096,
+Sales & Marketing,Avg Appraisal Rate,driver,0,0,0,1,0,0,12,-472.28,1.96,0.0001,0.0003,
+Sales & Marketing,Avg Salary (Wtd) (INR),driver,0,1,2,0,1,1,12,379.85,0.96,20708.5402,21095.3264,0.9582
+Sales & Marketing,Band 1 Count,driver,1,1,0,1,1,0,12,15.68,8.33,0.5,0.7071,8.3333
+Sales & Marketing,Band 1 Sal/FTE (INR),driver,0,1,2,1,1,1,12,346.6,1.07,6777.816,7827.8404,1.0725
+Sales & Marketing,Band 2 Count,driver,1,1,2,0,1,1,12,23.53,11.82,1.7101,1.751,11.8191
+Sales & Marketing,Band 2 Sal/FTE (INR),driver,0,1,2,1,1,1,12,360.09,0.03,240.6405,344.0525,0.0251
+Sales & Marketing,Band 3 Count,driver,0,1,2,1,1,1,12,14.04,1.31,0.2386,0.3389,1.3058
+Sales & Marketing,Band 3 Sal/FTE (INR),driver,1,1,2,1,1,1,12,369.57,0.37,5192.1098,7247.4105,0.3717
+Sales & Marketing,Band 4 Count,driver,2,0,2,1,1,1,12,29.2,2.28,0.2505,0.2853,2.2771
+Sales & Marketing,Band 4 Sal/FTE (INR),driver,0,1,2,1,1,1,12,397.96,0.16,3908.022,4519.3581,0.1623
+Sales & Marketing,Band 5 Count,driver,0,1,1,1,1,1,12,-25.05,20.83,0.8333,0.9129,20.833
+Sales & Marketing,Band 5 Sal/FTE (INR),driver,0,1,2,1,1,1,12,386.87,0.14,5380.9141,6611.897,0.1396
+Sales & Marketing,Band 6 Count,driver,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0
+Sales & Marketing,Band 6 Sal/FTE (INR),driver,0,1,1,1,1,1,12,472.18,0.88,57818.7765,67019.889,0.878
+Sales & Marketing,Billable HC,driver,2,0,2,0,1,1,12,62.23,2.46,1.2802,1.5133,2.4607
+Sales & Marketing,Bonus/Var Pay (INR),actual,0,1,2,0,1,1,12,575.61,55.44,245235.9204,486893.5096,
+Sales & Marketing,Budget: Admin Overhead (INR),budget,2,1,2,0,1,1,12,327.22,11.32,2627.5154,2790.8897,11.3182
+Sales & Marketing,Budget: Bonus (INR),budget,0,1,2,1,1,1,12,537.27,12.62,79711.0238,208262.4587,12.6161
+Sales & Marketing,Budget: Consultancy (INR),budget,0,1,2,0,1,1,12,508.63,11.28,38824.6237,94077.3096,11.2764
+Sales & Marketing,Budget: DBTS Charges (INR),budget,2,1,2,0,1,1,12,314.5,11.32,2299.1224,2442.0816,11.3184
+Sales & Marketing,Budget: Emp Engagement (INR),budget,0,1,2,0,1,1,12,493.28,13.45,25866.9078,61588.5175,13.4461
+Sales & Marketing,Budget: Finance Charges (INR),budget,1,0,1,0,1,1,12,316.15,3.7,446.534,531.7216,3.696
+Sales & Marketing,Budget: HR Cost (INR),budget,2,1,2,0,1,1,12,332.28,11.32,3612.6805,3837.3016,11.3177
+Sales & Marketing,Budget: IT Equipment (INR),budget,1,1,2,0,1,1,12,502.67,82.06,41878.4196,78152.9093,82.0635
+Sales & Marketing,Budget: IT License (INR),budget,0,1,0,1,1,1,12,403.69,7.27,4758.7243,5296.6731,7.2656
+Sales & Marketing,Budget: Learning Platform (INR),budget,2,1,2,0,1,1,12,339.59,8.94,1921.3464,2383.3468,8.9362
+Sales & Marketing,Budget: Long Leave (INR),budget,0,0,1,0,1,1,12,545.25,418.95,1755.3236,2606.2869,418.9493
+Sales & Marketing,Budget: Mgmt Overhead (INR),budget,1,0,1,0,1,1,12,447.98,2.12,4122.2964,5132.8759,2.1205
+Sales & Marketing,Budget: Office Rent (INR),budget,0,1,0,0,1,1,12,485.18,6.99,24450.1144,28541.5443,6.9933
+Sales & Marketing,Budget: Overtime (INR),budget,0,1,2,0,1,1,12,397.6,8.05,4558.9116,6863.7999,8.0509
+Sales & Marketing,Budget: Salary (INR),budget,0,1,2,0,1,1,12,560.38,12.1,978299.4892,1041256.6561,12.1022
+Sales & Marketing,Budget: Training & Dev (INR),budget,2,1,2,0,1,1,12,370.78,16.56,3736.0139,4629.7975,16.5558
+Sales & Marketing,Budget: Utilities (INR),budget,0,0,2,1,1,1,12,355.14,13.49,2110.2277,2246.0949,13.4875
+Sales & Marketing,CAD/INR Forex Rate,driver,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814
+Sales & Marketing,Closing HC,driver,1,0,2,1,1,1,12,56.22,3.82,2.1025,2.4151,3.8178
+Sales & Marketing,Consultancy Charges (INR),actual,2,1,2,0,1,1,12,557.2,41.36,103895.0072,306082.2673,41.3633
+Sales & Marketing,DBTS Charges (INR),actual,2,1,2,0,1,1,12,319.3,11.32,2148.1423,2281.7762,11.3154
+Sales & Marketing,Emp Engagement Cost (INR),actual,0,1,2,0,1,1,12,566.46,147.04,45975.6059,54231.6333,147.0418
+Sales & Marketing,Finance Charges (INR),actual,1,0,1,0,1,1,12,313.26,3.7,417.3492,496.9763,3.6962
+Sales & Marketing,HR Cost (INR),actual,2,1,2,0,1,1,12,329.58,11.32,3375.9217,3585.8868,11.3163
+Sales & Marketing,IT Equipment Cost (INR),actual,0,1,2,0,1,1,12,583.16,132.53,360407.2776,683200.19,
+Sales & Marketing,IT License Cost (INR),actual,1,1,2,1,1,1,12,550.23,2105.88,8292032.2394,26425413.6587,2105.8809
+Sales & Marketing,Learning Platform Cost (INR),actual,2,1,2,0,1,1,12,319.3,11.32,2148.1423,2281.7762,11.3154
+Sales & Marketing,Long Leave Cost (INR),driver,1,0,1,0,0,0,12,1103.72,inf,1446.6729,2017.7305,
+Sales & Marketing,Long Leave Count,driver,1,1,0,1,1,0,12,34.59,15.64,0.4717,0.596,
+Sales & Marketing,Mgmt Overhead (INR),actual,1,0,1,0,1,1,12,444.99,2.16,3924.768,4851.3808,2.1556
+Sales & Marketing,Office Rent & Facilities (INR),actual,0,1,0,0,1,1,12,482.2,7.0,22867.9977,26691.2428,6.9988
+Sales & Marketing,Opening HC,driver,2,0,1,1,1,1,12,62.89,4.03,2.2054,2.6847,4.0278
+Sales & Marketing,Original Budget (INR),actual,1,2,2,1,0,1,12,7125729.03,2.87,319320.3632,401169.0378,2.8669
+Sales & Marketing,Overtime Cost (INR),actual,0,1,0,1,1,0,12,571.07,26.11,16867.4773,58430.6552,
+Sales & Marketing,Salary Cost (INR),actual,0,1,2,0,1,1,12,594.24,14.0,1082574.6394,1194543.1848,13.9954
+Sales & Marketing,Talent Pool,driver,2,1,0,1,1,1,12,-225.7,27.78,0.8333,0.9129,27.7781
+Sales & Marketing,Total Exits,driver,2,0,0,0,1,0,12,15.94,37.5,0.25,0.5,
+Sales & Marketing,Total Hires,driver,0,1,1,1,1,1,12,55.67,73.86,0.7576,1.0308,
+Sales & Marketing,Training & Dev Cost (INR),actual,2,1,2,0,1,1,12,342.86,9.51,2137.767,2550.822,9.5107
+Sales & Marketing,Utilities Cost (INR),actual,0,0,1,1,1,1,12,369.5,12.16,1845.435,2020.5394,12.1555
+Sales & Marketing,WFH Count,driver,0,0,2,0,1,1,12,55.76,9.22,1.0308,1.3452,9.2232
+Sales & Marketing,WFO Count,driver,0,1,2,0,1,1,12,66.21,2.16,0.9379,1.1516,2.1579
+Risk & Compliance,Admin Overhead (INR),actual,0,1,2,0,1,1,12,498.67,18.42,1714.4362,2628.7237,18.415
+Risk & Compliance,Attrition % (Ann.),driver,0,0,1,1,1,1,12,-68.64,20.83,0.0338,0.0909,
+Risk & Compliance,Avg Appraisal Rate,driver,0,0,0,1,0,0,12,-368.5,10.25,0.0006,0.0017,
+Risk & Compliance,Avg Salary (Wtd) (INR),driver,0,1,2,0,1,1,12,425.25,1.35,55306.9085,57870.8914,1.3502
+Risk & Compliance,Band 1 Count,driver,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0
+Risk & Compliance,Band 1 Sal/FTE (INR),driver,0,1,2,0,1,1,12,358.3,0.35,3574.8869,4292.2141,0.3506
+Risk & Compliance,Band 2 Count,driver,0,1,2,0,0,0,12,-32.09,1.08,0.0434,0.0449,1.0846
+Risk & Compliance,Band 2 Sal/FTE (INR),driver,2,1,1,1,1,0,12,364.6,0.55,8684.2154,10621.5148,0.5498
+Risk & Compliance,Band 3 Count,driver,0,1,2,0,0,1,12,-9.17,0.59,0.0414,0.0448,0.592
+Risk & Compliance,Band 3 Sal/FTE (INR),driver,0,1,2,1,1,1,12,409.56,0.08,1886.7479,2346.5965,0.0785
+Risk & Compliance,Band 4 Count,driver,1,1,2,1,0,0,12,-8.96,0.29,0.0171,0.0283,0.2858
+Risk & Compliance,Band 4 Sal/FTE (INR),driver,0,1,2,1,1,1,12,422.41,0.8,30491.9011,35783.1689,0.8038
+Risk & Compliance,Band 5 Count,driver,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0
+Risk & Compliance,Band 5 Sal/FTE (INR),driver,1,0,2,0,1,1,12,434.02,0.1,5242.462,8816.4825,0.0991
+Risk & Compliance,Band 6 Count,driver,1,1,0,0,0,0,12,31.29,8.33,0.1667,0.4082,8.3333
+Risk & Compliance,Band 6 Sal/FTE (INR),driver,2,1,1,1,1,0,12,479.28,1.17,111660.0399,129663.4243,1.165
+Risk & Compliance,Billable HC,driver,0,1,2,1,1,1,12,35.1,2.24,0.4748,0.6194,2.2448
+Risk & Compliance,Bonus/Var Pay (INR),actual,0,1,2,0,1,1,12,587.29,100.86,273661.2411,590940.0028,
+Risk & Compliance,Budget: Admin Overhead (INR),budget,1,1,2,0,1,1,12,312.09,11.21,1095.7221,1153.0699,11.208
+Risk & Compliance,Budget: Bonus (INR),budget,0,1,2,1,1,1,12,512.76,11.19,13564.7886,30687.7861,11.1873
+Risk & Compliance,Budget: Consultancy (INR),budget,0,1,2,1,1,1,12,543.48,13.95,115086.5582,310644.1038,13.9509
+Risk & Compliance,Budget: DBTS Charges (INR),budget,1,1,2,1,1,1,12,353.94,10.92,3004.3203,3216.6566,10.9185
+Risk & Compliance,Budget: Emp Engagement (INR),budget,0,1,2,1,1,1,12,450.52,41.74,8303.3832,13793.9888,41.7351
+Risk & Compliance,Budget: Finance Charges (INR),budget,0,1,2,0,1,1,12,359.15,9.43,3555.0674,4083.6606,9.4252
+Risk & Compliance,Budget: HR Cost (INR),budget,1,1,2,1,1,1,12,325.29,10.69,1467.8361,1668.3652,10.6934
+Risk & Compliance,Budget: IT Equipment (INR),budget,1,1,2,0,1,1,12,501.82,274.95,28745.296,75070.2634,274.9519
+Risk & Compliance,Budget: IT License (INR),budget,0,1,2,0,1,1,12,364.98,11.37,4432.2326,5737.7087,11.3678
+Risk & Compliance,Budget: Learning Platform (INR),budget,1,1,2,0,1,1,12,321.67,11.39,994.118,1187.1667,11.3905
+Risk & Compliance,Budget: Long Leave (INR),budget,0,1,2,0,1,1,12,526.68,3826.56,74671.2147,132170.553,3826.5606
+Risk & Compliance,Budget: Mgmt Overhead (INR),budget,0,1,2,0,1,1,12,424.6,11.35,17491.8877,23615.6883,11.3543
+Risk & Compliance,Budget: Office Rent (INR),budget,0,0,2,0,1,1,12,471.86,11.31,21413.0395,23367.22,11.3141
+Risk & Compliance,Budget: Overtime (INR),budget,0,1,1,1,1,1,12,400.73,16.45,5139.5857,7968.1603,16.4545
+Risk & Compliance,Budget: Salary (INR),budget,0,0,2,0,1,1,12,618.66,10.1,661963.4019,781958.6375,10.1041
+Risk & Compliance,Budget: Training & Dev (INR),budget,1,1,2,1,1,1,12,358.29,13.79,2320.7543,3224.9914,13.7891
+Risk & Compliance,Budget: Utilities (INR),budget,1,1,2,0,1,1,12,299.53,11.29,715.7618,793.2257,11.2909
+Risk & Compliance,CAD/INR Forex Rate,driver,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814
+Risk & Compliance,Closing HC,driver,0,1,2,1,1,1,12,35.1,2.24,0.4748,0.6194,2.2448
+Risk & Compliance,Consultancy Charges (INR),actual,1,1,2,0,1,1,12,577.59,72.62,203459.2474,449992.2162,72.6247
+Risk & Compliance,DBTS Charges (INR),actual,1,1,2,1,1,1,12,349.17,10.88,2804.1718,3019.4645,10.8828
+Risk & Compliance,Emp Engagement Cost (INR),actual,0,1,2,0,1,1,12,578.09,537.61,256350.7427,611592.3599,537.607
+Risk & Compliance,Finance Charges (INR),actual,2,0,1,0,1,1,12,394.7,6.11,2249.9241,2724.8665,6.1096
+Risk & Compliance,HR Cost (INR),actual,1,1,2,1,1,1,12,322.85,10.67,1365.8077,1536.311,10.6687
+Risk & Compliance,IT Equipment Cost (INR),actual,0,1,2,1,1,1,12,564.14,120.12,196803.3799,252111.817,
+Risk & Compliance,IT License Cost (INR),actual,1,1,2,0,1,1,12,522.26,385.49,212159.7802,276345.2789,385.4859
+Risk & Compliance,Learning Platform Cost (INR),actual,1,1,2,1,1,1,12,306.54,10.92,896.2552,1021.5541,10.9191
+Risk & Compliance,Long Leave Cost (INR),driver,0,1,2,0,1,1,12,518.7,65.73,62952.352,85927.8786,
+Risk & Compliance,Long Leave Count,driver,0,1,2,0,1,1,12,29.46,68.37,0.2004,0.3972,
+Risk & Compliance,Mgmt Overhead (INR),actual,0,1,2,0,1,1,12,421.89,11.53,16597.8429,22376.1421,11.5343
+Risk & Compliance,Office Rent & Facilities (INR),actual,0,0,2,0,1,1,12,469.02,11.31,20012.5471,21838.9588,11.3143
+Risk & Compliance,Opening HC,driver,0,1,2,0,1,1,12,37.86,2.25,0.4716,0.5588,2.2541
+Risk & Compliance,Original Budget (INR),actual,0,1,2,0,1,1,12,596.82,11.61,1017039.4255,1235673.8947,11.6098
+Risk & Compliance,Overtime Cost (INR),actual,0,1,0,1,1,0,12,625.79,34.24,17376.7875,60194.9576,
+Risk & Compliance,Salary Cost (INR),actual,2,0,2,0,1,1,12,609.42,8.14,480501.5813,552136.6265,8.143
+Risk & Compliance,Talent Pool,driver,1,2,1,0,0,0,12,-972.23,inf,0.0,0.0,
+Risk & Compliance,Total Exits,driver,0,0,0,1,1,0,12,-571.18,0.0,0.0,0.0,
+Risk & Compliance,Total Hires,driver,2,0,0,1,1,1,12,28.43,25.0,0.1667,0.5774,
+Risk & Compliance,Training & Dev Cost (INR),actual,1,1,2,1,1,1,12,334.87,12.26,1542.5179,1692.9959,12.2577
+Risk & Compliance,Utilities Cost (INR),actual,2,1,2,1,1,1,12,300.85,11.92,752.5347,813.9899,11.9218
+Risk & Compliance,WFH Count,driver,2,0,1,0,1,1,12,49.17,7.02,0.3533,0.634,7.0221
+Risk & Compliance,WFO Count,driver,1,1,1,0,1,1,12,51.04,3.56,0.57,0.7519,3.5578
