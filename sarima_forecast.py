@@ -50,7 +50,7 @@ log = logging.getLogger(__name__)
 # ─────────────────────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────
-DATA_FILE  = r"cost_forecast_sample_data_v2_updated 2.xlsx"
+DATA_FILE  = r"cost_forecast_sample_data_v2_updated.xlsx"
 MODEL_DIR  = Path("sarimax_models")
 RESULT_DIR = Path("sarimax_results")
 CHART_DIR  = Path("sarimax_charts")
