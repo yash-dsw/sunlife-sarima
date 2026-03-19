@@ -1,11 +1,355 @@
 Sheet,Column,Kind,Multivariate,Exog_Features,p,d,q,P,D,Q,m,AIC,Selection_MAPE,Test_MAE,Test_RMSE,Test_MAPE_%,Top_SHAP_Feature,Top_SHAP_Value
-Operations,Budget: Financial Operation Charges (INR),budget,False,,0,1,2,0,1,1,12,313.09,3.64,846.288,950.0798,3.641,,
-Operations,Financial Operation Charges (INR),actual,True,Salary Cost (INR),0,1,2,0,1,1,12,313.47,4.77,1006.8381,2075.1457,4.7741,Salary Cost (INR),431.515041
-Finance,Budget: Financial Operation Charges (INR),budget,False,,1,1,2,0,1,1,12,394.61,6.87,4188.4286,4461.0267,6.871,,
-Finance,Financial Operation Charges (INR),actual,True,Salary Cost (INR),0,1,2,0,1,1,12,352.12,2.51,1377.2523,2317.818,2.5115,Salary Cost (INR),1523.766798
-HR,Budget: Financial Operation Charges (INR),budget,False,,2,1,2,1,1,0,12,292.16,3.11,132.8717,158.1431,3.1062,,
-HR,Financial Operation Charges (INR),actual,True,Salary Cost (INR),1,1,1,1,1,0,12,308.53,4.27,170.9991,366.4237,4.2696,Salary Cost (INR),67.176863
-Sales & Marketing,Budget: Financial Operation Charges (INR),budget,False,,1,0,1,0,1,1,12,316.15,3.7,446.534,531.7216,3.696,,
-Sales & Marketing,Financial Operation Charges (INR),actual,True,Salary Cost (INR),0,1,2,0,1,1,12,300.93,4.75,540.5686,1084.9904,4.749,Salary Cost (INR),484.049408
-Risk & Compliance,Budget: Financial Operation Charges (INR),budget,False,,0,1,2,0,1,1,12,359.15,9.43,3555.0674,4083.6606,9.4252,,
-Risk & Compliance,Financial Operation Charges (INR),actual,True,Salary Cost (INR),0,1,2,0,1,1,12,361.82,7.95,2768.9588,3556.2962,7.9499,Salary Cost (INR),1444.088111
+Technology,Admin Overhead (INR),actual,True,Closing HC|Total Exits,0,0,0,1,1,0,12,562.16,27.31,10052.6207,22606.6225,27.3129,Closing HC,8479.368941
+Technology,Attrition % (Ann.),driver,True,Total Exits,0,0,2,1,0,0,12,-320.8,6.14,0.0065,0.0116,6.136,Total Exits,0.014164
+Technology,Avg Appraisal Rate,driver,False,,0,0,0,1,0,0,12,-420.47,8.52,0.0005,0.0013,8.5244,,
+Technology,Avg Salary (Wtd) (INR),driver,False,,1,1,2,0,1,1,12,383.84,0.76,21101.6994,21401.2628,0.7604,,
+Technology,Band 1 Count,driver,False,,0,1,0,1,0,0,12,-21.11,0.0,0.0,0.0,0.0,,
+Technology,Band 1 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,373.68,1.39,12004.3682,14122.1334,1.3854,,
+Technology,Band 2 Count,driver,False,,2,0,0,0,1,1,12,41.07,1.42,0.2714,0.323,1.4195,,
+Technology,Band 2 Sal/FTE (INR),driver,False,,0,1,2,0,1,1,12,334.83,0.11,1457.4518,1686.0273,0.1069,,
+Technology,Band 3 Count,driver,False,,1,0,2,0,1,1,12,36.53,2.72,0.625,0.7036,2.7162,,
+Technology,Band 3 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,393.29,0.79,15998.103,17925.2,0.7911,,
+Technology,Band 4 Count,driver,False,,0,1,1,0,1,1,12,24.75,1.34,0.1667,0.4082,1.3356,,
+Technology,Band 4 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,362.56,0.64,19824.5322,23298.4295,0.6436,,
+Technology,Band 5 Count,driver,False,,2,1,2,1,0,0,12,-523.12,0.0,0.0,0.0,0.0,,
+Technology,Band 5 Sal/FTE (INR),driver,False,,2,0,2,1,1,1,12,438.16,0.11,5052.9685,6100.2049,0.1064,,
+Technology,Band 6 Count,driver,False,,0,0,2,0,1,1,12,69.5,58.66,0.9551,1.224,58.664,,
+Technology,Band 6 Sal/FTE (INR),driver,False,,2,1,0,1,1,0,12,445.0,0.18,14703.8663,23492.7548,0.1795,,
+Technology,Billable HC,driver,False,,1,0,0,0,1,1,12,54.09,2.68,1.7451,2.0774,2.6846,,
+Technology,Bonus/Var Pay (INR),actual,True,Avg Appraisal Rate|Closing HC,0,1,2,0,1,1,12,626.39,96.67,1414393.7547,1585113.0291,96.6738,Avg Appraisal Rate,3846070.779028
+Technology,Budget: Admin Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,338.45,4.7,2007.9018,2805.985,4.6954,Avg Salary (Wtd) (INR),45970.890643
+Technology,Budget: Bonus (INR),budget,True,Avg Appraisal Rate|Closing HC,0,1,2,1,1,1,12,571.66,62.6,130485.2955,187120.5721,62.5975,Avg Appraisal Rate,24636.886564
+Technology,Budget: Consultancy (INR),budget,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,1,2,0,1,1,12,525.01,29.59,151570.3208,263630.2579,29.5887,Avg Appraisal Rate,938531.598269
+Technology,Budget: DBTS Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,363.1,4.84,3588.9676,4693.343,4.838,Avg Salary (Wtd) (INR),100310.952304
+Technology,Budget: Emp Engagement (INR),budget,True,Long Leave Count|Closing HC,0,1,2,0,1,1,12,499.59,305.69,99994.7199,106828.0154,305.685,Closing HC,78722.506792
+Technology,Budget: Financial Operation Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),2,1,2,0,1,1,12,360.82,4.98,3078.1834,4220.3088,4.9792,Avg Salary (Wtd) (INR),99943.08457
+Technology,Budget: HR Cost (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,354.91,5.22,3036.7825,3937.5247,5.2154,Avg Salary (Wtd) (INR),72444.9171
+Technology,Budget: IT Equipment (INR),budget,True,Total Hires|Closing HC,1,1,2,1,1,1,12,532.35,1850.51,262804.5928,297380.2804,1850.5147,Closing HC,195456.689267
+Technology,Budget: IT License (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,410.29,4.16,9884.5539,13252.3099,4.1595,Avg Salary (Wtd) (INR),394797.167677
+Technology,Budget: Learning Platform (INR),budget,True,Closing HC|Avg Appraisal Rate,2,1,2,1,1,1,12,349.41,6.4,2201.4701,3183.5526,6.4021,Closing HC,4651.037531
+Technology,Budget: Long Leave (INR),budget,True,Long Leave Count,0,1,2,0,1,1,12,515.94,1242.68,41736.5525,81277.2572,1242.6773,Long Leave Count,541.57875
+Technology,Budget: Mgmt Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,436.55,4.61,22307.3805,30984.8168,4.6128,Avg Salary (Wtd) (INR),1086213.248782
+Technology,Budget: Office Rent (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,449.38,9.95,44989.1695,48671.3078,9.9529,Avg Salary (Wtd) (INR),1840393.625568
+Technology,Budget: Overtime (INR),budget,True,WFO Count|Avg Appraisal Rate,1,1,2,0,1,1,12,553.15,30.52,232209.9871,384893.8592,30.5178,Avg Appraisal Rate,244919.009731
+Technology,Budget: Salary (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),0,1,2,0,1,1,12,575.05,5.69,1085768.1867,1429091.5866,5.6942,Band 3 Sal/FTE (INR),59308337.829841
+Technology,Budget: Training & Dev (INR),budget,True,Avg Appraisal Rate|Total Hires|Billable HC|Closing HC,0,1,2,0,1,1,12,416.91,10.04,7055.5931,9355.186,10.0359,Avg Appraisal Rate,25060.866183
+Technology,Budget: Utilities (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),2,1,2,0,1,1,12,315.5,7.98,1448.3173,1907.9298,7.976,Avg Salary (Wtd) (INR),45736.01418
+Technology,CAD/INR Forex Rate,driver,False,,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814,,
+Technology,Closing HC,driver,False,,1,0,2,1,1,0,12,61.88,2.04,1.387,1.8535,2.043,,
+Technology,Consultancy Charges (INR),actual,True,Avg Appraisal Rate|CAD/INR Forex Rate,2,1,0,1,1,1,12,634.59,51.95,199937.2613,290759.3481,51.9488,Avg Appraisal Rate,2039515.729627
+Technology,DBTS Charges (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,1,1,1,12,358.01,5.78,3997.8682,5146.193,5.779,Avg Salary (Wtd) (INR),17692.991482
+Technology,Emp Engagement Cost (INR),actual,True,Long Leave Count|Closing HC,2,1,2,1,1,1,12,626.84,6678.91,3635037.5801,4310932.0237,6678.913,Closing HC,88820.91893
+Technology,Financial Operation Charges (INR),actual,True,Salary Cost (INR)|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,345.66,16.58,8949.0795,9530.5052,16.5794,Avg Salary (Wtd) (INR),193279.827948
+Technology,HR Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),2,1,2,0,1,1,12,349.53,4.74,2579.1469,3338.3675,4.7379,Avg Salary (Wtd) (INR),81976.366232
+Technology,IT Equipment Cost (INR),actual,True,Total Hires|Avg Appraisal Rate,0,1,1,0,1,1,12,617.38,45.27,488010.0999,1006046.8637,45.2652,Avg Appraisal Rate,5679400.853944
+Technology,IT License Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,407.58,4.17,9264.6503,12412.47,4.1717,Avg Salary (Wtd) (INR),367228.385464
+Technology,Learning Platform Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,334.06,5.86,2035.7285,2675.0768,5.8626,Avg Salary (Wtd) (INR),58755.922437
+Technology,Long Leave Cost (INR),driver,True,Long Leave Count,0,1,1,0,1,1,12,531.74,76.16,46732.931,59980.8866,76.1596,Long Leave Count,929.939479
+Technology,Long Leave Count,driver,False,,0,0,1,0,1,1,12,35.34,75.0,0.3382,0.515,75.0,,
+Technology,Mgmt Overhead (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,433.84,4.62,20882.3289,28989.1328,4.621,Avg Salary (Wtd) (INR),1014231.289444
+Technology,Office Rent & Facilities (INR),actual,True,WFO Count|CAD/INR Forex Rate,0,1,2,0,1,1,12,568.47,190.22,844731.0566,882735.8506,190.2177,WFO Count,825875.101489
+Technology,Original Budget (INR),actual,True,Closing HC|Total Hires|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,617.8,6.46,1798033.5801,2493218.5643,6.4649,Avg Salary (Wtd) (INR),7875814.667855
+Technology,Overtime Cost (INR),actual,True,WFO Count|Total Exits,0,1,2,1,1,1,12,585.64,42.14,256644.6015,675202.0484,42.1434,Total Exits,92387.148819
+Technology,Salary Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),0,1,2,0,1,1,12,613.41,5.53,926950.7477,1204754.8817,5.5333,Band 1 Sal/FTE (INR),86199576.851675
+Technology,Talent Pool,driver,False,,1,0,1,0,0,0,12,-7.29,5.81,0.1929,0.2849,5.8139,,
+Technology,Total Exits,driver,False,,2,0,0,0,1,0,12,6.16,25.0,0.1667,0.4082,25.0,,
+Technology,Total Hires,driver,False,,0,1,2,0,1,1,12,37.11,22.98,0.3541,0.3934,22.9806,,
+Technology,Training & Dev Cost (INR),actual,True,Avg Appraisal Rate|Total Hires|Closing HC,0,1,2,0,1,1,12,382.25,4.88,3865.6652,5595.0786,4.8839,Closing HC,6600.752527
+Technology,Utilities Cost (INR),actual,True,WFO Count|CAD/INR Forex Rate,1,1,2,0,1,1,12,532.26,1862.25,321532.5805,336380.8077,1862.2526,WFO Count,338804.794852
+Technology,WFH Count,driver,False,,2,0,2,1,1,1,12,106.72,5.08,1.6774,2.4324,5.0811,,
+Technology,WFO Count,driver,False,,0,1,2,0,1,1,12,102.94,5.61,1.9229,3.3451,5.6108,,
+Operations,Admin Overhead (INR),actual,True,Closing HC|Total Exits,2,0,2,1,1,1,12,373.41,2.58,1444.9186,1773.9453,2.5764,Closing HC,2988.192544
+Operations,Attrition % (Ann.),driver,True,Total Exits,0,1,1,1,0,0,12,-119.01,1.48,0.0747,0.1027,1.4758,Total Exits,0.013552
+Operations,Avg Appraisal Rate,driver,False,,0,0,0,1,0,0,12,-441.71,3.97,0.0001,0.0004,3.9661,,
+Operations,Avg Salary (Wtd) (INR),driver,False,,0,1,2,1,1,1,12,361.19,3.45,41849.0252,46914.829,3.4537,,
+Operations,Band 1 Count,driver,False,,0,1,2,0,1,1,12,35.44,0.87,0.3132,0.4232,0.8692,,
+Operations,Band 1 Sal/FTE (INR),driver,False,,1,1,2,1,1,1,12,350.55,1.02,4902.8442,6168.188,1.0206,,
+Operations,Band 2 Count,driver,False,,0,1,1,0,1,1,12,26.28,1.78,0.7298,0.8416,1.7777,,
+Operations,Band 2 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,352.42,2.57,17723.9719,20535.9852,2.5691,,
+Operations,Band 3 Count,driver,False,,0,1,0,1,1,0,12,11.1,0.32,0.0833,0.2887,0.3205,,
+Operations,Band 3 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,370.85,0.81,8624.707,10105.2168,0.8131,,
+Operations,Band 4 Count,driver,False,,0,1,0,1,1,1,12,0.43,2.56,0.3333,0.5773,2.5641,,
+Operations,Band 4 Sal/FTE (INR),driver,False,,0,1,1,1,1,1,12,386.61,2.95,48036.155,48078.6775,2.9459,,
+Operations,Band 5 Count,driver,False,,1,0,0,0,0,0,12,-12.22,19.79,0.7911,0.8268,19.79,,
+Operations,Band 5 Sal/FTE (INR),driver,False,,0,1,2,0,1,1,12,399.33,0.07,1846.1125,1950.9951,0.0689,,
+Operations,Band 6 Count,driver,False,,1,0,0,0,1,1,12,52.25,27.91,0.46,0.543,27.906,,
+Operations,Band 6 Sal/FTE (INR),driver,False,,2,1,2,0,1,1,12,397.05,0.06,2549.6779,3266.3422,0.0588,,
+Operations,Billable HC,driver,False,,0,1,0,1,1,1,12,62.63,1.17,1.3797,1.5685,1.1747,,
+Operations,Bonus/Var Pay (INR),actual,True,Avg Appraisal Rate|Closing HC,0,1,2,0,1,1,12,624.82,464.53,3788586.8735,3955201.8158,464.5258,Avg Appraisal Rate,15064607.218826
+Operations,Budget: Admin Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,356.31,3.05,1870.7947,2101.8804,3.0464,Avg Salary (Wtd) (INR),10466.624932
+Operations,Budget: Bonus (INR),budget,True,Avg Appraisal Rate|Closing HC,0,1,2,1,1,1,12,549.19,367.17,338169.3183,397309.6719,367.1658,Avg Appraisal Rate,422510.010967
+Operations,Budget: Consultancy (INR),budget,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,1,2,1,1,1,12,492.06,18.11,39296.8511,97747.0239,18.1085,Avg Appraisal Rate,918943.445747
+Operations,Budget: DBTS Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,0,1,1,1,1,12,415.3,2.77,2316.6514,3239.3482,2.7729,Avg Salary (Wtd) (INR),52312.80975
+Operations,Budget: Emp Engagement (INR),budget,True,Long Leave Count|Closing HC,0,1,2,0,1,1,12,530.2,159.4,89155.3114,119655.0813,159.3984,Closing HC,406245.645771
+Operations,Budget: Financial Operation Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),2,1,1,0,1,1,12,324.82,2.55,580.1855,760.2635,2.5539,Avg Salary (Wtd) (INR),6854.214226
+Operations,Budget: HR Cost (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,366.57,3.61,3021.7059,3377.0893,3.6132,Avg Salary (Wtd) (INR),14123.416625
+Operations,Budget: IT Equipment (INR),budget,True,Total Hires|Closing HC,2,0,2,0,1,1,12,578.59,396.39,96532.6416,209434.9872,396.3891,Closing HC,3044.64961
+Operations,Budget: IT License (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,389.35,3.68,5441.6735,6393.1993,3.6847,Avg Salary (Wtd) (INR),25029.04274
+Operations,Budget: Learning Platform (INR),budget,True,Closing HC|Avg Appraisal Rate,1,1,2,0,1,1,12,378.6,5.63,2822.4545,3715.1732,5.633,Avg Appraisal Rate,34515.806279
+Operations,Budget: Long Leave (INR),budget,True,Long Leave Count,0,0,2,0,1,1,12,533.77,10092.36,40878.8872,69414.6382,10092.3552,Long Leave Count,250.300916
+Operations,Budget: Mgmt Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,413.38,5.81,16140.8562,19264.9977,5.8096,Avg Salary (Wtd) (INR),32991.014992
+Operations,Budget: Office Rent (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,457.14,4.03,32717.0048,42016.9874,4.0302,WFO Count,115421.949211
+Operations,Budget: Overtime (INR),budget,True,WFO Count|Avg Appraisal Rate,1,1,2,1,1,1,12,506.47,37.77,131240.9493,341683.1936,37.7655,Avg Appraisal Rate,2087824.102827
+Operations,Budget: Salary (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),1,1,2,0,1,1,12,562.01,3.38,395981.4968,444478.7176,3.3767,Band 3 Sal/FTE (INR),17717390.361153
+Operations,Budget: Training & Dev (INR),budget,True,Avg Appraisal Rate|Total Hires|Billable HC|Closing HC,0,1,2,0,1,1,12,404.68,8.76,3915.1523,6182.6864,8.7572,Avg Appraisal Rate,80558.048241
+Operations,Budget: Utilities (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,347.24,2.99,1334.284,1842.7296,2.9925,Avg Salary (Wtd) (INR),10484.766882
+Operations,CAD/INR Forex Rate,driver,False,,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814,,
+Operations,Closing HC,driver,False,,0,1,2,0,1,1,12,56.77,0.91,1.1272,1.5214,0.9056,,
+Operations,Consultancy Charges (INR),actual,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,1,2,1,1,1,12,605.48,87.73,392310.7901,822919.3072,87.725,Avg Appraisal Rate,1959955.793697
+Operations,DBTS Charges (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,1,1,1,1,12,386.49,3.21,2600.0321,3004.3747,3.2073,Avg Salary (Wtd) (INR),13531.566712
+Operations,Emp Engagement Cost (INR),actual,True,Long Leave Count|Closing HC,0,0,2,1,1,1,12,639.28,190.94,714688.8842,1444723.8539,190.939,Closing HC,725035.816919
+Operations,Financial Operation Charges (INR),actual,True,Salary Cost (INR)|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,307.49,4.79,1010.6114,2083.1936,4.7923,Avg Salary (Wtd) (INR),6720.552246
+Operations,HR Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,363.95,3.62,2833.2871,3140.7443,3.6183,Avg Salary (Wtd) (INR),13224.329684
+Operations,IT Equipment Cost (INR),actual,True,Total Hires|Avg Appraisal Rate,0,1,2,1,1,1,12,602.58,294.37,507471.7796,643552.6309,294.3691,Avg Appraisal Rate,5658374.027064
+Operations,IT License Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,1,1,1,12,572.43,2298.72,3224025.6089,3241620.061,2298.7172,Closing HC,2182009.974459
+Operations,Learning Platform Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,348.64,3.36,1713.7233,2043.1507,3.3625,Avg Salary (Wtd) (INR),8757.643982
+Operations,Long Leave Cost (INR),driver,True,Long Leave Count,1,1,2,1,1,1,12,500.91,43.8,37274.5641,44430.6948,43.7999,Long Leave Count,432.957647
+Operations,Long Leave Count,driver,False,,0,0,2,1,1,1,12,41.27,115.36,0.4836,0.6823,115.3571,,
+Operations,Mgmt Overhead (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,1,1,1,12,411.48,3.67,9986.2562,11513.7797,3.6667,Avg Salary (Wtd) (INR),31210.891241
+Operations,Office Rent & Facilities (INR),actual,True,WFO Count|CAD/INR Forex Rate,0,1,2,0,1,1,12,568.38,136.79,1114897.784,1176643.6717,136.7901,WFO Count,3806604.910395
+Operations,Original Budget (INR),actual,True,Closing HC|Total Hires|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,601.09,4.86,829471.0414,904914.7436,4.8576,Closing HC,3164295.294663
+Operations,Overtime Cost (INR),actual,True,WFO Count|Total Exits,1,1,2,0,1,1,12,583.88,98.03,205057.4025,438436.788,98.0289,WFO Count,244061.634785
+Operations,Salary Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),0,1,2,0,1,1,12,608.79,20.76,2403726.1497,2567678.8749,20.7644,Band 1 Sal/FTE (INR),32314708.628125
+Operations,Talent Pool,driver,False,,0,1,1,1,0,0,12,14.06,0.28,0.0168,0.0168,0.2793,,
+Operations,Total Exits,driver,False,,2,0,0,0,1,0,12,-870.94,0.0,0.0,0.0,0.0,,
+Operations,Total Hires,driver,False,,0,0,2,0,1,1,12,51.35,19.87,0.4601,0.8568,19.875,,
+Operations,Training & Dev Cost (INR),actual,True,Avg Appraisal Rate|Total Hires|Closing HC,0,1,2,0,1,1,12,371.12,4.65,2139.3031,2927.8318,4.6513,Avg Appraisal Rate,27655.809399
+Operations,Utilities Cost (INR),actual,True,WFO Count|CAD/INR Forex Rate,0,1,2,0,1,1,12,534.11,1208.52,543578.789,568031.5697,1208.5247,WFO Count,1590859.546076
+Operations,WFH Count,driver,False,,0,1,2,0,1,1,12,78.89,5.31,0.9469,1.328,5.3069,,
+Operations,WFO Count,driver,False,,2,1,1,1,1,0,12,84.42,5.1,5.2242,5.7521,5.0988,,
+Finance,Admin Overhead (INR),actual,True,Closing HC|Total Exits,0,1,2,0,1,1,12,330.88,7.3,724.2119,916.4561,7.3018,Closing HC,139.807318
+Finance,Attrition % (Ann.),driver,True,Total Exits,1,0,2,1,0,1,12,1592.52,4.06,0.0051,0.0103,4.056,Total Exits,0.025434
+Finance,Avg Appraisal Rate,driver,False,,0,0,0,1,0,0,12,-390.49,1.82,0.0001,0.0004,1.8247,,
+Finance,Avg Salary (Wtd) (INR),driver,False,,0,1,2,1,1,1,12,403.55,3.36,124588.1099,125682.1062,3.3582,,
+Finance,Band 1 Count,driver,False,,0,0,1,1,1,0,12,-1.72,5.56,0.1667,0.4082,5.5556,,
+Finance,Band 1 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,380.73,11.17,108144.9538,125949.4292,11.1747,,
+Finance,Band 2 Count,driver,False,,0,0,0,1,1,1,12,30.74,6.17,0.3412,0.4942,6.1665,,
+Finance,Band 2 Sal/FTE (INR),driver,False,,1,1,2,0,1,1,12,401.2,0.68,10026.4487,10366.7998,0.6783,,
+Finance,Band 3 Count,driver,False,,2,0,2,0,1,1,12,38.94,6.0,0.461,0.5843,6.0028,,
+Finance,Band 3 Sal/FTE (INR),driver,False,,1,1,2,1,1,1,12,369.67,0.55,12465.5996,14403.2663,0.5501,,
+Finance,Band 4 Count,driver,False,,0,1,0,1,0,0,12,-895.32,0.0,0.0,0.0,0.0,,
+Finance,Band 4 Sal/FTE (INR),driver,False,,2,0,1,1,1,1,12,478.81,0.38,13972.9237,18536.7279,0.3834,,
+Finance,Band 5 Count,driver,False,,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0,,
+Finance,Band 5 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,445.33,1.18,69747.5172,80537.5772,1.1804,,
+Finance,Band 6 Count,driver,False,,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0,,
+Finance,Band 6 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,426.55,0.1,10285.5904,13192.6441,0.0992,,
+Finance,Billable HC,driver,False,,2,0,2,0,1,1,12,30.76,3.68,0.9527,1.2869,3.6796,,
+Finance,Bonus/Var Pay (INR),actual,True,Avg Appraisal Rate|Closing HC,0,1,2,0,1,1,12,575.99,137.25,772547.4766,975890.0431,137.2461,Avg Appraisal Rate,787267.947417
+Finance,Budget: Admin Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,327.99,5.34,563.2297,659.2329,5.3375,Closing HC,189.067204
+Finance,Budget: Bonus (INR),budget,True,Avg Appraisal Rate|Closing HC,0,1,2,0,1,1,12,477.72,106.67,38522.7755,49833.42,106.6656,Avg Appraisal Rate,72929.896046
+Finance,Budget: Consultancy (INR),budget,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,1,2,1,1,1,12,510.39,64.08,105052.0636,127954.9526,64.0777,Avg Appraisal Rate,1179491.943393
+Finance,Budget: DBTS Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,0,2,0,1,1,12,374.34,4.26,1139.0238,1746.0788,4.2616,Avg Salary (Wtd) (INR),6949.212366
+Finance,Budget: Emp Engagement (INR),budget,True,Long Leave Count|Closing HC,0,1,2,1,1,1,12,463.46,106.7,22330.4647,37423.7439,106.6986,Closing HC,2472.941612
+Finance,Budget: Financial Operation Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,0,2,0,1,1,12,410.35,4.65,2955.6203,3803.4847,4.6549,Avg Salary (Wtd) (INR),9253.162215
+Finance,Budget: HR Cost (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,340.27,8.32,1214.9843,1476.3434,8.3157,Avg Salary (Wtd) (INR),2310.255417
+Finance,Budget: IT Equipment (INR),budget,True,Total Hires|Closing HC,0,1,2,1,1,1,12,492.33,634.01,60320.6654,93843.3147,634.0072,Total Hires,13456.588174
+Finance,Budget: IT License (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,0,2,0,1,1,12,389.76,4.17,1595.155,2510.2533,4.166,Avg Salary (Wtd) (INR),10320.609307
+Finance,Budget: Learning Platform (INR),budget,True,Closing HC|Avg Appraisal Rate,0,1,2,0,1,1,12,332.93,12.97,870.7723,1024.981,12.9704,Avg Appraisal Rate,3230.1206
+Finance,Budget: Long Leave (INR),budget,True,Long Leave Count,2,1,2,1,1,1,12,533.97,1283.6,40869.1262,94196.9313,1283.6046,Long Leave Count,833.411739
+Finance,Budget: Mgmt Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,429.94,9.29,14525.3538,17645.6377,9.2868,Avg Salary (Wtd) (INR),35934.634833
+Finance,Budget: Office Rent (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),0,1,2,1,1,1,12,436.01,11.24,19719.1802,22681.0958,11.2431,Avg Salary (Wtd) (INR),14222.398683
+Finance,Budget: Overtime (INR),budget,True,WFO Count|Avg Appraisal Rate,0,1,2,1,1,1,12,351.43,7.14,1881.0744,2065.7278,7.1419,Avg Appraisal Rate,5693.938251
+Finance,Budget: Salary (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),2,0,0,1,1,0,12,639.6,5.82,367721.2766,455118.707,5.8218,Band 3 Sal/FTE (INR),5936480.926939
+Finance,Budget: Training & Dev (INR),budget,True,Avg Appraisal Rate|Total Hires|Billable HC|Closing HC,0,1,2,0,1,1,12,377.09,22.31,1802.2474,2371.4696,22.3055,Avg Appraisal Rate,8632.747213
+Finance,Budget: Utilities (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),2,1,2,0,1,1,12,308.08,17.32,1056.7114,1212.4447,17.3185,Avg Salary (Wtd) (INR),9367.303284
+Finance,CAD/INR Forex Rate,driver,False,,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814,,
+Finance,Closing HC,driver,False,,2,0,2,0,1,1,12,30.76,3.68,0.9527,1.2869,3.6796,,
+Finance,Consultancy Charges (INR),actual,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,1,2,1,1,1,12,548.37,201.61,425438.5211,475841.5202,201.6108,Avg Appraisal Rate,2959864.097389
+Finance,DBTS Charges (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,1,1,1,12,362.49,4.91,1214.738,1714.9824,4.9138,Avg Salary (Wtd) (INR),3732.043621
+Finance,Emp Engagement Cost (INR),actual,True,Long Leave Count|Closing HC,0,1,2,0,1,1,12,584.31,4419.66,646126.3447,782159.8837,4419.6598,Closing HC,684075.51627
+Finance,Financial Operation Charges (INR),actual,True,Salary Cost (INR)|Avg Salary (Wtd) (INR),2,1,2,0,1,1,12,357.4,3.37,1997.7763,2679.2256,3.3681,Avg Salary (Wtd) (INR),5185.469463
+Finance,HR Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,337.69,8.01,1094.8591,1346.7596,8.0073,Avg Salary (Wtd) (INR),1838.313594
+Finance,IT Equipment Cost (INR),actual,True,Total Hires|Avg Appraisal Rate,2,1,2,0,1,1,12,557.51,83.19,162927.7263,340541.9568,83.1904,Avg Appraisal Rate,1452495.919094
+Finance,IT License Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),2,1,2,1,1,1,12,535.59,426.43,144348.9861,191415.2242,426.4289,Avg Salary (Wtd) (INR),337790.040167
+Finance,Learning Platform Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,1,1,1,1,12,337.94,4.68,420.8209,700.6281,4.6756,Avg Salary (Wtd) (INR),2070.48192
+Finance,Long Leave Cost (INR),driver,True,Long Leave Count,0,1,2,0,1,1,12,513.51,95.64,37151.05,73993.1865,95.6408,Long Leave Count,931.882898
+Finance,Long Leave Count,driver,False,,0,1,2,1,1,1,12,26.99,5.33,0.4275,0.5303,5.3256,,
+Finance,Mgmt Overhead (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,427.22,9.55,13943.231,16784.2778,9.5456,Avg Salary (Wtd) (INR),33471.677948
+Finance,Office Rent & Facilities (INR),actual,True,WFO Count|CAD/INR Forex Rate,2,1,2,0,1,1,12,560.29,566.76,936162.1905,952898.3085,566.7623,WFO Count,54940.212496
+Finance,Original Budget (INR),actual,True,Closing HC|Total Hires|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,593.72,34.32,2797041.8172,2897411.1964,34.3232,Avg Salary (Wtd) (INR),2656223.747102
+Finance,Overtime Cost (INR),actual,True,WFO Count|Total Exits,0,1,2,0,1,1,12,535.09,27.26,36685.5721,61816.7938,27.2613,WFO Count,9984.397961
+Finance,Salary Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),2,0,1,1,1,0,12,641.4,8.6,477595.095,552973.7915,8.5964,Avg Salary (Wtd) (INR),5829845.552925
+Finance,Talent Pool,driver,False,,1,2,1,0,0,0,12,-972.23,inf,0.0,0.0,,,
+Finance,Total Exits,driver,False,,1,0,0,1,0,0,12,-887.41,0.0,0.0,0.0,0.0001,,
+Finance,Total Hires,driver,False,,2,0,0,0,1,0,12,-17.41,10.0,0.0833,0.2887,10.0,,
+Finance,Training & Dev Cost (INR),actual,True,Avg Appraisal Rate|Total Hires|Closing HC,2,1,2,0,1,1,12,349.06,10.78,1103.987,1288.9755,10.7827,Avg Appraisal Rate,3964.613809
+Finance,Utilities Cost (INR),actual,True,WFO Count|CAD/INR Forex Rate,0,1,2,1,1,1,12,512.49,4506.28,276645.552,292171.4391,4506.2778,CAD/INR Forex Rate,23559.441314
+Finance,WFH Count,driver,False,,0,1,0,0,1,1,12,61.59,9.16,0.6389,0.8221,9.1601,,
+Finance,WFO Count,driver,False,,2,0,2,0,1,1,12,53.19,3.87,0.7178,0.9523,3.8658,,
+HR,Admin Overhead (INR),actual,True,Closing HC|Total Exits,2,1,1,1,1,0,12,340.35,6.9,696.4807,858.9421,6.9018,Closing HC,42.26471
+HR,Attrition % (Ann.),driver,True,Total Exits,2,0,0,1,0,0,12,-172.89,6.14,0.0071,0.0156,6.1433,Total Exits,0.048278
+HR,Avg Appraisal Rate,driver,False,,0,0,0,1,0,0,12,-460.9,1.59,0.0001,0.0004,1.5863,,
+HR,Avg Salary (Wtd) (INR),driver,False,,1,1,2,0,1,1,12,389.99,1.02,20912.7556,21532.8237,1.0169,,
+HR,Band 1 Count,driver,False,,0,1,0,1,1,1,12,15.68,58.33,1.0,1.0801,58.334,,
+HR,Band 1 Sal/FTE (INR),driver,False,,0,1,2,0,1,1,12,362.73,0.78,5097.7886,5978.1924,0.7777,,
+HR,Band 2 Count,driver,False,,0,1,0,1,1,0,12,20.42,18.06,1.0833,1.1547,18.0556,,
+HR,Band 2 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,359.57,1.45,14139.8853,16559.3881,1.4501,,
+HR,Band 3 Count,driver,False,,1,0,0,1,0,0,12,42.01,20.6,1.4094,1.5155,20.5951,,
+HR,Band 3 Sal/FTE (INR),driver,False,,0,1,2,0,1,1,12,387.31,0.7,10409.4059,12022.5592,0.7018,,
+HR,Band 4 Count,driver,False,,0,1,1,1,1,1,12,10.28,12.17,0.4168,0.4565,12.1728,,
+HR,Band 4 Sal/FTE (INR),driver,False,,2,1,2,1,1,0,12,426.1,0.32,7128.8297,8283.3904,0.3171,,
+HR,Band 5 Count,driver,False,,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0,,
+HR,Band 5 Sal/FTE (INR),driver,False,,2,1,1,1,1,0,12,414.19,0.21,7795.79,9126.5337,0.2148,,
+HR,Band 6 Count,driver,False,,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0,,
+HR,Band 6 Sal/FTE (INR),driver,False,,1,1,2,1,1,1,12,445.86,0.85,49523.0345,57314.4419,0.85,,
+HR,Billable HC,driver,False,,2,0,0,1,1,1,12,48.77,3.43,0.6554,0.8307,3.4342,,
+HR,Bonus/Var Pay (INR),actual,True,Avg Appraisal Rate|Closing HC,0,1,2,0,1,1,12,586.19,209.45,535973.2445,551824.6584,209.4535,Avg Appraisal Rate,5518846.916986
+HR,Budget: Admin Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),2,1,1,1,1,0,12,351.19,9.02,1020.2001,1209.2455,9.0228,Avg Salary (Wtd) (INR),13291.827836
+HR,Budget: Bonus (INR),budget,True,Avg Appraisal Rate|Closing HC,0,1,2,0,1,1,12,497.15,111.04,41359.4459,67152.9422,111.0369,Avg Appraisal Rate,96982.943159
+HR,Budget: Consultancy (INR),budget,True,Avg Appraisal Rate|CAD/INR Forex Rate,2,1,2,1,1,1,12,478.01,35.44,16739.655,24043.108,35.4376,Avg Appraisal Rate,70122.557956
+HR,Budget: DBTS Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,319.9,29.81,2251.8223,2551.2369,29.8145,Avg Salary (Wtd) (INR),2672.320434
+HR,Budget: Emp Engagement (INR),budget,True,Long Leave Count|Closing HC,2,1,2,0,1,1,12,450.72,238.55,23979.3526,24860.9123,238.5519,Closing HC,2639.861199
+HR,Budget: Financial Operation Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),2,1,1,1,1,0,12,287.72,5.95,253.4972,289.8978,5.9517,Avg Salary (Wtd) (INR),4691.819737
+HR,Budget: HR Cost (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),2,1,1,1,1,0,12,349.89,9.43,1459.5993,1711.6419,9.4295,Avg Salary (Wtd) (INR),17182.487368
+HR,Budget: IT Equipment (INR),budget,True,Total Hires|Closing HC,0,0,2,1,1,1,12,553.38,894.06,46833.6907,50224.5629,894.0608,Closing HC,26638.378757
+HR,Budget: IT License (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,361.62,16.92,3167.291,3839.7841,16.9198,Avg Salary (Wtd) (INR),720.548382
+HR,Budget: Learning Platform (INR),budget,True,Closing HC|Avg Appraisal Rate,0,0,2,1,1,1,12,366.69,10.58,860.7119,1242.7338,10.5809,Avg Appraisal Rate,12041.69748
+HR,Budget: Long Leave (INR),budget,True,Long Leave Count,0,1,2,0,1,1,12,478.01,5063.12,17485.525,28354.9488,5063.1154,Long Leave Count,4138.399609
+HR,Budget: Mgmt Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,1,1,0,12,454.47,14.48,14267.5235,18270.6362,14.4839,Avg Salary (Wtd) (INR),14973.980118
+HR,Budget: Office Rent (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),0,1,1,0,1,1,12,453.24,6.34,9434.1227,13703.2458,6.3444,Avg Salary (Wtd) (INR),16364.92762
+HR,Budget: Overtime (INR),budget,True,WFO Count|Avg Appraisal Rate,0,1,2,1,1,1,12,360.3,26.66,4320.4768,5868.2897,26.659,Avg Appraisal Rate,6054.016436
+HR,Budget: Salary (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),0,1,2,0,1,1,12,568.19,17.08,586418.9188,699784.759,17.0766,Band 3 Sal/FTE (INR),4193827.577799
+HR,Budget: Training & Dev (INR),budget,True,Avg Appraisal Rate|Total Hires|Billable HC|Closing HC,1,1,2,1,1,1,12,364.2,63.09,3800.9673,5811.6502,63.0931,Avg Appraisal Rate,15200.290312
+HR,Budget: Utilities (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),2,1,2,0,1,1,12,323.54,17.75,1151.4971,1590.0984,17.7537,Avg Salary (Wtd) (INR),7661.915513
+HR,CAD/INR Forex Rate,driver,False,,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814,,
+HR,Closing HC,driver,False,,2,0,0,1,1,1,12,48.77,3.43,0.6554,0.8307,3.4342,,
+HR,Consultancy Charges (INR),actual,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,0,2,0,1,1,12,548.66,118.45,55097.7061,77568.5522,118.4501,Avg Appraisal Rate,25573.050157
+HR,DBTS Charges (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,320.69,21.88,1531.2871,1783.053,21.8779,Avg Salary (Wtd) (INR),1315.873714
+HR,Emp Engagement Cost (INR),actual,True,Long Leave Count|Closing HC,0,1,2,1,1,1,12,550.53,1608.06,310277.4195,368480.1134,1608.0627,Closing HC,61238.602979
+HR,Financial Operation Charges (INR),actual,True,Salary Cost (INR)|Avg Salary (Wtd) (INR),1,1,0,0,1,1,12,307.36,4.71,188.6621,372.4471,4.7081,Avg Salary (Wtd) (INR),6325.821614
+HR,HR Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),2,1,1,1,1,0,12,347.83,9.35,1352.6715,1588.5197,9.3452,Avg Salary (Wtd) (INR),16154.412468
+HR,IT Equipment Cost (INR),actual,True,Total Hires|Avg Appraisal Rate,0,1,2,0,1,1,12,550.22,428.56,193401.717,290463.8336,428.557,Avg Appraisal Rate,182777.35442
+HR,IT License Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,1,1,1,12,521.53,12543.77,2322427.0111,2387541.9015,12543.769,Avg Salary (Wtd) (INR),300874.299028
+HR,Learning Platform Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,1,1,1,12,329.23,15.24,1374.6826,1574.5137,15.2436,Avg Salary (Wtd) (INR),936.24378
+HR,Long Leave Cost (INR),driver,True,Long Leave Count,2,1,2,1,1,0,12,489.02,2.07,16545.4143,25103.3321,2.0711,Long Leave Count,3124.433816
+HR,Long Leave Count,driver,False,,0,1,0,1,1,0,12,46.18,0.0,0.8333,0.9789,0.0,,
+HR,Mgmt Overhead (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),2,1,2,1,1,0,12,429.67,16.81,14908.2244,16165.4034,16.8125,Avg Salary (Wtd) (INR),86284.875778
+HR,Office Rent & Facilities (INR),actual,True,WFO Count|CAD/INR Forex Rate,2,1,0,1,1,0,12,565.32,10.76,47243.4473,145373.7561,10.7638,WFO Count,91948.148677
+HR,Original Budget (INR),actual,True,Closing HC|Total Hires|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,589.68,18.06,849467.9274,949349.8572,18.0566,Avg Salary (Wtd) (INR),840283.382035
+HR,Overtime Cost (INR),actual,True,WFO Count|Total Exits,1,0,1,0,0,0,12,1166.31,inf,23519.4977,24976.497,,WFO Count,2554.895723
+HR,Salary Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),0,1,2,0,1,1,12,582.45,54.05,1921611.1598,2013849.0669,54.0469,Avg Salary (Wtd) (INR),11685270.478183
+HR,Talent Pool,driver,False,,1,2,1,0,0,0,12,-972.23,inf,0.0,0.0,,,
+HR,Total Exits,driver,False,,0,0,2,1,1,0,12,-557.0,0.0,0.0,0.0,0.0,,
+HR,Total Hires,driver,False,,0,1,2,1,1,1,12,16.6,37.45,0.2615,0.3365,37.4495,,
+HR,Training & Dev Cost (INR),actual,True,Avg Appraisal Rate|Total Hires|Closing HC,1,0,2,0,1,1,12,332.31,5.26,304.5845,405.1815,5.2596,Avg Appraisal Rate,7880.321327
+HR,Utilities Cost (INR),actual,True,WFO Count|CAD/INR Forex Rate,1,0,2,1,1,1,12,519.52,13.48,17926.9538,60895.4166,13.4771,WFO Count,6007.859391
+HR,WFH Count,driver,False,,0,1,0,0,0,1,12,1711.9,12.2,0.6072,0.6965,12.196,,
+HR,WFO Count,driver,False,,2,0,2,1,1,1,12,47.84,4.35,0.6152,0.6865,4.3477,,
+Sales & Marketing,Admin Overhead (INR),actual,True,Closing HC|Total Exits,0,1,2,0,1,1,12,332.58,7.76,1694.5023,1937.6869,7.7621,Closing HC,688.275093
+Sales & Marketing,Attrition % (Ann.),driver,True,Total Exits,2,0,0,1,0,1,12,1490.77,178.8,0.2619,0.513,178.8021,Total Exits,0.065792
+Sales & Marketing,Avg Appraisal Rate,driver,False,,0,0,0,1,0,0,12,-472.28,1.96,0.0001,0.0003,1.96,,
+Sales & Marketing,Avg Salary (Wtd) (INR),driver,False,,0,1,2,0,1,1,12,379.85,0.96,20708.5402,21095.3264,0.9582,,
+Sales & Marketing,Band 1 Count,driver,False,,1,1,0,1,1,0,12,15.68,8.33,0.5,0.7071,8.3333,,
+Sales & Marketing,Band 1 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,346.6,1.07,6777.816,7827.8404,1.0725,,
+Sales & Marketing,Band 2 Count,driver,False,,1,1,2,0,1,1,12,23.53,11.82,1.7101,1.751,11.8191,,
+Sales & Marketing,Band 2 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,360.09,0.03,240.6405,344.0525,0.0251,,
+Sales & Marketing,Band 3 Count,driver,False,,0,1,2,1,1,1,12,14.04,1.31,0.2386,0.3389,1.3058,,
+Sales & Marketing,Band 3 Sal/FTE (INR),driver,False,,1,1,2,1,1,1,12,369.57,0.37,5192.1098,7247.4105,0.3717,,
+Sales & Marketing,Band 4 Count,driver,False,,2,0,2,1,1,1,12,29.2,2.28,0.2505,0.2853,2.2771,,
+Sales & Marketing,Band 4 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,397.96,0.16,3908.022,4519.3581,0.1623,,
+Sales & Marketing,Band 5 Count,driver,False,,0,1,1,1,1,1,12,-25.05,20.83,0.8333,0.9129,20.833,,
+Sales & Marketing,Band 5 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,386.87,0.14,5380.9141,6611.897,0.1396,,
+Sales & Marketing,Band 6 Count,driver,False,,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0,,
+Sales & Marketing,Band 6 Sal/FTE (INR),driver,False,,0,1,1,1,1,1,12,472.18,0.88,57818.7765,67019.889,0.878,,
+Sales & Marketing,Billable HC,driver,False,,2,0,2,0,1,1,12,62.23,2.46,1.2802,1.5133,2.4607,,
+Sales & Marketing,Bonus/Var Pay (INR),actual,True,Avg Appraisal Rate|Closing HC,1,1,2,0,1,1,12,574.06,25.48,270498.3982,463168.3876,25.4824,Avg Appraisal Rate,4255486.066362
+Sales & Marketing,Budget: Admin Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,330.95,8.37,1948.9285,2210.0507,8.3677,Avg Salary (Wtd) (INR),22703.640662
+Sales & Marketing,Budget: Bonus (INR),budget,True,Avg Appraisal Rate|Closing HC,0,1,2,1,1,1,12,538.8,813.35,325300.4612,358449.0977,813.355,Avg Appraisal Rate,568167.138401
+Sales & Marketing,Budget: Consultancy (INR),budget,True,Avg Appraisal Rate|CAD/INR Forex Rate,1,0,2,0,1,1,12,535.97,16.28,48943.5508,100933.8841,16.2846,Avg Appraisal Rate,530871.952044
+Sales & Marketing,Budget: DBTS Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,1,1,1,12,324.51,5.74,1134.1988,1329.0568,5.7428,Avg Salary (Wtd) (INR),1158.388911
+Sales & Marketing,Budget: Emp Engagement (INR),budget,True,Long Leave Count|Closing HC,0,0,2,0,1,1,12,520.39,63.62,34443.128,63455.4048,63.6169,Closing HC,2212.738287
+Sales & Marketing,Budget: Financial Operation Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,303.52,8.61,1118.4489,1278.4962,8.6102,Closing HC,531.070209
+Sales & Marketing,Budget: HR Cost (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,344.17,8.12,2599.6861,2957.9832,8.1156,Avg Salary (Wtd) (INR),32220.114781
+Sales & Marketing,Budget: IT Equipment (INR),budget,True,Total Hires|Closing HC,0,1,2,1,1,1,12,514.74,172.51,41177.8167,57357.0551,172.5126,Closing HC,135886.139769
+Sales & Marketing,Budget: IT License (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,376.27,9.74,6299.7521,7091.2335,9.7361,Avg Salary (Wtd) (INR),75111.692799
+Sales & Marketing,Budget: Learning Platform (INR),budget,True,Closing HC|Avg Appraisal Rate,2,1,2,0,1,1,12,340.92,7.14,1246.4669,1550.9959,7.1424,Avg Appraisal Rate,12327.894181
+Sales & Marketing,Budget: Long Leave (INR),budget,True,Long Leave Count,0,0,1,0,1,1,12,547.46,515.58,2082.244,2969.8866,515.5761,Long Leave Count,956.180899
+Sales & Marketing,Budget: Mgmt Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,1,1,1,12,420.08,4.66,9062.5078,10003.9574,4.6642,Avg Salary (Wtd) (INR),229675.767646
+Sales & Marketing,Budget: Office Rent (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,439.34,8.55,30067.3866,35654.13,8.5533,WFO Count,34766.128697
+Sales & Marketing,Budget: Overtime (INR),budget,True,WFO Count|Avg Appraisal Rate,2,1,2,1,1,1,12,400.54,11.9,4769.4813,6710.7988,11.8959,Avg Appraisal Rate,46449.261184
+Sales & Marketing,Budget: Salary (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),0,1,2,0,1,1,12,560.4,16.06,1295777.0686,1359267.2377,16.0587,Band 1 Sal/FTE (INR),1718864.68756
+Sales & Marketing,Budget: Training & Dev (INR),budget,True,Avg Appraisal Rate|Total Hires|Billable HC|Closing HC,2,1,2,0,1,1,12,377.37,26.9,2523.3584,2941.3747,26.8967,Avg Appraisal Rate,20720.081969
+Sales & Marketing,Budget: Utilities (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),1,0,2,0,1,1,12,356.38,9.08,1405.7809,1682.9009,9.0838,Avg Salary (Wtd) (INR),8562.637083
+Sales & Marketing,CAD/INR Forex Rate,driver,False,,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814,,
+Sales & Marketing,Closing HC,driver,False,,1,0,2,1,1,1,12,56.22,3.82,2.1025,2.4151,3.8178,,
+Sales & Marketing,Consultancy Charges (INR),actual,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,0,2,1,1,1,12,580.35,31.22,59045.8745,111796.9581,31.2194,CAD/INR Forex Rate,63109.652373
+Sales & Marketing,DBTS Charges (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,320.48,8.22,1566.2764,1778.4875,8.2231,Avg Salary (Wtd) (INR),2710.44496
+Sales & Marketing,Emp Engagement Cost (INR),actual,True,Long Leave Count|Closing HC,2,1,2,1,1,1,12,576.28,589.84,265924.0353,585372.4674,589.8378,Closing HC,81230.532299
+Sales & Marketing,Financial Operation Charges (INR),actual,True,Salary Cost (INR)|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,297.57,16.67,2017.6693,2264.4559,16.6666,Avg Salary (Wtd) (INR),14091.05834
+Sales & Marketing,HR Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,1,1,1,12,337.45,7.31,2183.0081,2510.3391,7.3101,Avg Salary (Wtd) (INR),2435.484789
+Sales & Marketing,IT Equipment Cost (INR),actual,True,Total Hires|Avg Appraisal Rate,0,0,2,0,1,1,12,616.06,195.32,169027.1543,328772.1334,195.3204,Avg Appraisal Rate,499784.804436
+Sales & Marketing,IT License Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,553.18,19132.5,12472388.9028,12538688.6837,19132.4978,Closing HC,513426.101512
+Sales & Marketing,Learning Platform Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,320.48,8.22,1566.2764,1778.4875,8.2231,Avg Salary (Wtd) (INR),2710.44496
+Sales & Marketing,Long Leave Cost (INR),driver,True,Long Leave Count,1,0,1,0,0,0,12,1104.03,inf,7740.7849,13707.6148,,Long Leave Count,1487.679429
+Sales & Marketing,Long Leave Count,driver,False,,1,1,0,1,1,0,12,34.59,15.64,0.4717,0.596,15.6406,,
+Sales & Marketing,Mgmt Overhead (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),1,1,2,0,1,1,12,415.51,4.6,8289.0589,9278.9006,4.6038,Avg Salary (Wtd) (INR),228372.649175
+Sales & Marketing,Office Rent & Facilities (INR),actual,True,WFO Count|CAD/INR Forex Rate,2,1,2,0,1,1,12,440.42,17.22,55390.9073,57767.1956,17.2233,WFO Count,31786.826801
+Sales & Marketing,Original Budget (INR),actual,True,Closing HC|Total Hires|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,587.16,6.81,751209.9905,854865.9434,6.8059,Closing HC,777519.643561
+Sales & Marketing,Overtime Cost (INR),actual,True,WFO Count|Total Exits,0,1,2,0,1,1,12,522.55,7.65,35455.9298,37298.7245,7.6506,WFO Count,38761.224428
+Sales & Marketing,Salary Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),2,1,2,0,1,1,12,612.1,15.54,1138329.538,1291855.7004,15.5435,Band 1 Sal/FTE (INR),20675705.892201
+Sales & Marketing,Talent Pool,driver,False,,2,1,0,1,1,1,12,-225.7,27.78,0.8333,0.9129,27.7781,,
+Sales & Marketing,Total Exits,driver,False,,2,0,0,0,1,0,12,15.94,37.5,0.25,0.5,37.5,,
+Sales & Marketing,Total Hires,driver,False,,0,1,1,1,1,1,12,55.67,73.86,0.7576,1.0308,73.8564,,
+Sales & Marketing,Training & Dev Cost (INR),actual,True,Avg Appraisal Rate|Total Hires|Closing HC,2,1,2,0,1,1,12,339.65,8.81,1573.0094,1758.2725,8.8126,Avg Appraisal Rate,9370.833839
+Sales & Marketing,Utilities Cost (INR),actual,True,WFO Count|CAD/INR Forex Rate,2,0,0,1,1,0,12,346.13,8.09,1233.6147,1530.0368,8.0916,WFO Count,3210.294671
+Sales & Marketing,WFH Count,driver,False,,0,0,2,0,1,1,12,55.76,9.22,1.0308,1.3452,9.2232,,
+Sales & Marketing,WFO Count,driver,False,,0,1,2,0,1,1,12,66.21,2.16,0.9379,1.1516,2.1579,,
+Risk & Compliance,Admin Overhead (INR),actual,True,Closing HC|Total Exits,0,1,2,0,1,1,12,514.88,10422.49,960251.5278,964119.2409,10422.4873,Closing HC,204934.32084
+Risk & Compliance,Attrition % (Ann.),driver,True,Total Exits,0,0,1,1,1,1,12,-126.0,17.22,0.0277,0.0678,17.2155,Total Exits,0.0
+Risk & Compliance,Avg Appraisal Rate,driver,False,,0,0,0,1,0,0,12,-368.5,10.25,0.0006,0.0017,10.2519,,
+Risk & Compliance,Avg Salary (Wtd) (INR),driver,False,,0,1,2,0,1,1,12,425.25,1.35,55306.9085,57870.8914,1.3502,,
+Risk & Compliance,Band 1 Count,driver,False,,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0,,
+Risk & Compliance,Band 1 Sal/FTE (INR),driver,False,,0,1,2,0,1,1,12,358.3,0.35,3574.8869,4292.2141,0.3506,,
+Risk & Compliance,Band 2 Count,driver,False,,0,1,2,0,0,0,12,-32.09,1.08,0.0434,0.0449,1.0846,,
+Risk & Compliance,Band 2 Sal/FTE (INR),driver,False,,2,1,1,1,1,0,12,364.6,0.55,8684.2154,10621.5148,0.5498,,
+Risk & Compliance,Band 3 Count,driver,False,,0,1,2,0,0,1,12,-9.17,0.59,0.0414,0.0448,0.592,,
+Risk & Compliance,Band 3 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,409.56,0.08,1886.7479,2346.5965,0.0785,,
+Risk & Compliance,Band 4 Count,driver,False,,1,1,2,1,0,0,12,-8.96,0.29,0.0171,0.0283,0.2858,,
+Risk & Compliance,Band 4 Sal/FTE (INR),driver,False,,0,1,2,1,1,1,12,422.41,0.8,30491.9011,35783.1689,0.8038,,
+Risk & Compliance,Band 5 Count,driver,False,,0,1,0,0,0,0,12,-1184.24,0.0,0.0,0.0,0.0,,
+Risk & Compliance,Band 5 Sal/FTE (INR),driver,False,,1,0,2,0,1,1,12,434.02,0.1,5242.462,8816.4825,0.0991,,
+Risk & Compliance,Band 6 Count,driver,False,,1,1,0,0,0,0,12,31.29,8.33,0.1667,0.4082,8.3333,,
+Risk & Compliance,Band 6 Sal/FTE (INR),driver,False,,2,1,1,1,1,0,12,479.28,1.17,111660.0399,129663.4243,1.165,,
+Risk & Compliance,Billable HC,driver,False,,0,1,2,1,1,1,12,35.1,2.24,0.4748,0.6194,2.2448,,
+Risk & Compliance,Bonus/Var Pay (INR),actual,True,Avg Appraisal Rate|Closing HC,1,1,2,0,1,1,12,603.74,131.27,456764.6075,669712.9745,131.2686,Closing HC,249102.808561
+Risk & Compliance,Budget: Admin Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,1,1,1,12,314.8,8.03,796.3226,1000.1976,8.0304,Avg Salary (Wtd) (INR),1208.501765
+Risk & Compliance,Budget: Bonus (INR),budget,True,Avg Appraisal Rate|Closing HC,0,1,2,1,1,1,12,514.97,20.57,19896.9046,37617.775,20.5664,Closing HC,79203.03772
+Risk & Compliance,Budget: Consultancy (INR),budget,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,0,2,1,1,1,12,586.73,34.55,167827.489,331385.5463,34.5521,Avg Appraisal Rate,881471.745488
+Risk & Compliance,Budget: DBTS Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,1,1,1,12,359.1,9.04,2604.4768,3619.6749,9.0389,Avg Salary (Wtd) (INR),7720.781593
+Risk & Compliance,Budget: Emp Engagement (INR),budget,True,Long Leave Count|Closing HC,0,1,2,1,1,1,12,454.64,33.07,7888.1403,15392.6423,33.0727,Closing HC,2114.232238
+Risk & Compliance,Budget: Financial Operation Charges (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,1,1,1,12,367.15,11.47,4485.5878,5165.959,11.4726,Avg Salary (Wtd) (INR),8537.650952
+Risk & Compliance,Budget: HR Cost (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),2,1,2,1,1,1,12,334.42,11.81,1663.6318,2122.8071,11.8148,Avg Salary (Wtd) (INR),3670.719769
+Risk & Compliance,Budget: IT Equipment (INR),budget,True,Total Hires|Closing HC,1,0,2,1,1,1,12,521.47,387.38,25453.9696,36458.6674,387.3795,Closing HC,2710.448693
+Risk & Compliance,Budget: IT License (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),2,1,2,0,1,1,12,376.08,13.92,5516.2789,6404.0262,13.9206,Avg Salary (Wtd) (INR),12076.424742
+Risk & Compliance,Budget: Learning Platform (INR),budget,True,Closing HC|Avg Appraisal Rate,2,1,2,0,1,1,12,332.73,11.69,1038.7859,1271.4977,11.6872,Avg Appraisal Rate,2932.252577
+Risk & Compliance,Budget: Long Leave (INR),budget,True,Long Leave Count,0,1,2,0,1,1,12,527.82,3653.17,70789.1834,124568.5732,3653.1662,Long Leave Count,9923.714812
+Risk & Compliance,Budget: Mgmt Overhead (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,421.89,11.02,17391.175,18817.8913,11.0225,Avg Salary (Wtd) (INR),36496.882283
+Risk & Compliance,Budget: Office Rent (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),1,1,2,1,1,1,12,449.92,14.17,25546.0028,32006.0093,14.174,Avg Salary (Wtd) (INR),40630.376288
+Risk & Compliance,Budget: Overtime (INR),budget,True,WFO Count|Avg Appraisal Rate,0,1,2,0,1,1,12,391.75,16.61,5006.4689,5924.9471,16.6121,Avg Appraisal Rate,7497.043826
+Risk & Compliance,Budget: Salary (INR),budget,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),0,1,2,0,1,1,12,573.06,9.91,651514.252,766075.5152,9.9078,Avg Salary (Wtd) (INR),2488650.815326
+Risk & Compliance,Budget: Training & Dev (INR),budget,True,Avg Appraisal Rate|Total Hires|Billable HC|Closing HC,1,1,2,0,1,1,12,380.97,12.42,2093.0831,3344.1285,12.4155,Avg Appraisal Rate,9430.293748
+Risk & Compliance,Budget: Utilities (INR),budget,True,WFO Count|Avg Salary (Wtd) (INR),2,1,2,1,1,0,12,331.8,18.13,1113.5023,1268.0404,18.1291,Avg Salary (Wtd) (INR),5046.542651
+Risk & Compliance,CAD/INR Forex Rate,driver,False,,0,1,2,0,1,1,12,43.17,3.98,2.3234,2.7736,3.9814,,
+Risk & Compliance,Closing HC,driver,False,,0,1,2,1,1,1,12,35.1,2.24,0.4748,0.6194,2.2448,,
+Risk & Compliance,Consultancy Charges (INR),actual,True,Avg Appraisal Rate|CAD/INR Forex Rate,0,1,2,0,1,1,12,582.37,343.3,842360.9033,946254.1926,343.2953,Avg Appraisal Rate,4159188.571845
+Risk & Compliance,DBTS Charges (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,354.94,11.82,2980.3438,3235.3837,11.8223,Avg Salary (Wtd) (INR),6584.703931
+Risk & Compliance,Emp Engagement Cost (INR),actual,True,Long Leave Count|Closing HC,0,1,2,0,1,1,12,583.65,1639.31,391520.469,638190.3166,1639.3112,Closing HC,385033.646812
+Risk & Compliance,Financial Operation Charges (INR),actual,True,Salary Cost (INR)|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,366.96,10.19,3554.4538,4398.3344,10.1904,Avg Salary (Wtd) (INR),54725.952737
+Risk & Compliance,HR Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,326.88,12.87,1557.7067,1835.1605,12.8713,Closing HC,1883.715089
+Risk & Compliance,IT Equipment Cost (INR),actual,True,Total Hires|Avg Appraisal Rate,0,1,2,1,1,1,12,560.06,96.15,134354.1055,180395.2991,96.1515,Avg Appraisal Rate,1788737.754409
+Risk & Compliance,IT License Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,523.26,81.72,38003.5166,48617.514,81.7181,Avg Salary (Wtd) (INR),156197.121135
+Risk & Compliance,Learning Platform Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),2,1,1,1,1,1,12,322.73,9.07,751.0605,928.689,9.0673,Closing HC,1162.326555
+Risk & Compliance,Long Leave Cost (INR),driver,True,Long Leave Count,0,1,2,0,1,1,12,520.21,72.45,59356.9185,89681.2084,72.4517,Long Leave Count,4997.297813
+Risk & Compliance,Long Leave Count,driver,False,,0,1,2,0,1,1,12,29.46,68.37,0.2004,0.3972,68.3728,,
+Risk & Compliance,Mgmt Overhead (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,419.19,11.36,16824.9244,17965.9788,11.3616,Avg Salary (Wtd) (INR),34102.966339
+Risk & Compliance,Office Rent & Facilities (INR),actual,True,WFO Count|CAD/INR Forex Rate,0,1,1,0,1,1,12,464.63,11.22,19894.6418,22191.0838,11.2206,WFO Count,6361.404353
+Risk & Compliance,Original Budget (INR),actual,True,Closing HC|Total Hires|Avg Salary (Wtd) (INR),0,1,2,0,1,1,12,594.95,21.51,1856009.4598,2035905.8042,21.513,Avg Salary (Wtd) (INR),18731030.525769
+Risk & Compliance,Overtime Cost (INR),actual,True,WFO Count|Total Exits,2,1,1,1,1,1,12,573.27,19.03,662828.2392,685310.8023,19.031,WFO Count,4265.210626
+Risk & Compliance,Salary Cost (INR),actual,True,Closing HC|Avg Salary (Wtd) (INR)|Band 1 Sal/FTE (INR)|Band 3 Sal/FTE (INR),0,1,2,0,1,1,12,576.96,120.02,7255626.0502,7284524.383,120.0207,Band 3 Sal/FTE (INR),28042018.982006
+Risk & Compliance,Talent Pool,driver,False,,1,2,1,0,0,0,12,-972.23,inf,0.0,0.0,,,
+Risk & Compliance,Total Exits,driver,False,,0,0,0,1,1,0,12,-571.18,0.0,0.0,0.0,0.0001,,
+Risk & Compliance,Total Hires,driver,False,,2,0,0,1,1,1,12,28.43,25.0,0.1667,0.5774,25.0001,,
+Risk & Compliance,Training & Dev Cost (INR),actual,True,Avg Appraisal Rate|Total Hires|Closing HC,0,1,2,0,1,1,12,340.31,11.32,1548.8385,1863.351,11.3193,Avg Appraisal Rate,3220.89668
+Risk & Compliance,Utilities Cost (INR),actual,True,WFO Count|CAD/INR Forex Rate,1,0,2,0,1,1,12,295.66,9.06,545.0971,639.5431,9.0553,CAD/INR Forex Rate,727.893624
+Risk & Compliance,WFH Count,driver,False,,2,0,1,0,1,1,12,49.17,7.02,0.3533,0.634,7.0221,,
+Risk & Compliance,WFO Count,driver,False,,1,1,1,0,1,1,12,51.04,3.56,0.57,0.7519,3.5578,,

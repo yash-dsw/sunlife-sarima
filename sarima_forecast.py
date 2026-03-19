@@ -84,47 +84,102 @@ MONTH_MAP = {
 # target_column -> list of exogenous columns fed into SARIMAX
 # Only columns that are either raw data or modelled BEFORE the target column
 # (sorted alphabetically in the main loop) should appear here.
+# EXOG_MAP: dict[str, list[str]] = {
+#     # Salary-driven actuals
+#     "Salary Cost (INR)":              ["Closing HC", "Avg Salary (Wtd) (INR)", "Avg Appraisal Rate"],
+#     "Bonus/Var Pay (INR)":            ["Closing HC", "Salary Cost (INR)"],
+#     "Overtime Cost (INR)":            ["Total Exits"],
+#     "Long Leave Cost (INR)":          ["Long Leave Count"],
+#     # Headcount-driven indirect actuals
+#     "HR Cost (INR)":                  ["Closing HC"],
+#     "Admin Overhead (INR)":           ["Closing HC"],
+#     "IT License Cost (INR)":          ["Closing HC"],
+#     "IT Equipment Cost (INR)":        ["Total Hires"],
+#     "Training & Dev Cost (INR)":      ["Total Hires", "Closing HC"],
+#     "Learning Platform Cost (INR)":   ["Closing HC"],
+#     "Emp Engagement Cost (INR)":      ["Closing HC"],
+#     "Mgmt Overhead (INR)":            ["Closing HC"],
+#     "DBTS Charges (INR)":             ["Closing HC"],
+#     "Consultancy Charges (INR)":      ["Closing HC"],
+#     "Financial Operation Charges (INR)": ["Salary Cost (INR)"],
+#     # WFO-driven actuals
+#     "Office Rent & Facilities (INR)": ["WFO Count"],
+#     "Utilities Cost (INR)":           ["WFO Count"],
+#     # Budget columns
+#     "Budget: Salary (INR)":           ["Closing HC"],
+#     "Budget: Long Leave (INR)":       ["Long Leave Count"],
+#     "Budget: Training & Dev (INR)":   ["Total Hires", "Closing HC", "Billable HC"],
+#     "Budget: HR Cost (INR)":          ["Closing HC"],
+#     "Budget: Admin Overhead (INR)":   ["Closing HC"],
+#     "Budget: IT License (INR)":       ["Closing HC"],
+#     "Budget: IT Equipment (INR)":     ["Total Hires", "Closing HC"],
+#     "Budget: Utilities (INR)":        ["WFO Count"],
+#     "Budget: Mgmt Overhead (INR)":    ["Closing HC"],
+#     "Budget: Learning Platform (INR)":["Closing HC"],
+#     "Budget: Emp Engagement (INR)":   ["Closing HC"],
+#     "Original Budget (INR)":          ["Closing HC", "Total Hires"],
+#     "Attrition % (Ann.)":             ["Total Exits", "Opening HC"]
+# }
 EXOG_MAP: dict[str, list[str]] = {
-    # Salary-driven actuals
-    "Salary Cost (INR)":              ["Closing HC", "Avg Salary (Wtd) (INR)", "Avg Appraisal Rate"],
-    "Bonus/Var Pay (INR)":            ["Closing HC", "Salary Cost (INR)"],
-    "Overtime Cost (INR)":            ["Total Exits"],
+
+    # ── Direct cost actuals ──────────────────────────────────────
+    # Salary is driven by the count×rate identity: HC × weighted band salary
+    "Salary Cost (INR)":              ["Closing HC", "Avg Salary (Wtd) (INR)",
+                                        "Band 1 Sal/FTE (INR)", "Band 3 Sal/FTE (INR)"],
+    # Bonus fires on appraisal cycles; HC sets the pool size
+    "Bonus/Var Pay (INR)":            ["Avg Appraisal Rate", "Closing HC"],
+    # Overtime spikes on WFO pressure and exit-driven backfill crunch
+    "Overtime Cost (INR)":            ["WFO Count", "Total Exits"],
+    # Long leave cost is directly proportional to leave headcount
     "Long Leave Cost (INR)":          ["Long Leave Count"],
-    # Headcount-driven indirect actuals
-    "HR Cost (INR)":                  ["Closing HC"],
-    "Admin Overhead (INR)":           ["Closing HC"],
-    "IT License Cost (INR)":          ["Closing HC"],
-    "IT Equipment Cost (INR)":        ["Total Hires"],
-    "Training & Dev Cost (INR)":      ["Total Hires", "Closing HC"],
-    "Learning Platform Cost (INR)":   ["Closing HC"],
-    "Emp Engagement Cost (INR)":      ["Closing HC"],
-    "Mgmt Overhead (INR)":            ["Closing HC"],
-    "DBTS Charges (INR)":             ["Closing HC"],
-    "Consultancy Charges (INR)":      ["Closing HC"],
-    "Financial Operation Charges (INR)": ["Salary Cost (INR)"],
-    # WFO-driven actuals
-    "Office Rent & Facilities (INR)": ["WFO Count"],
-    "Utilities Cost (INR)":           ["WFO Count"],
-    # Budget columns
-    "Budget: Salary (INR)":           ["Closing HC"],
+
+    # ── Indirect cost actuals ────────────────────────────────────
+    # All of these are per-head cost pools; salary-weighted avg captures seniority
+    "HR Cost (INR)":                  ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "Admin Overhead (INR)":           ["Closing HC", "Total Exits"],     # exits spike admin work
+    "IT License Cost (INR)":          ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "IT Equipment Cost (INR)":        ["Total Hires", "Avg Appraisal Rate"],  # r=0.51 on appraisal
+    "Training & Dev Cost (INR)":      ["Avg Appraisal Rate", "Total Hires", "Closing HC"],
+    "Learning Platform Cost (INR)":   ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "Emp Engagement Cost (INR)":      ["Long Leave Count", "Closing HC"],  # r=0.43 on leave
+    "Mgmt Overhead (INR)":            ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "DBTS Charges (INR)":             ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "Consultancy Charges (INR)":      ["Avg Appraisal Rate", "CAD/INR Forex Rate"],
+    "Financial Operation Charges (INR)": ["Salary Cost (INR)", "Avg Salary (Wtd) (INR)"],
+    # WFO-driven — physical space cost
+    "Office Rent & Facilities (INR)": ["WFO Count", "CAD/INR Forex Rate"],
+    "Utilities Cost (INR)":           ["WFO Count", "CAD/INR Forex Rate"],
+
+    # ── Budget columns ───────────────────────────────────────────
+    "Budget: Salary (INR)":           ["Closing HC", "Avg Salary (Wtd) (INR)",
+                                        "Band 1 Sal/FTE (INR)", "Band 3 Sal/FTE (INR)"],
+    "Budget: Bonus (INR)":            ["Avg Appraisal Rate", "Closing HC"],
+    "Budget: Overtime (INR)":         ["WFO Count", "Avg Appraisal Rate"],
     "Budget: Long Leave (INR)":       ["Long Leave Count"],
-    "Budget: Training & Dev (INR)":   ["Total Hires", "Closing HC", "Billable HC"],
-    "Budget: HR Cost (INR)":          ["Closing HC"],
-    "Budget: Admin Overhead (INR)":   ["Closing HC"],
-    "Budget: IT License (INR)":       ["Closing HC"],
+    "Budget: Training & Dev (INR)":   ["Avg Appraisal Rate", "Total Hires",
+                                        "Billable HC", "Closing HC"],
+    "Budget: HR Cost (INR)":          ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "Budget: Admin Overhead (INR)":   ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "Budget: IT License (INR)":       ["Closing HC", "Avg Salary (Wtd) (INR)"],
     "Budget: IT Equipment (INR)":     ["Total Hires", "Closing HC"],
-    "Budget: Utilities (INR)":        ["WFO Count"],
-    "Budget: Mgmt Overhead (INR)":    ["Closing HC"],
-    "Budget: Learning Platform (INR)":["Closing HC"],
-    "Budget: Emp Engagement (INR)":   ["Closing HC"],
-    "Original Budget (INR)":          ["Closing HC", "Total Hires"],
-    "Attrition % (Ann.)":             ["Total Exits", "Opening HC"]
+    "Budget: Office Rent (INR)":      ["WFO Count", "Avg Salary (Wtd) (INR)"],
+    "Budget: Utilities (INR)":        ["WFO Count", "Avg Salary (Wtd) (INR)"],
+    "Budget: Mgmt Overhead (INR)":    ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "Budget: Learning Platform (INR)":["Closing HC", "Avg Appraisal Rate"],
+    "Budget: Emp Engagement (INR)":   ["Long Leave Count", "Closing HC"],
+    "Budget: DBTS Charges (INR)":     ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "Budget: Consultancy (INR)":      ["Avg Appraisal Rate", "CAD/INR Forex Rate"],
+    "Budget: Financial Operation Charges (INR)": ["Closing HC", "Avg Salary (Wtd) (INR)"],
+    "Original Budget (INR)":          ["Closing HC", "Total Hires", "Avg Salary (Wtd) (INR)"],
+
+    # ── Attrition (semi-derived, still benefits from SARIMAX) ───
+    "Attrition % (Ann.)":             ["Total Exits"],
 }
 
 # ── Columns on which SARIMAX models are trained ───────────
 MODEL_COLS = {
     # Headcount & workforce drivers
-    "Opening HC", "Total Hires", "Total Exits", "Long Leave Count",
+    "Total Hires", "Total Exits", "Long Leave Count",
     "Closing HC", "WFH Count", "WFO Count", "Billable HC", "Talent Pool",
     "Band 1 Count", "Band 2 Count", "Band 3 Count",
     "Band 4 Count", "Band 5 Count", "Band 6 Count",
@@ -174,14 +229,122 @@ INDIRECT_ACTUAL_COLS = [
 ]
 
 # ── Ratio-derived cols (business logic, no model) ─────────
+# RATIO_DERIVED = {
+#     "Benefits Cost (INR)":    ("Salary Cost (INR)",   "Budget: Benefits (INR)"),
+#     "Payroll Tax (INR)":      ("Salary Cost (INR)",   "Budget: Payroll Tax (INR)"),
+#     "Travel Allowance (INR)": ("Closing HC",          "Budget: Travel Allow (INR)"),
+#     "Meal Allowance (INR)":   ("Closing HC",          "Budget: Meal Allow (INR)"),
+#     "Recruitment Cost (INR)": ("Total Hires",         "Budget: Recruitment (INR)"),
+# }
+
+# Tier 3 — Business logic derivations (no SARIMAX model)
+# Format: derived_col -> (numerator_col, method, notes)
+#
+# method = "ratio"    →  derived = numerator × historical_avg_ratio
+# method = "identity" →  derived = numerator directly (no ratio needed)
+# method = "formula"  →  derived via explicit formula, not ratio
+
+# RATIO_DERIVED = {
+#     # ── Ratio-based (derived = numerator × trailing avg ratio) ───────────
+
+#     # Benefits is a fixed % of salary (statutory + policy)
+#     # historical ratio = Benefits Cost / Salary Cost ≈ 0.10
+#     "Benefits Cost (INR)": (
+#         "Salary Cost (INR)", "ratio",
+#         "Benefits ≈ 10% of Salary Cost historically"
+#     ),
+
+#     # Payroll tax is a statutory % of salary
+#     # historical ratio = Payroll Tax / Salary Cost ≈ 0.05
+#     "Payroll Tax (INR)": (
+#         "Salary Cost (INR)", "ratio",
+#         "Payroll Tax ≈ 5% of Salary Cost historically"
+#     ),
+
+#     # Travel allowance is per-head; scales with headcount not salary
+#     # historical ratio = Travel Allowance / Closing HC
+#     "Travel Allowance (INR)": (
+#         "Closing HC", "ratio",
+#         "Per-head travel allowance × Closing HC"
+#     ),
+
+#     # Meal allowance similarly per-head
+#     # historical ratio = Meal Allowance / Closing HC
+#     "Meal Allowance (INR)": (
+#         "Closing HC", "ratio",
+#         "Per-head meal allowance × Closing HC"
+#     ),
+
+#     # Recruitment cost per hire
+#     # historical ratio = Recruitment Cost / Total Hires
+#     "Recruitment Cost (INR)": (
+#         "Total Hires", "ratio",
+#         "Cost per hire × Total Hires (only non-zero when Hires > 0)"
+#     ),
+
+#     # ── Formula-based (explicit business rule, not a ratio) ──────────────
+
+#     # Attrition % is a defined formula — not a SARIMAX target
+#     # Do NOT use ratio here; this is a hard identity
+#     "Attrition % (Ann.)": (
+#         None, "formula",
+#         "= (Total Exits / Opening HC) × 12  — annualised rate"
+#     ),
+
+#     # ── Identity-based (next month value = current month output) ─────────
+
+#     # Opening HC of month t+1 = Closing HC of month t
+#     # This is enforced as a hard constraint in the simulation loop,
+#     # not computed as a ratio — listed here for completeness
+#     "Opening HC": (
+#         "Closing HC", "identity",
+#         "Opening HC[t] = Closing HC[t-1] — enforced chronologically"
+#     ),
+
+#     # Avg Salary (Wtd) — recomputed from band counts and band rates
+#     # after any HC simulation step (not a ratio, an explicit formula)
+#     "Avg Salary (Wtd) (INR)": (
+#         None, "formula",
+#         "= Σ(Band N Count × Band N Sal/FTE) / Closing HC"
+#     ),
+# }
 RATIO_DERIVED = {
-    "Benefits Cost (INR)":    ("Salary Cost (INR)",   "Budget: Benefits (INR)"),
-    "Payroll Tax (INR)":      ("Salary Cost (INR)",   "Budget: Payroll Tax (INR)"),
-    "Travel Allowance (INR)": ("Closing HC",          "Budget: Travel Allow (INR)"),
-    "Meal Allowance (INR)":   ("Closing HC",          "Budget: Meal Allow (INR)"),
-    "Recruitment Cost (INR)": ("Total Hires",         "Budget: Recruitment (INR)"),
-    "Financial Operation Charges (INR)": (
-        "Salary Cost (INR)", "Budget: Financial Operation Charges (INR)"),
+    # ── 1. ratio-based (depend only on SARIMAX fc_dict outputs) ─
+    "Benefits Cost (INR)": (
+        "Salary Cost (INR)", "ratio",
+        "Benefits ≈ 10% of Salary Cost historically",
+    ),
+    "Payroll Tax (INR)": (
+        "Salary Cost (INR)", "ratio",
+        "Payroll Tax ≈ 5% of Salary Cost historically",
+    ),
+    "Travel Allowance (INR)": (
+        "Closing HC", "ratio",
+        "Per-head travel allowance × Closing HC",
+    ),
+    "Meal Allowance (INR)": (
+        "Closing HC", "ratio",
+        "Per-head meal allowance × Closing HC",
+    ),
+    "Recruitment Cost (INR)": (
+        "Total Hires", "ratio",
+        "Cost per hire × Total Hires (zero when no hires)",
+    ),
+    # ── 2. identity (depends on Closing HC — SARIMAX output) ────
+    "Opening HC": (
+        "Closing HC", "identity",
+        "Opening HC[t] = Closing HC[t-1]; enforced month-by-month in simulation",
+    ),
+    # ── 3. formula — Avg Salary (depends on Band counts + rates) ─
+    "Avg Salary (Wtd) (INR)": (
+        None, "formula",
+        "= Σ(Band N Count × Band N Sal/FTE) / Closing HC",
+    ),
+    # ── 4. formula — Attrition (depends on Opening HC from step 2) ─
+    "Attrition % (Ann.)": (
+        None, "formula",
+        "= (Total Exits / Opening HC) × 12  — annualised rate",
+    ),
 }
 
 
@@ -259,7 +422,8 @@ def build_exog_from_fc(fc_dict: dict, exog_cols: list[str],
     rows = []
     for col in exog_cols:
         if col in fc_dict:
-            arr = np.nan_to_num(fc_dict[col][:n].astype(float))
+            # arr = np.nan_to_num(fc_dict[col][:n].astype(float))
+            arr = np.nan_to_num(np.array(fc_dict[col][:n], dtype=float))
         elif col in df.columns:
             arr = np.full(n, df[col].dropna().tail(12).mean())
         else:
@@ -466,19 +630,88 @@ def plot_shap_bar(shap_summary: dict, sheet: str, col: str, chart_dir: Path):
 # BUSINESS LOGIC HELPERS
 # ─────────────────────────────────────────────────────────
 
-def derive_by_ratio(fc_dict, driver, numerator, hist_df, n):
-    if numerator not in fc_dict or driver not in hist_df.columns:
-        return np.full(n, np.nan)
-    hist_num = hist_df[numerator].replace(0, np.nan)
-    hist_drv = hist_df[driver]
-    common   = hist_num.dropna().index.intersection(hist_drv.dropna().index)
-    if len(common) == 0:
-        return np.full(n, np.nan)
-    ratios    = (hist_drv.loc[common] / hist_num.loc[common]) \
-                    .replace([np.inf, -np.inf], np.nan).dropna()
-    avg_ratio = ratios[-36:].mean() if len(ratios) >= 12 else ratios.mean()
-    return np.array(fc_dict[numerator]) * avg_ratio
+# def derive_by_ratio(fc_dict, driver, numerator, hist_df, n):
+#     if numerator not in fc_dict or driver not in hist_df.columns:
+#         return np.full(n, np.nan)
+#     hist_num = hist_df[numerator].replace(0, np.nan)
+#     hist_drv = hist_df[driver]
+#     common   = hist_num.dropna().index.intersection(hist_drv.dropna().index)
+#     if len(common) == 0:
+#         return np.full(n, np.nan)
+#     ratios    = (hist_drv.loc[common] / hist_num.loc[common]) \
+#                     .replace([np.inf, -np.inf], np.nan).dropna()
+#     avg_ratio = ratios[-36:].mean() if len(ratios) >= 12 else ratios.mean()
+#     return np.array(fc_dict[numerator]) * avg_ratio
 
+def derive_tier3(
+    fc_dict: dict,
+    col: str,
+    numerator: str | None,
+    method: str,
+    hist_df: pd.DataFrame,
+    n: int,
+) -> np.ndarray:
+
+    if method == "ratio":
+        # Standard: derived = numerator_forecast × historical_avg_ratio
+        if numerator not in fc_dict or col not in hist_df.columns:
+            return np.full(n, np.nan)
+        hist_num = hist_df[numerator].replace(0, np.nan)
+        hist_drv = hist_df[col]
+        common   = hist_num.dropna().index.intersection(hist_drv.dropna().index)
+        if len(common) == 0:
+            return np.full(n, np.nan)
+        ratios    = (hist_drv.loc[common] / hist_num.loc[common]) \
+                        .replace([np.inf, -np.inf], np.nan).dropna()
+        avg_ratio = ratios[-36:].mean() if len(ratios) >= 12 else ratios.mean()
+        return np.array(fc_dict[numerator]) * avg_ratio
+
+    elif method == "identity":
+        # Opening HC[t] = Closing HC[t-1]
+        # Handled month-by-month in the simulation loop.
+        # In the baseline forecast pass, just return Closing HC shifted by 1.
+        if numerator not in fc_dict:
+            return np.full(n, np.nan)
+        closing = fc_dict[numerator]                   # Closing HC forecast
+        prev_closing = hist_df["Closing HC"].iloc[-1]  # Dec 2025 actual
+        return np.concatenate([[prev_closing], closing[:-1]])
+
+    # elif method == "formula":
+    #     if col == "Attrition % (Ann.)":
+    #         opening = fc_dict.get("Opening HC", np.full(n, np.nan))
+    #         exits   = fc_dict.get("Total Exits", np.full(n, np.nan))
+    #         with np.errstate(divide="ignore", invalid="ignore"):
+    #             return np.where(opening > 0, (exits / opening) * 12, np.nan)
+
+    #     elif col == "Avg Salary (Wtd) (INR)":
+    #         band_counts = [fc_dict.get(f"Band {b} Count", np.zeros(n))
+    #                        for b in range(1, 7)]
+    #         band_rates  = [fc_dict.get(f"Band {b} Sal/FTE (INR)", np.zeros(n))
+    #                        for b in range(1, 7)]
+    #         closing_hc  = fc_dict.get("Closing HC", np.full(n, np.nan))
+    #         weighted_sum = sum(bc * br for bc, br in zip(band_counts, band_rates))
+    #         with np.errstate(divide="ignore", invalid="ignore"):
+    #             return np.where(closing_hc > 0, weighted_sum / closing_hc, np.nan)
+    elif method == "formula":
+        if col == "Attrition % (Ann.)":
+            opening = np.array(fc_dict.get("Opening HC", np.full(n, np.nan)), dtype=float)
+            exits   = np.array(fc_dict.get("Total Exits", np.full(n, np.nan)), dtype=float)
+            with np.errstate(divide="ignore", invalid="ignore"):
+                return np.where(opening > 0, (exits / opening) * 12, np.nan)
+
+        elif col == "Avg Salary (Wtd) (INR)":
+            band_counts = [np.array(fc_dict.get(f"Band {b} Count", np.zeros(n)), dtype=float)
+                           for b in range(1, 7)]
+            band_rates  = [np.array(fc_dict.get(f"Band {b} Sal/FTE (INR)", np.zeros(n)), dtype=float)
+                           for b in range(1, 7)]
+            closing_hc  = np.array(fc_dict.get("Closing HC", np.full(n, np.nan)), dtype=float)
+            weighted_sum = sum(bc * br for bc, br in zip(band_counts, band_rates))
+            with np.errstate(divide="ignore", invalid="ignore"):
+                return np.where(closing_hc > 0, weighted_sum / closing_hc, np.nan)
+
+        return np.full(n, np.nan)
+
+    return np.full(n, np.nan)
 
 def sum_cols(fc_dict, cols, hist_df, n):
     out = np.zeros(n)
@@ -688,12 +921,14 @@ def main():
 
         # ── 2. Ratio-derived columns ─────────────────────────
         log.info("  ▶ Deriving ratio-based columns ...")
-        for drv_col, (num_col, _) in RATIO_DERIVED.items():
+        for drv_col, (numerator, method, note) in RATIO_DERIVED.items():
             if drv_col in fc_dict:
                 continue
-            derived      = derive_by_ratio(fc_dict, drv_col, num_col,
-                                           full_train_df, FORECAST_STEPS)
+            derived = derive_tier3(
+                fc_dict, drv_col, numerator, method, full_train_df, FORECAST_STEPS
+            )
             fc_dict[drv_col] = derived
+            log.info("    Tier3 [%s] %s", method, drv_col)
             if drv_col in full_train_df.columns:
                 plot_series(sheet, drv_col, full_train_df[drv_col].dropna(),
                             fc_months, derived, CHART_DIR / dept_safe)
