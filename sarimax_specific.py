@@ -50,7 +50,7 @@ log = logging.getLogger(__name__)
 # ─────────────────────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────
-DATA_FILE  = r"cost_forecast_sample_data_v2_updated.xlsx"
+DATA_FILE  = r"cost_forecast_sample_data_v2_updated_with_projects.xlsx"
 MODEL_DIR  = Path("sarimax_models")
 RESULT_DIR = Path("sarimax_results")
 CHART_DIR  = Path("sarimax_charts")
@@ -1023,6 +1023,7 @@ def main(target_columns=None):
 
 if __name__ == "__main__":
     # Example: specify columns to train here
-    target_cols = ["Budget: Office Rent (INR)", "Office Rent & Facilities (INR)"]
+    target_cols = ["Band 1 Hires", "Band 2 Hires", "Band 3 Hires", "Band 4 Hires", "Band 5 Hires", "Band 6 Hires", 
+                   "Band 1 Exits", "Band 2 Exits", "Band 3 Exits", "Band 4 Exits", "Band 5 Exits", "Band 6 Exits",  ]
     main(target_columns=target_cols)
     # main()
